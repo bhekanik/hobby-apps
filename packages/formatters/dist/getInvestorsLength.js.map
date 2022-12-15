@@ -1,0 +1,1 @@
+{"version":3,"file":"getInvestorsLength.js","sourceRoot":"","sources":["../src/getInvestorsLength.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,MAAM,kBAAkB,GAAG,CAAC,KAAa,EAAE,EAAE;IAClD,OAAO,CAAC,GAAG,IAAI,GAAG,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,IAAI,EAAE,EAAE,CAAC,IAAI,CAAC,SAAqB,CAAC,CAAC,IAAI,EAAE,CAAC,CAAC;SACxE,MAAM,CAAC;AACZ,CAAC,CAAC"}

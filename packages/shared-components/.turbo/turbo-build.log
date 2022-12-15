@@ -1,0 +1,12 @@
+
+> shared-components@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/shared-components
+> rm -rf dist && pnpm build:esm && pnpm build:cjs
+
+
+> shared-components@1.0.0 build:esm /Users/bhekanik/dev/dealbase-africa/packages/shared-components
+> tsc
+
+
+> shared-components@1.0.0 build:cjs /Users/bhekanik/dev/dealbase-africa/packages/shared-components
+> tsc --module CommonJS --outDir dist/cjs
+

@@ -1,0 +1,39 @@
+{
+  "name": "hobby-apps",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "dotenv -e .env -- turbo run dev",
+    "dev:prod": "dotenv -e .env.prod -- turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:ci": "turbo run test:ci",
+    "lint": "turbo run lint",
+    "prepare": "husky install",
+    "prettier": "turbo run prettier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhekanik/hobby-apps.git"
+  },
+  "devDependencies": {
+    "fixtures": "workspace:1.0.0",
+    "formatters": "workspace:1.0.0",
+    "husky": "^7.0.4",
+    "turbo": "^1.6.3",
+    "types": "workspace:1.0.0",
+    "utils": "workspace:1.0.0"
+  },
+  "author": "Bhekani Khumalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhekanik/hobby-apps/issues"
+  },
+  "homepage": "https://github.com/bhekanik/hobby-apps#readme",
+  "dependencies": {
+    "dotenv-cli": "^6.0.0"
+  }
+}

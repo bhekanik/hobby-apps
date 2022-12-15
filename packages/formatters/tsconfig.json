@@ -1,0 +1,11 @@
+{
+  "extends": "tsconfig/lib.json",
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "downlevelIteration": true,
+    "outDir": "./dist",
+    "target": "ESNext"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,15 @@
+{
+	"extends": "./nextjs.json",
+	"compilerOptions": {
+		"sourceMap": true,
+		"noEmit": false,
+		"preserveWatchOutput": true,
+		"declaration": true
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

@@ -1,0 +1,4 @@
+
+> utils@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/utils
+> rm -rf dist && tsc
+

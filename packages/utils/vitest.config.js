@@ -1,0 +1,13 @@
+/// <reference types="vitest" />
+import { configDefaults, defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    exclude: [...configDefaults.exclude],
+    globals: true,
+    coverage: {
+      reporter: ["text", "html"],
+    },
+    css: false,
+  },
+});

@@ -1,0 +1,16 @@
+
+> fixtures@1.0.0 prettier /Users/bhekanik/dev/dealbase-africa/packages/fixtures
+> prettier --write src/**/*
+
+[error] No parser could be inferred for file: src/africaData.csv
+src/countryList.ts 203ms
+src/dates.ts 13ms
+src/deals.ts 90ms
+src/defaultCompany.ts 17ms
+src/defaultDealflow.ts 2ms
+src/index.ts 2ms
+src/investors.ts 187ms
+src/investorsList.ts 1ms
+src/sectors.ts 3ms
+src/stages.ts 6ms
+ ELIFECYCLE  Command failed with exit code 2.

@@ -1,0 +1,4 @@
+
+> formatters@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/formatters
+> rm -rf dist && tsc
+

@@ -1,0 +1,32 @@
+{
+  "background_color": "#31A078",
+  "theme_color": "#D98F39",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "dealbase.africa",
+  "short_name": "dealbase",
+  "description": "Showcasing the African Startup Opportunity | Equipping Founders to Raise Capital and Investors to Optimise Dealflow.",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

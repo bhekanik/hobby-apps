@@ -1,0 +1,4 @@
+
+> types@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/types
+> rm -rf dist && tsc
+

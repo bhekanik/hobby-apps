@@ -1,0 +1,6 @@
+
+> tsconfig@ build /Users/bhekanik/dev/dealbase-africa/packages/tsconfig
+> prettier --write /src
+
+[error] No files matching the pattern were found: "/src".
+ ELIFECYCLE  Command failed with exit code 2.

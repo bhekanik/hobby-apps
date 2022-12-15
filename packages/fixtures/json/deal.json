@@ -1,0 +1,23 @@
+{
+  "company": {
+    "name": "",
+    "website": "",
+    "country": "",
+    "logo_filename": "",
+    "about": "",
+    "launch_year": 0,
+    "created_at": ""
+  },
+  "investor": {
+    "name": "",
+    "website": "",
+    "created_at": "",
+    "logo_filename": ""
+  },
+  "press_release": {
+    "link": "",
+    "date": ""
+  },
+  "amount": 0,
+  "stage": ""
+}

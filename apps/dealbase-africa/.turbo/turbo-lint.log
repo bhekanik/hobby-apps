@@ -1,0 +1,393 @@
+
+> app@1.0.0 lint /Users/bhekanik/dev/dealbase-africa/apps/app
+> pnpm prettier && next lint --cache-location './node_modules/@eslint/.eslintcache/'
+
+
+> app@1.0.0 prettier /Users/bhekanik/dev/dealbase-africa/apps/app
+> prettier --write .
+
+.eslintrc.js 33ms
+.gitpod.yml 19ms
+.prettierrc 3ms
+.vercel/project.json 1ms
+cypress.json 1ms
+cypress/examples/1-getting-started/todo.spec.ts 227ms
+cypress/examples/2-advanced-examples/actions.spec.ts 45ms
+cypress/examples/2-advanced-examples/aliasing.spec.ts 5ms
+cypress/examples/2-advanced-examples/assertions.spec.ts 18ms
+cypress/examples/2-advanced-examples/connectors.spec.ts 9ms
+cypress/examples/2-advanced-examples/cookies.spec.ts 6ms
+cypress/examples/2-advanced-examples/cypress_api.spec.ts 13ms
+cypress/examples/2-advanced-examples/files.spec.ts 5ms
+cypress/examples/2-advanced-examples/local_storage.spec.ts 5ms
+cypress/examples/2-advanced-examples/location.spec.ts 3ms
+cypress/examples/2-advanced-examples/misc.spec.ts 6ms
+cypress/examples/2-advanced-examples/navigation.spec.ts 3ms
+cypress/examples/2-advanced-examples/network_requests.spec.ts 13ms
+cypress/examples/2-advanced-examples/querying.spec.ts 10ms
+cypress/examples/2-advanced-examples/spies_stubs_clocks.spec.ts 13ms
+cypress/examples/2-advanced-examples/traversal.spec.ts 11ms
+cypress/examples/2-advanced-examples/utilities.spec.ts 6ms
+cypress/examples/2-advanced-examples/viewport.spec.ts 2ms
+cypress/examples/2-advanced-examples/waiting.spec.ts 2ms
+cypress/examples/2-advanced-examples/window.spec.ts 2ms
+cypress/fixtures/example.json 1ms
+cypress/integration/01-Landing.ts 6ms
+cypress/plugins/index.ts 2ms
+cypress/support/commands.ts 2ms
+cypress/support/index.ts 1ms
+cypress/tsconfig.json 1ms
+declarations.d.ts 2ms
+e2e/1-LandingPage.test.ts 5ms
+next-env.d.ts 1ms
+next-sitemap.js 3ms
+next.config.js 6ms
+package.json 3ms
+playwright.config.ts 3ms
+public/fallback-zhb0ff-vuGgczW7R0gcrD.js 3ms
+public/loader.json 92ms
+public/manifest.json 22ms
+public/sw.js 21ms
+public/workbox-b777c91b.js 98ms
+README.md 56ms
+sentry.client.config.js 2ms
+sentry.server.config.js 2ms
+src/components/BulkImageUploader/index.tsx 24ms
+src/components/Charts/Breakdown/Monthly/index.tsx 11ms
+src/components/Charts/Breakdown/Sector/index.tsx 9ms
+src/components/Charts/Compare/index.tsx 7ms
+src/components/Charts/Gender/index.tsx 4ms
+src/components/Charts/GenderHorizontal/index.tsx 6ms
+src/components/Charts/GenderPie/index.tsx 5ms
+src/components/Charts/OffsetCompare/BarComponent.tsx 3ms
+src/components/Charts/OffsetCompare/data.ts 3ms
+src/components/Charts/Race/index.tsx 4ms
+src/components/Charts/RaceHorizontal/index.tsx 4ms
+src/components/Charts/RacePie/index.tsx 4ms
+src/components/ComparePeriod/index.tsx 5ms
+src/components/DashboardNav/DashboardNavItem.tsx 3ms
+src/components/DashboardNav/index.tsx 2ms
+src/components/DataGrid/Card/index.tsx 2ms
+src/components/DataGrid/index.tsx 5ms
+src/components/DataGrid/SortButton/index.tsx 4ms
+src/components/DataGrid/SortButtons/index.tsx 3ms
+src/components/DataGrid/SortSelect/index.tsx 6ms
+src/components/DataGrid/SortTool/index.tsx 3ms
+src/components/DataTable/CompaniesTable/CompanyPopover.tsx 7ms
+src/components/DataTable/CompaniesTable/CompanyPopoverDealCard.tsx 4ms
+src/components/DataTable/CompaniesTable/CompanyPopoverDealsTable.tsx 6ms
+src/components/DataTable/CompaniesTable/index.tsx 10ms
+src/components/DataTable/CrowdsourcedDeal/index.tsx 13ms
+src/components/DataTable/DashboardInvestorTable/index.tsx 11ms
+src/components/DataTable/DealTable/index.tsx 16ms
+src/components/DataTable/index.tsx 4ms
+src/components/DataTable/InvestorsTable/InvestorPopover.tsx 6ms
+src/components/DataTable/InvestorsTable/InvestorPopoverDealCard.tsx 5ms
+src/components/DataTable/InvestorsTable/InvestorPopoverDealGrid.tsx 5ms
+src/components/DataTable/InvestorTable/index.tsx 10ms
+src/components/DataTable/Pagination/index.tsx 9ms
+src/components/DataTable/SubscriberTable/index.tsx 6ms
+src/components/DataTable/TableBase.tsx 4ms
+src/components/DataTable/types.ts 2ms
+src/components/DataView/DataViewHeader/index.tsx 3ms
+src/components/DataView/DataViewToggle/index.tsx 2ms
+src/components/DataView/DataViewToolbar/index.tsx 3ms
+src/components/DataView/DealCard/index.tsx 10ms
+src/components/DataView/DealDataView/index.tsx 9ms
+src/components/DataView/Investors/index.tsx 6ms
+src/components/DataView/Investors/InvestorCard.tsx 9ms
+src/components/DataView/types.ts 2ms
+src/components/DataViz/index.tsx 7ms
+src/components/DataViz/MiniDataViz/chartsMap.tsx 6ms
+src/components/DataViz/MiniDataViz/index.tsx 6ms
+src/components/DataViz/TabsCompare.tsx 2ms
+src/components/Filters/CompanySearchInput.tsx 6ms
+src/components/Filters/index.tsx 15ms
+src/components/Filters/MiniFilter/index.tsx 8ms
+src/components/FormElements/FormFieldLabel.tsx 2ms
+src/components/FormElements/Inputs/CheckPicker.tsx 5ms
+src/components/FormElements/Inputs/FilterDatePicker.tsx 4ms
+src/components/FormElements/Inputs/FilterInput.tsx 2ms
+src/components/FormElements/Inputs/FilterSelect.tsx 3ms
+src/components/FormElements/Inputs/Input.tsx 3ms
+src/components/FormElements/Inputs/MiniCheckPicker.tsx 4ms
+src/components/FormElements/Inputs/MiniFilterDatePicker.tsx 4ms
+src/components/FormElements/Inputs/MiniFilterSelect.tsx 3ms
+src/components/FormElements/Inputs/MoneyInput/index.tsx 2ms
+src/components/FormElements/Inputs/MoneyInput/MoneyInputBase.tsx 3ms
+src/components/FormElements/Inputs/Select.tsx 3ms
+src/components/Forms/CompaniesForm.tsx 3ms
+src/components/Forms/CompaniesFormFields.tsx 5ms
+src/components/Forms/Deals/AddDealForm.tsx 2ms
+src/components/Forms/Deals/AddDealFormFields.tsx 16ms
+src/components/Forms/Deals/EditDealForm.tsx 3ms
+src/components/Forms/Deals/EditDealFormFields.tsx 12ms
+src/components/Forms/Deals/fragments/DiversityFields/DiversityFields.test.tsx 2ms
+src/components/Forms/Deals/fragments/DiversityFields/index.tsx 1ms
+src/components/Forms/InvestorsForm.tsx 4ms
+src/components/Forms/InvestorsFormFields.tsx 2ms
+src/components/Gallery/ImageCard/index.tsx 4ms
+src/components/Head/getTitle.test.ts 2ms
+src/components/Head/getTitle.tsx 2ms
+src/components/Head/index.tsx 3ms
+src/components/Header/index.tsx 2ms
+src/components/Header/Logo.tsx 3ms
+src/components/HeaderMenu/components/AnalyticsMenu.tsx 2ms
+src/components/HeaderMenu/components/DataMenu.tsx 2ms
+src/components/HeaderMenu/components/MobileMenu.tsx 11ms
+src/components/HeaderMenu/components/SocialsMenu.tsx 4ms
+src/components/HeaderMenu/components/SubscribeMenu.tsx 3ms
+src/components/HeaderMenu/index.tsx 4ms
+src/components/HomeContents/index.tsx 4ms
+src/components/ImageGrid/index.tsx 4ms
+src/components/ImageUploader/index.tsx 3ms
+src/components/LinkText/index.tsx 2ms
+src/components/Loader/index.tsx 2ms
+src/components/LoginButton/index.tsx 1ms
+src/components/LogoutButton/index.tsx 1ms
+src/components/MapComponent/hooks/useChloroplethLayerStyle.tsx 5ms
+src/components/MapComponent/hooks/usePopup.tsx 8ms
+src/components/MapComponent/hooks/useResetMapOnSearch.tsx 3ms
+src/components/MapComponent/hooks/useSelectedFeatures.tsx 7ms
+src/components/MapComponent/index.tsx 5ms
+src/components/Modals/Deals/useAddDealModal.tsx 3ms
+src/components/Modals/Deals/useEditDealModal.tsx 3ms
+src/components/Modals/Deals/useSubmitDealModal.tsx 5ms
+src/components/Modals/ModalActionFooter.tsx 1ms
+src/components/Modals/useBulkAddModal.tsx 9ms
+src/components/Modals/useCompanyModal.tsx 3ms
+src/components/Modals/useCrowdsourcedDealsModal.tsx 2ms
+src/components/Modals/useDeleteAlert.tsx 4ms
+src/components/Modals/useInvestorsModal.tsx 3ms
+src/components/Modals/useShareModal.tsx 6ms
+src/components/Modals/useSubscribeModal.tsx 6ms
+src/components/PageContents/Deals/index.tsx 3ms
+src/components/PageContents/index.tsx 3ms
+src/components/PageContents/Investors/index.tsx 3ms
+src/components/Popover/CompanyPopover.tsx 5ms
+src/components/Profile/index.tsx 1ms
+src/components/Share/index.tsx 6ms
+src/components/Statistics/index.tsx 3ms
+src/components/Statistics/MiniStatistics/index.tsx 2ms
+src/components/Statistics/MiniStatisticsItem/index.tsx 2ms
+src/components/Statistics/StatisticsItem/index.tsx 3ms
+src/components/Summaries/index.tsx 4ms
+src/components/Watermark/index.tsx 1ms
+src/contexts/Dealflow.tsx 4ms
+src/contexts/FeatureFlags/ApiContext.ts 2ms
+src/contexts/FeatureFlags/FeatureFlagsBridge.test.tsx 3ms
+src/contexts/FeatureFlags/FeatureFlagsBridge.tsx 2ms
+src/contexts/FeatureFlags/FeatureFlagsBroker.test.ts 4ms
+src/contexts/FeatureFlags/FeatureFlagsBroker.ts 4ms
+src/contexts/FeatureFlags/FeatureFlagsProvider.test.tsx 24ms
+src/contexts/FeatureFlags/FeatureFlagsProvider.tsx 4ms
+src/contexts/FeatureFlags/FeatureFlagsSource.ts 1ms
+src/contexts/FeatureFlags/FeatureToggle.test.tsx 4ms
+src/contexts/FeatureFlags/FeatureToggle.tsx 2ms
+src/contexts/FeatureFlags/FlagsContext.ts 1ms
+src/contexts/FeatureFlags/index.ts 2ms
+src/contexts/FeatureFlags/reactHelpers.test.ts 1ms
+src/contexts/FeatureFlags/reactHelpers.ts 1ms
+src/contexts/FeatureFlags/StorageAdapter.test.ts 3ms
+src/contexts/FeatureFlags/StorageAdapter.ts 3ms
+src/contexts/FeatureFlags/types.ts 1ms
+src/contexts/FeatureFlags/useAllFeatureFlags.ts 1ms
+src/contexts/FeatureFlags/useFeatureFlag.test.ts 3ms
+src/contexts/FeatureFlags/useFeatureFlag.ts 2ms
+src/contexts/FeatureFlags/useFeatureFlagValue.test.ts 3ms
+src/contexts/FeatureFlags/useFeatureFlagValue.ts 2ms
+src/contexts/FeatureFlags/useLocalFlags.test.ts 5ms
+src/contexts/FeatureFlags/useLocalFlags.ts 3ms
+src/contexts/FeatureFlags/useOverridableEnvironment.test.ts 5ms
+src/contexts/FeatureFlags/useOverridableEnvironment.ts 3ms
+src/contexts/FeatureFlags/useRemoteFlags.test.ts 5ms
+src/contexts/FeatureFlags/useRemoteFlags.ts 2ms
+src/contexts/FeatureFlags/utils/getFeatureFlagsFromSources.tsx 2ms
+src/contexts/FeatureFlags/utils/isValidFeatureFlagValue.tsx 2ms
+src/hooks/index.ts 1ms
+src/hooks/useAuthHeaders.tsx 2ms
+src/hooks/useBreakdownData.tsx 3ms
+src/hooks/useCompanies.tsx 3ms
+src/hooks/useCompareData.tsx 2ms
+src/hooks/useCrowdsourcedDeals.tsx 3ms
+src/hooks/useDealflowAndUrlFromQueryParams.tsx 2ms
+src/hooks/useDeals.tsx 2ms
+src/hooks/useDealsByInvestor.tsx 2ms
+src/hooks/useDeleteEntry.tsx 4ms
+src/hooks/useDiversityData.tsx 4ms
+src/hooks/useEditCompany.tsx 3ms
+src/hooks/useEditDeal.tsx 3ms
+src/hooks/useEditInvestor.tsx 3ms
+src/hooks/useFeatureRedirect.ts 2ms
+src/hooks/useFilteredDeals.tsx 2ms
+src/hooks/useFilteredInvestors.tsx 3ms
+src/hooks/useFuzzySearchBar/index.tsx 3ms
+src/hooks/useInvestors.tsx 3ms
+src/hooks/useLastUpdateDate.tsx 2ms
+src/hooks/useLogos.tsx 2ms
+src/hooks/useProtected.tsx 1ms
+src/hooks/useSaveCompany.tsx 3ms
+src/hooks/useSaveCrowdsoucedDeal.tsx 3ms
+src/hooks/useSaveDeal.tsx 3ms
+src/hooks/useSaveDeals.tsx 4ms
+src/hooks/useSaveInvestor.tsx 3ms
+src/hooks/useSaveLogos.tsx 2ms
+src/hooks/useSaveSubscriber.tsx 4ms
+src/hooks/useSectorBreakdownData.tsx 3ms
+src/hooks/useSubscribers.tsx 2ms
+src/hooks/useUserPermissions.tsx 2ms
+src/layouts/AppLayout/index.tsx 2ms
+src/layouts/DashboardLayout/index.tsx 4ms
+src/lib/authConfig.json 1ms
+src/lib/Chakra.tsx 2ms
+src/lib/cloudinary/cloudinary.ts 1ms
+src/lib/cloudinary/config.ts 1ms
+src/lib/cloudinary/getSignature.ts 2ms
+src/lib/cloudinary/uploadImage.ts 1ms
+src/lib/config.ts 1ms
+src/lib/db/repositories/supabase.ts 3ms
+src/lib/db/service.ts 3ms
+src/lib/db/supabase.tsx 1ms
+src/lib/db/types.ts 3ms
+src/lib/googleAnalytics/index.js 2ms
+src/lib/handleApiError.ts 2ms
+src/lib/logger.ts 1ms
+src/lib/middlewares/applyCommonMIddlewares.ts 1ms
+src/lib/middlewares/authorizeAccessToken.ts 2ms
+src/lib/middlewares/checkPermissions.ts 1ms
+src/lib/middlewares/jwtAuthz.js 3ms
+src/lib/middlewares/runMiddleware.ts 1ms
+src/lib/server/createDeals.ts 6ms
+src/lib/server/editDeals.ts 7ms
+src/lib/server/getDeals.ts 2ms
+src/lib/supabaseClient.ts 1ms
+src/lib/theme.ts 3ms
+src/pages/_app.tsx 4ms
+src/pages/_document.tsx 2ms
+src/pages/_error.js 4ms
+src/pages/_offline.tsx 1ms
+src/pages/404.tsx 2ms
+src/pages/analytics/investors.tsx 5ms
+src/pages/api/companies.ts 6ms
+src/pages/api/crowdsourced_deal.ts 5ms
+src/pages/api/deals.ts 4ms
+src/pages/api/investors.ts 7ms
+src/pages/api/logos.ts 5ms
+src/pages/api/map-data.ts 2ms
+src/pages/api/share.ts 6ms
+src/pages/api/shorten.ts 3ms
+src/pages/api/sign.ts 3ms
+src/pages/api/subscribers.ts 5ms
+src/pages/api/tunnel.js 3ms
+src/pages/api/users.ts 3ms
+src/pages/dashboard/companies.tsx 3ms
+src/pages/dashboard/crowdsourced-deals.tsx 3ms
+src/pages/dashboard/dashboard.tsx 1ms
+src/pages/dashboard/deals.tsx 4ms
+src/pages/dashboard/gallery.tsx 2ms
+src/pages/dashboard/investors.tsx 4ms
+src/pages/dashboard/settings.tsx 1ms
+src/pages/dashboard/subscribers.tsx 2ms
+src/pages/embed-designer/[clientId].tsx 7ms
+src/pages/embed/[clientId].tsx 3ms
+src/pages/index.tsx 3ms
+src/pages/investors.tsx 3ms
+src/pages/signin.tsx 1ms
+src/setupTests.ts 2ms
+src/stores/dealflow.ts 4ms
+src/styles/globals.css 28ms
+src/styles/rsuite-overrides.css 4ms
+tsconfig.json 1ms
+vitest.config.js 2ms
+
+./src/components/Charts/Breakdown/Monthly/index.tsx
+16:36  Warning: 'showLegend' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/Charts/Breakdown/Sector/index.tsx
+16:35  Warning: 'showLegend' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+16:55  Warning: 'colors' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/Charts/GenderPie/index.tsx
+13:9  Warning: 'legend' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+41:9  Warning: 'maxValue' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/Charts/OffsetCompare/BarComponent.tsx
+4:8  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Charts/RacePie/index.tsx
+13:9  Warning: 'legend' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+41:9  Warning: 'maxValue' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/DataTable/CompaniesTable/CompanyPopoverDealsTable.tsx
+24:3  Warning: 'companyName' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/FormElements/Inputs/Input.tsx
+18:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+18:25  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/FormElements/Inputs/MoneyInput/index.tsx
+11:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+11:25  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/FormElements/Inputs/Select.tsx
+18:20  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+18:25  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Forms/CompaniesFormFields.tsx
+61:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+61:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+72:37  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+72:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+123:37  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+123:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+134:37  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+134:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Forms/Deals/AddDealFormFields.tsx
+301:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+301:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Forms/Deals/EditDealFormFields.tsx
+300:39  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+300:44  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/HeaderMenu/components/DataMenu.tsx
+19:28  Warning: 'onOpen' is defined but never used.  @typescript-eslint/no-unused-vars
+19:36  Warning: 'setType' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/components/MapComponent/hooks/useChloroplethLayerStyle.tsx
+95:6  Warning: React Hook useEffect has missing dependencies: 'dealsPerCountry' and 'setFeaturesToRender'. Either include them or remove the dependency array. If 'setFeaturesToRender' changes too often, find the parent component that defines it and wrap that definition in useCallback.  react-hooks/exhaustive-deps
+
+./src/components/Share/index.tsx
+61:5  Warning: React Hook useMemo has an unnecessary dependency: 'countryList'. Either exclude it or remove the dependency array. Outer scope values like 'countryList' aren't valid dependencies because mutating them doesn't re-render the component.  react-hooks/exhaustive-deps
+
+./src/components/Statistics/MiniStatistics/index.tsx
+12:3  Warning: 'withTitle' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/contexts/FeatureFlags/FeatureFlagsBroker.test.ts
+39:32  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/contexts/FeatureFlags/FeatureFlagsProvider.tsx
+85:6  Warning: React Hook useMemo was passed a dependency list that is not an array literal. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps
+85:6  Warning: React Hook useMemo has a missing dependency: 'sources'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/contexts/FeatureFlags/StorageAdapter.test.ts
+6:30  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/lib/server/createDeals.ts
+24:7  Warning: 'created_at' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+25:22  Warning: '_' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+25:37  Warning: 'cca' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/lib/server/editDeals.ts
+24:7  Warning: 'created_at' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+25:22  Warning: '_' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+25:37  Warning: 'cca' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/pages/api/share.ts
+144:42  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/pages/embed/[clientId].tsx
+30:6  Warning: React Hook useEffect has a missing dependency: 'setColorMode'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
