@@ -10,7 +10,7 @@ interface Props {
     control: Control<any, any>;
     register?: RegisterOptions;
 }
-declare type LabelProps = {
+type LabelProps = {
     label?: never;
     id?: string;
 } | {

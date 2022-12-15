@@ -1,6 +1,0 @@
-.next
-node_modules
-.devcontainer
-.husky
-
-.eslintcache

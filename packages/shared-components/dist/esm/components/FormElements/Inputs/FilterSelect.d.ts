@@ -7,7 +7,7 @@ interface Props {
     noBorder?: boolean;
     flex?: number;
 }
-declare type LabelProps = {
+type LabelProps = {
     label?: never;
     id?: string;
 } | {

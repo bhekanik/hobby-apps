@@ -1,4 +1,4 @@
 
-> types@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/types
+> types@1.0.0 build /Users/bhekanik/dev/hobby-apps/packages/types
 > rm -rf dist && tsc
 

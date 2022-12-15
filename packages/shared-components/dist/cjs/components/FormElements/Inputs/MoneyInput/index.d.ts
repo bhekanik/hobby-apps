@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { Control, RegisterOptions } from "react-hook-form";
 interface OwnProps {
     defaultValue: number;

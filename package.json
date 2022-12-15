@@ -9,6 +9,7 @@
     "dev": "dotenv -e .env -- turbo run dev",
     "dev:prod": "dotenv -e .env.prod -- turbo run dev",
     "build": "turbo run build",
+    "lint-staged": "turbo run lint-staged",
     "test": "turbo run test",
     "test:ci": "turbo run test:ci",
     "lint": "turbo run lint",

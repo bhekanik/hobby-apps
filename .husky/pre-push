@@ -2,5 +2,3 @@
 . "$(dirname "$0")/_/husky.sh"
 
 pnpm test:ci
-pnpm lint
-pnpm build

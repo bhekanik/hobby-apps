@@ -1,13 +1,13 @@
 
-> shared-components@1.0.0 test:ci /Users/bhekanik/dev/dealbase-africa/packages/shared-components
+> shared-components@1.0.0 test:ci /Users/bhekanik/dev/hobby-apps/packages/shared-components
 > vitest run
 
 
- RUN  v0.12.10 /Users/bhekanik/dev/dealbase-africa/packages/shared-components
+ RUN  v0.12.10 /Users/bhekanik/dev/hobby-apps/packages/shared-components
 
- √ src/components/ColorModeToggle/ColorModeToggle.test.tsx  (1 test) 12ms
+ √ src/components/ColorModeToggle/ColorModeToggle.test.tsx  (1 test) 11ms
 
 Test Files  1 passed (1)
      Tests  1 passed (1)
-      Time  2.71s (in thread 12ms, 22550.94%)
+      Time  1.09s (in thread 11ms, 9885.01%)
 

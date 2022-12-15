@@ -1,3 +1,4 @@
+/// <reference types="react" />
 interface Props {
     icon?: string;
     noBorder?: boolean;
@@ -5,7 +6,7 @@ interface Props {
     value: [Date, Date];
     onOk?: (value: [Date, Date]) => void;
 }
-declare type LabelProps = {
+type LabelProps = {
     label?: never;
     id?: string;
 } | {

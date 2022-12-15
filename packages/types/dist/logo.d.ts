@@ -6,7 +6,7 @@ export interface Logo {
     format: string;
     original_filename?: string;
 }
-export declare type LogoRelation = {
+export type LogoRelation = {
     logo: Logo | null;
     logo_id?: number | null;
 } | {

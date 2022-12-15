@@ -1,4 +1,4 @@
 
-> fixtures@1.0.0 build /Users/bhekanik/dev/dealbase-africa/packages/fixtures
+> fixtures@1.0.0 build /Users/bhekanik/dev/hobby-apps/packages/fixtures
 > rm -rf dist && tsc
 

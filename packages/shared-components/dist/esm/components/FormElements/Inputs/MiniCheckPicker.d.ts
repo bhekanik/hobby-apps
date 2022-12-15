@@ -19,7 +19,7 @@ interface Props {
     placeholder?: string;
     isGrouped?: boolean;
 }
-declare type LabelProps = {
+type LabelProps = {
     label?: never;
     id?: string;
 } | {
