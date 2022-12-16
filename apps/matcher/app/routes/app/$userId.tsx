@@ -14,6 +14,7 @@ import { User } from "~/types/User";
 
 interface LoaderData {
   likes: LikeWithUsers[];
+  likedBy: LikeWithUsers[];
   users: User[];
   currentUser: User;
 }
@@ -28,7 +29,12 @@ export const loader: LoaderFunction = async ({ params }) => {
     ? await getLikesByToOrFrom({ from: currentUser.id })
     : [];
 
+  const likedBy = currentUser?.id
+    ? await getLikesByToOrFrom({ to: currentUser.id })
+    : [];
+
   return {
+    likedBy,
     likes,
     users,
     currentUser,
@@ -49,6 +55,7 @@ export const action: ActionFunction = async ({ request, ...rest }) => {
 
     return json(result);
   } catch (error) {
+    console.log("error:", error);
     return badRequest({
       formError:
         (error as ZodError).issues?.reduce(
@@ -60,29 +67,63 @@ export const action: ActionFunction = async ({ request, ...rest }) => {
 };
 
 export default function Index() {
-  const { users, currentUser, likes } = useLoaderData<LoaderData>();
+  const { users, currentUser, likes, likedBy } = useLoaderData<LoaderData>();
+
   const [genderFilteredUsers, setGenderFilteredUsers] = useState<
     SerializeDate<User>[]
   >([]);
 
+  const [likesMap, setLikesMap] = useState<Record<string, SerializeDate<User>>>(
+    {}
+  );
+
+  console.log("likesMap:", likesMap);
+
+  const [likedByMap, setLikedByMap] = useState<
+    Record<string, SerializeDate<User>>
+  >({});
+
+  console.log("likedByMap:", likedByMap);
+
   useEffect(() => {
-    if (users && likes) {
-      console.log("users:", users);
+    if (likes) {
+      const map = likes.reduce<Record<string, SerializeDate<User>>>(
+        (acc, like) => {
+          acc[like.to.id as string] = like.to;
+          return acc;
+        },
+        {}
+      );
+
+      setLikesMap(map);
+    }
+  }, [likes]);
+
+  useEffect(() => {
+    if (likedBy) {
+      const map = likedBy.reduce<Record<string, SerializeDate<User>>>(
+        (acc, like) => {
+          acc[like.from.id as string] = like.from;
+          return acc;
+        },
+        {}
+      );
+
+      setLikedByMap(map);
+    }
+  }, [likedBy]);
+
+  useEffect(() => {
+    if (users) {
       setGenderFilteredUsers(
         users
           .filter((user) => user.gender !== currentUser.gender)
           .filter((user) => {
-            const found = Boolean(
-              likes.find((like) => {
-                return like.to.id === user.id;
-              })
-            );
-            console.log("found:", found);
-            return !found;
+            return !Boolean(likesMap[user.id as string]);
           })
       );
     }
-  }, [users, likes]);
+  }, [likesMap, users]);
 
   return (
     <div className="p-8 flex flex-col items-center gap-4 mx-8">
@@ -99,12 +140,14 @@ export default function Index() {
       </p>
 
       <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-xl font-bold">Here are the people you've liked</h2>
+        <h2 className="text-xl font-bold">Here are the people you've liked:</h2>
 
         <ul className="flex flex-col gap-4">
           {likes?.map((like) => (
             <li key={like.id} className="flex gap-4">
-              {`${like.to.firstname} ${like.to.lastname} (${like.to.whatsapp_username})`}
+              {`${like.to.firstname} ${like.to.lastname} (${
+                like.to.whatsapp_username
+              }) ${likedByMap[like.to.id as string] ? "- MATCHED 🎉" : ""}`}
             </li>
           ))}
         </ul>
