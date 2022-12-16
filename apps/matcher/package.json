@@ -61,8 +61,8 @@
     "node": ">=14"
   },
   "lint-staged": {
-    "src/**/*.{js,ts,tsx}": "eslint --cache --fix",
-    "src/**/*.{js,ts,tsx,css,md}": "prettier --write",
-    "src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}": "vitest related --run"
+    "src/**/*.{ts,tsx}": "eslint --cache --fix",
+    "src/**/*.{ts,tsx,css,md}": "prettier --write",
+    "src/**/*.{test,spec}.{ts,tsx}": "vitest related --run"
   }
 }
