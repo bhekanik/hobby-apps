@@ -5,10 +5,10 @@
 
  RUN  v0.12.10 /Users/bhekanik/dev/hobby-apps/packages/utils
 
- √ src/createDateAsUTC.test.ts  (1 test) 2ms
  √ src/stringCompare.test.ts  (4 tests) 2ms
+ √ src/createDateAsUTC.test.ts  (1 test) 2ms
 
 Test Files  2 passed (2)
      Tests  5 passed (5)
-      Time  540ms (in thread 4ms, 13502.63%)
+      Time  544ms (in thread 4ms, 13588.69%)
 
