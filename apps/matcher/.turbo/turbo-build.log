@@ -3,12 +3,12 @@
 > npm-run-all -p build:*
 
 
-> masked@1.0.0 build:remix /Users/bhekanik/dev/hobby-apps/apps/matcher
-> cross-env NODE_ENV=production remix build
-
-
 > masked@1.0.0 build:worker /Users/bhekanik/dev/hobby-apps/apps/matcher
 > esbuild ./app/entry.worker.ts --outfile=./public/entry.worker.js --minify --bundle --format=esm --define:process.env.NODE_ENV='"production"'
+
+
+> masked@1.0.0 build:remix /Users/bhekanik/dev/hobby-apps/apps/matcher
+> cross-env NODE_ENV=production remix build
 
 
 > masked@1.0.0 build:css /Users/bhekanik/dev/hobby-apps/apps/matcher
@@ -17,10 +17,10 @@
 
   public/entry.worker.js  3.7kb
 
-⚡ Done in 39ms
+⚡ Done in 25ms
 
 Rebuilding...
 
-Done in 176ms.
+Done in 170ms.
 Building Remix app in production mode...
-Built in 240ms
+Built in 307ms
