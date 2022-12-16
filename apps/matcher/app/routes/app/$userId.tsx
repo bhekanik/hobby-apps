@@ -151,7 +151,7 @@ export default function Index() {
       <p>
         The matcher concept is simple, just select the people you might fancy
         and want to get to know a little more from the list below and click
-        submit. If they also like you, you'll both be notified. If not then
+        submit. If they also like you, you'll both see MATCHED 🎉. If not then
         nothing will happen. This will save you from shooting your shot where
         you're not wanted.
       </p>

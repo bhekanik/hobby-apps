@@ -3,6 +3,43 @@
 > eslint --cache --cache-location ./node_modules/.cache/eslint .
 
 
+/Users/bhekanik/dev/hobby-apps/apps/matcher/api/index.js
+    11:12   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+    11:39   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+    16:100  warning  Unexpected use of comma operator                                                              no-sequences
+    53:58   warning  Unexpected use of comma operator                                                              no-sequences
+   320:39   warning  Unexpected use of comma operator                                                              no-sequences
+   384:21   warning  Unexpected use of comma operator                                                              no-sequences
+   396:11   warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
+   396:46   warning  Unexpected use of comma operator                                                              no-sequences
+   404:86   warning  Unexpected use of comma operator                                                              no-sequences
+   411:17   warning  Unexpected use of comma operator                                                              no-sequences
+   438:30   warning  Unexpected use of comma operator                                                              no-sequences
+   544:41   warning  'webPush' is assigned a value but never used                                                  no-unused-vars
+   546:3    warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
+   546:24   warning  Unexpected use of comma operator                                                              no-sequences
+   552:40   warning  Unexpected use of comma operator                                                              no-sequences
+   557:6    warning  Unexpected use of comma operator                                                              no-sequences
+   588:5    warning  'likeWithUsersSchema' is assigned a value but never used                                      no-unused-vars
+   598:48   warning  Unexpected use of comma operator                                                              no-sequences
+   605:34   warning  Unexpected use of comma operator                                                              no-sequences
+   612:3    warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
+   612:52   warning  Unexpected use of comma operator                                                              no-sequences
+   633:41   warning  Unexpected use of comma operator                                                              no-sequences
+   635:44   warning  Unexpected use of comma operator                                                              no-sequences
+   638:40   warning  Unexpected use of comma operator                                                              no-sequences
+   652:48   warning  Unexpected use of comma operator                                                              no-sequences
+   655:50   warning  Unexpected use of comma operator                                                              no-sequences
+   663:54   warning  Unexpected use of comma operator                                                              no-sequences
+   670:84   warning  Redundant Boolean call                                                                        no-extra-boolean-cast
+   766:30   warning  Unexpected use of comma operator                                                              no-sequences
+   801:30   warning  Unexpected use of comma operator                                                              no-sequences
+   881:40   warning  Unexpected use of comma operator                                                              no-sequences
+   893:19   warning  Unexpected use of comma operator                                                              no-sequences
+  1010:30   warning  Unexpected use of comma operator                                                              no-sequences
+  1067:19   warning  Unexpected use of comma operator                                                              no-sequences
+  1118:30   warning  Unexpected use of comma operator                                                              no-sequences
+
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/components/FormElements/Button/index.tsx
    2:1   warning  Imports "ButtonHTMLAttributes" and "PropsWithChildren" are only used as types  @typescript-eslint/consistent-type-imports
    3:1   warning  Import "Color" is only used as types                                           @typescript-eslint/consistent-type-imports
@@ -83,6 +120,6 @@
 /Users/bhekanik/dev/hobby-apps/apps/matcher/routes/resources/subscribe.ts
   1:10  warning  'PushNotification' is defined but never used  @typescript-eslint/no-unused-vars
 
-✖ 42 problems (0 errors, 42 warnings)
-  0 errors and 33 warnings potentially fixable with the `--fix` option.
+✖ 77 problems (0 errors, 77 warnings)
+  0 errors and 34 warnings potentially fixable with the `--fix` option.
 
