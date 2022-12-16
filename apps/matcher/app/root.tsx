@@ -1,4 +1,9 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import {
+  json,
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,12 +12,14 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLoaderData,
   useLocation,
   useMatches,
 } from "@remix-run/react";
 import React from "react";
 import { AppLayout } from "./layouts/AppLayout";
 import { config } from "./lib/config";
+import { getCurrentUser } from "./models/users.server.";
 import styles from "./styles/app.css";
 let isMount = true;
 
@@ -42,9 +49,18 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
+export const loader: LoaderFunction = async ({ request }) => {
+  const user = await getCurrentUser(request);
+
+  return json({
+    user,
+  });
+};
+
 export default function App() {
   let location = useLocation();
   let matches = useMatches();
+  const { user } = useLoaderData();
 
   React.useEffect(() => {
     let mounted = isMount;
@@ -86,7 +102,7 @@ export default function App() {
         <Meta /> <Links />
       </head>
       <body>
-        <AppLayout>
+        <AppLayout user={user}>
           <Outlet />
         </AppLayout>
         <ScrollRestoration /> <Scripts /> <LiveReload />

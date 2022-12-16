@@ -3,24 +3,24 @@
 > npm-run-all -p build:*
 
 
-> masked@1.0.0 build:css /Users/bhekanik/dev/hobby-apps/apps/matcher
-> tailwindcss -m -i ./styles/app.css -o app/styles/app.css
+> masked@1.0.0 build:remix /Users/bhekanik/dev/hobby-apps/apps/matcher
+> cross-env NODE_ENV=production remix build
 
 
 > masked@1.0.0 build:worker /Users/bhekanik/dev/hobby-apps/apps/matcher
 > esbuild ./app/entry.worker.ts --outfile=./public/entry.worker.js --minify --bundle --format=esm --define:process.env.NODE_ENV='"production"'
 
 
-> masked@1.0.0 build:remix /Users/bhekanik/dev/hobby-apps/apps/matcher
-> cross-env NODE_ENV=production remix build
+> masked@1.0.0 build:css /Users/bhekanik/dev/hobby-apps/apps/matcher
+> tailwindcss -m -i ./styles/app.css -o app/styles/app.css
 
 
-  public/entry.worker.js  3.9kb
+  public/entry.worker.js  3.7kb
 
-⚡ Done in 27ms
+⚡ Done in 39ms
 
 Rebuilding...
 
-Done in 193ms.
+Done in 176ms.
 Building Remix app in production mode...
-Built in 241ms
+Built in 240ms

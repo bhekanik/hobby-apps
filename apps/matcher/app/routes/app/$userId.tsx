@@ -1,14 +1,14 @@
 import { ActionFunction, json, LoaderFunction } from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, useCatch, useLoaderData } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import invariant from "tiny-invariant";
 import { ZodError } from "zod";
 import { Button } from "~/components/FormElements/Button";
-import Header from "~/components/Header";
+import { AppLayout } from "~/layouts/AppLayout";
 import { badRequest } from "~/lib/badRequest";
 import { config } from "~/lib/config";
 import { createLikes, getLikesByToOrFrom } from "~/models/likes.server.";
-import { getAllUsers, getUser } from "~/models/users.server.";
+import { getAllUsers, getUser, requireUserId } from "~/models/users.server.";
 import { LikeWithUsers } from "~/types/Like";
 import { SerializeDate } from "~/types/SerializeDate";
 import { User } from "~/types/User";
@@ -20,8 +20,9 @@ interface LoaderData {
   currentUser: User;
 }
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = async ({ params, request }) => {
   invariant(params.userId);
+  await requireUserId(request);
 
   const users = await getAllUsers();
   const currentUser = await getUser(params.userId);
@@ -44,12 +45,14 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export const action: ActionFunction = async ({ request, ...rest }) => {
   try {
+    const userId = await requireUserId(request);
     const formData = await request.formData();
     const { from, ...likesObject } = Object.fromEntries(formData);
     const likeIds = Object.values(likesObject);
+
     const likes = likeIds.map((like) => ({
       to: like as string,
-      from: from as string,
+      from: userId,
     }));
 
     const result = await createLikes(likes);
@@ -127,23 +130,20 @@ export default function Index() {
   }, [likesMap, users]);
 
   return (
-    <>
-      <div className="flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-purple-800 z-20 border-b-[1px] border-purple-700">
-        <Header user={currentUser} />
-      </div>
-      <div className="p-8 flex flex-col items-center gap-4 mx-8">
-        <h1>
-          Welcome to {config.appName}, {currentUser.firstname}
-        </h1>
+    <div className="p-8 flex flex-col items-center gap-4 mx-8">
+      <h1>
+        Welcome to {config.appName}, {currentUser.firstname}
+      </h1>
 
-        <p>
-          The matcher concept is simple, just select the people you might fancy
-          and want to get to know a little more from the list below and click
-          submit. If they also like you, you'll both be notified. If not then
-          nothing will happen. This will save you from shooting your shot where
-          you're not wanted.
-        </p>
+      <p>
+        The matcher concept is simple, just select the people you might fancy
+        and want to get to know a little more from the list below and click
+        submit. If they also like you, you'll both be notified. If not then
+        nothing will happen. This will save you from shooting your shot where
+        you're not wanted.
+      </p>
 
+      {likes.length ? (
         <div className="flex flex-col gap-4 w-full">
           <h2 className="text-xl font-bold">
             Here are the people you've liked:
@@ -152,27 +152,33 @@ export default function Index() {
           <ul className="flex flex-col gap-4">
             {likes?.map((like) => (
               <li key={like.id} className="flex gap-4">
-                {`${like.to.firstname} ${like.to.lastname} (${
+                {`- ${like.to.firstname} ${like.to.lastname} (${
                   like.to.whatsapp_username
-                }) ${likedByMap[like.to.id as string] ? "- MATCHED 🎉" : ""}`}
+                }) ${
+                  likedByMap[like.to.id as string]
+                    ? "- MATCHED 🎉. Why don't you slide into their DMS and say hi."
+                    : ""
+                }`}
               </li>
             ))}
           </ul>
         </div>
+      ) : null}
 
-        <div className="flex flex-col gap-4 w-full">
-          <h2 className="text-xl font-bold">
-            Here are the people you have not liked
-          </h2>
-          {genderFilteredUsers.length === 0 && (
-            <div>
-              Looks like there are no{" "}
-              {currentUser.gender === "male" ? "female" : "male"}s who have
-              registered yet. Share the link to get people to register.
-            </div>
-          )}
+      <div className="flex flex-col gap-4 w-full">
+        {genderFilteredUsers.length === 0 && (
+          <div>
+            Looks like there are no{" "}
+            {currentUser.gender === "male" ? "female" : "male"}s who have
+            registered yet. Share the link to get people to register.
+          </div>
+        )}
 
-          {genderFilteredUsers.length && (
+        {genderFilteredUsers.length ? (
+          <>
+            <h2 className="text-xl font-bold">
+              Here are the people you have not liked
+            </h2>
             <Form method="post" className="flex flex-col gap-4">
               <ul className="flex flex-col gap-4">
                 {genderFilteredUsers.map((user) => (
@@ -190,14 +196,35 @@ export default function Index() {
                   </li>
                 ))}
               </ul>
-              <input type="hidden" name="from" value={currentUser.id} />
               <Button type="submit" className="w-full">
                 Submit
               </Button>
             </Form>
-          )}
-        </div>
+          </>
+        ) : null}
       </div>
-    </>
+    </div>
   );
+}
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  console.error(error);
+
+  return (
+    <AppLayout>
+      <div className="flex flex-col gap-4 w-full max-w-4xl mx-auto z-10">
+        <div>An unexpected error occurred: {error.message}</div>;
+      </div>
+    </AppLayout>
+  );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  if (caught.status === 404) {
+    return <div>Not found</div>;
+  }
+
+  throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }

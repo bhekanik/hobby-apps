@@ -2,7 +2,9 @@ import { z } from "zod";
 
 export const userSchema = z.object({
   id: z.string().optional(),
-  username: z.string(),
+  username: z
+    .string()
+    .min(5, { message: "Username must be 5 or more characters" }),
   password: z
     .string()
     .min(8, { message: "Password must be 8 or more characters long" }),

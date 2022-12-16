@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "@remix-run/react";
+import { Form, Link, useNavigate } from "@remix-run/react";
 import { config } from "~/lib/config";
 import { SerializeDate } from "~/types/SerializeDate";
 import { User } from "~/types/User";
@@ -23,13 +23,20 @@ export default function Header({ user }: Props) {
             {config.appName}
           </h1>
         </Link>
-        <Button
-          color="secondary"
-          onClick={handleLogout}
-          className="flex items-center justify-center w-[fit-content] px-4 rounded-full absolute left-0 text-lg"
+        <Form
+          action="/logout"
+          method="post"
+          className="flex items-center justify-center w-[fit-content] rounded-full absolute left-0"
         >
-          Logout
-        </Button>
+          <Button
+            color="secondary"
+            type="submit"
+            onClick={handleLogout}
+            className="flex items-center justify-center w-[fit-content] px-4 rounded-full text-lg"
+          >
+            Logout
+          </Button>
+        </Form>
       </div>
     </header>
   ) : (
