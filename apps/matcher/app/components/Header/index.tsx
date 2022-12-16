@@ -32,7 +32,7 @@ export default function Header({ user }: Props) {
             color="secondary"
             type="submit"
             onClick={handleLogout}
-            className="flex items-center justify-center w-[fit-content] px-4 rounded-full text-lg"
+            className="flex items-center justify-center w-[fit-content] rounded-full text-sm py-0 px-4"
           >
             Logout
           </Button>

@@ -157,7 +157,7 @@ function Header({ user }) {
             color: "secondary",
             type: "submit",
             onClick: handleLogout,
-            className: "flex items-center justify-center w-[fit-content] px-4 rounded-full text-lg",
+            className: "flex items-center justify-center w-[fit-content] rounded-full text-sm py-0 px-4",
             children: "Logout"
           })
         })
@@ -347,7 +347,7 @@ var register = async (newUser) => {
 };
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-WG47EZBM.css";
+var app_default = "/build/_assets/app-JEYPQYTZ.css";
 
 // app/root.tsx
 var import_jsx_runtime5 = require("react/jsx-runtime"), isMount = !0, links = () => [
@@ -681,7 +681,7 @@ function Index() {
         ]
       }),
       /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", {
-        children: "The matcher concept is simple, just select the people you might fancy and want to get to know a little more from the list below and click submit. If they also like you, you'll both be notified. If not then nothing will happen. This will save you from shooting your shot where you're not wanted."
+        children: "The matcher concept is simple, just select the people you might fancy and want to get to know a little more from the list below and click submit. If they also like you, you'll both see MATCHED \u{1F389}. If not then nothing will happen. This will save you from shooting your shot where you're not wanted."
       }),
       likes.length ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", {
         className: "flex flex-col gap-4 w-full",
@@ -1140,7 +1140,7 @@ function CatchBoundary5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "e48518dc", entry: { module: "/build/entry.client-FZ6NF3LX.js", imports: ["/build/_shared/chunk-3Q74EVIB.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-V3NZFSSE.js", imports: ["/build/_shared/chunk-B5FBTH6A.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-DKZYCLNI.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CTQERU5V.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-QT3Q7U7M.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-IZG7GJDG.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-2WEMLEIN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-4YHTISHU.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E48518DC.js" };
+var assets_manifest_default = { version: "a8f3e005", entry: { module: "/build/entry.client-FZ6NF3LX.js", imports: ["/build/_shared/chunk-3Q74EVIB.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-JT2646DP.js", imports: ["/build/_shared/chunk-ATKU4RYB.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-4AUPGJ7Q.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-BDWAO7TE.js", imports: ["/build/_shared/chunk-TUTFXEDT.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-CG7XV4QX.js", imports: ["/build/_shared/chunk-TUTFXEDT.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-GCM6CPAL.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-2WEMLEIN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-4YHTISHU.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-A8F3E005.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
