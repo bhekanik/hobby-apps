@@ -11,7 +11,6 @@ import {
   useMatches,
 } from "@remix-run/react";
 import React from "react";
-import Header from "./components/Header";
 import { AppLayout } from "./layouts/AppLayout";
 import { config } from "./lib/config";
 import styles from "./styles/app.css";
@@ -28,7 +27,7 @@ export const links: LinksFunction = () => {
       crossorigin: "true",
     },
     {
-      href: "https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap",
       rel: "stylesheet",
     },
   ];
@@ -101,9 +100,6 @@ export function ErrorBoundary({ error }: { error: Error }) {
 
   return (
     <AppLayout>
-      <div className="flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700">
-        <Header home />
-      </div>
       <div className="flex flex-col gap-4 w-full max-w-4xl mx-auto z-10">
         <div>An unexpected error occurred: {error.message}</div>;
       </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import invariant from "tiny-invariant";
 import { ZodError } from "zod";
 import { Button } from "~/components/FormElements/Button";
+import Header from "~/components/Header";
 import { badRequest } from "~/lib/badRequest";
 import { config } from "~/lib/config";
 import { createLikes, getLikesByToOrFrom } from "~/models/likes.server.";
@@ -126,70 +127,77 @@ export default function Index() {
   }, [likesMap, users]);
 
   return (
-    <div className="p-8 flex flex-col items-center gap-4 mx-8">
-      <h1>
-        Welcome to {config.appName}, {currentUser.firstname}
-      </h1>
-
-      <p>
-        The matcher concept is simple, just select the people you might fancy
-        and want to get to know a little more from the list below and click
-        submit. If they also like you, you'll both be notified. If not then
-        nothing will happen. This will save you from shooting your shot where
-        you're not wanted.
-      </p>
-
-      <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-xl font-bold">Here are the people you've liked:</h2>
-
-        <ul className="flex flex-col gap-4">
-          {likes?.map((like) => (
-            <li key={like.id} className="flex gap-4">
-              {`${like.to.firstname} ${like.to.lastname} (${
-                like.to.whatsapp_username
-              }) ${likedByMap[like.to.id as string] ? "- MATCHED 🎉" : ""}`}
-            </li>
-          ))}
-        </ul>
+    <>
+      <div className="flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-purple-800 z-20 border-b-[1px] border-purple-700">
+        <Header user={currentUser} />
       </div>
+      <div className="p-8 flex flex-col items-center gap-4 mx-8">
+        <h1>
+          Welcome to {config.appName}, {currentUser.firstname}
+        </h1>
 
-      <div className="flex flex-col gap-4 w-full">
-        <h2 className="text-xl font-bold">
-          Here are the people you have not liked
-        </h2>
-        {genderFilteredUsers.length === 0 && (
-          <div>
-            Looks like there are no{" "}
-            {currentUser.gender === "male" ? "female" : "male"}s who have
-            registered yet. Share the link to get people to register.
-          </div>
-        )}
+        <p>
+          The matcher concept is simple, just select the people you might fancy
+          and want to get to know a little more from the list below and click
+          submit. If they also like you, you'll both be notified. If not then
+          nothing will happen. This will save you from shooting your shot where
+          you're not wanted.
+        </p>
 
-        {genderFilteredUsers.length && (
-          <Form method="post" className="flex flex-col gap-4">
-            <ul className="flex flex-col gap-4">
-              {genderFilteredUsers.map((user) => (
-                <li key={user.id} className="flex gap-4">
-                  <input
-                    type="checkbox"
-                    id={user.username}
-                    name={user.username}
-                    className="accent-gray-800"
-                    value={user.id}
-                  />
-                  <label
-                    htmlFor={user.username}
-                  >{`${user.firstname} ${user.lastname} (${user.whatsapp_username})`}</label>
-                </li>
-              ))}
-            </ul>
-            <input type="hidden" name="from" value={currentUser.id} />
-            <Button type="submit" className="w-full">
-              Submit
-            </Button>
-          </Form>
-        )}
+        <div className="flex flex-col gap-4 w-full">
+          <h2 className="text-xl font-bold">
+            Here are the people you've liked:
+          </h2>
+
+          <ul className="flex flex-col gap-4">
+            {likes?.map((like) => (
+              <li key={like.id} className="flex gap-4">
+                {`${like.to.firstname} ${like.to.lastname} (${
+                  like.to.whatsapp_username
+                }) ${likedByMap[like.to.id as string] ? "- MATCHED 🎉" : ""}`}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4 w-full">
+          <h2 className="text-xl font-bold">
+            Here are the people you have not liked
+          </h2>
+          {genderFilteredUsers.length === 0 && (
+            <div>
+              Looks like there are no{" "}
+              {currentUser.gender === "male" ? "female" : "male"}s who have
+              registered yet. Share the link to get people to register.
+            </div>
+          )}
+
+          {genderFilteredUsers.length && (
+            <Form method="post" className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-4">
+                {genderFilteredUsers.map((user) => (
+                  <li key={user.id} className="flex gap-4">
+                    <input
+                      type="checkbox"
+                      id={user.username}
+                      name={user.username}
+                      className="accent-purple-800"
+                      value={user.id}
+                    />
+                    <label
+                      htmlFor={user.username}
+                    >{`${user.firstname} ${user.lastname} (${user.whatsapp_username})`}</label>
+                  </li>
+                ))}
+              </ul>
+              <input type="hidden" name="from" value={currentUser.id} />
+              <Button type="submit" className="w-full">
+                Submit
+              </Button>
+            </Form>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { InputProps } from "@chakra-ui/react";
 interface Props {
     helperText?: string;

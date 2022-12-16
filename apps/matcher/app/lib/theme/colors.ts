@@ -1,12 +1,12 @@
 export const colors = {
   primary: "bg-blue",
-  secondary: "bg-gray",
+  secondary: "bg-purple",
   accent: "bg-green",
 };
 
 export const colorsOnly = {
   primary: "blue",
-  secondary: "gray",
+  secondary: "purple",
   accent: "green",
 };
 

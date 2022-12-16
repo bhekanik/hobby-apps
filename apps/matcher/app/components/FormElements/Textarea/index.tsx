@@ -17,7 +17,7 @@ export const Textarea = forwardRef<
     ref
   ) => {
     const inputClasses = classnames(
-      "p-4 w-full bg-gray-700 rounded-3xl overflow-auto",
+      "p-4 w-full bg-purple-700 rounded-3xl overflow-auto",
       className,
       !className?.includes("px-") && "px-6"
     );

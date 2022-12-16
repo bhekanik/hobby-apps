@@ -6,7 +6,7 @@ export const Input = forwardRef<
   PropsWithChildren<InputHTMLAttributes<HTMLInputElement>>
 >(({ children, className, color = "primary", ...props }, ref) => {
   const inputClasses = classnames(
-    "p-2 px-6 w-full bg-gray-700 rounded-full",
+    "p-2 px-6 w-full bg-purple-700 rounded-full",
     className
   );
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ZodError } from "zod";
 import { Button } from "~/components/FormElements/Button";
 import { Input } from "~/components/FormElements/Input";
+import Header from "~/components/Header";
 import { badRequest } from "~/lib/badRequest";
 import { config } from "~/lib/config";
 import { colorsOnly } from "~/lib/theme/colors";
@@ -81,95 +82,98 @@ export default function Index() {
   }, [actionData]);
 
   return (
-    <div className="p-8 flex flex-col items-center gap-4 mx-8">
-      <h1>Welcome to {config.appName}</h1>
+    <>
+      <Header />
+      <div className="p-8 flex flex-col items-center gap-4 mx-8">
+        <h1>Welcome to {config.appName}</h1>
 
-      <h2>Register to start</h2>
+        <h2>Register to start</h2>
 
-      <Form
-        className="flex flex-col gap-4 items-center w-full md:px-12"
-        method="post"
-      >
-        <Input
-          required
-          placeholder="Username"
-          name="username"
-          className="text-center"
-        />
-        <fieldset className="flex flex-col md:flex-row gap-4 w-full">
-          <Input
-            required
-            placeholder="First Name"
-            name="firstname"
-            className="text-center"
-          />
-          <Input
-            required
-            placeholder="Last Name"
-            name="lastname"
-            className="text-center"
-          />
-        </fieldset>
-        <fieldset className="flex md:flex-row flex-col gap-4 w-full">
-          <Input
-            required
-            placeholder="Whatsapp Username"
-            name="whatsapp_username"
-            className="text-center w-full"
-          />
-
-          <div className="flex flex-row gap-2 justify-center items-center">
-            <label className="flex flex-row gap-2 justify-center items-center">
-              <input
-                type="radio"
-                name="gender"
-                value="male"
-                defaultChecked
-                className="accent-gray-800"
-              />
-              Male
-            </label>
-            <label className="flex flex-row gap-2 justify-center items-center">
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                className="accent-gray-800"
-              />
-              Female
-            </label>
-          </div>
-        </fieldset>
-        <Input
-          required
-          type="password"
-          placeholder="Password"
-          name="password"
-          className="text-center"
-        />
-        <Input
-          required
-          type="password"
-          placeholder="Confirm Password"
-          name="confirm_password"
-          className="text-center"
-        />
-        {error && (
-          <p className="text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full">
-            {error}
-          </p>
-        )}
-        <Button type="submit" className="px-4 w-full">
-          Register
-        </Button>
-        <p>Already have an account?</p>
-        <Link
-          to="/login"
-          className={`text-${colorsOnly.accent}-500 px-4 w-full text-center underline`}
+        <Form
+          className="flex flex-col gap-4 items-center w-full md:px-12"
+          method="post"
         >
-          Login
-        </Link>
-      </Form>
-    </div>
+          <Input
+            required
+            placeholder="Username"
+            name="username"
+            className="text-center"
+          />
+          <fieldset className="flex flex-col md:flex-row gap-4 w-full">
+            <Input
+              required
+              placeholder="First Name"
+              name="firstname"
+              className="text-center"
+            />
+            <Input
+              required
+              placeholder="Last Name"
+              name="lastname"
+              className="text-center"
+            />
+          </fieldset>
+          <fieldset className="flex md:flex-row flex-col gap-4 w-full">
+            <Input
+              required
+              placeholder="Whatsapp Username"
+              name="whatsapp_username"
+              className="text-center w-full"
+            />
+
+            <div className="flex flex-row gap-2 justify-center items-center">
+              <label className="flex flex-row gap-2 justify-center items-center">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  defaultChecked
+                  className="accent-purple-800"
+                />
+                Male
+              </label>
+              <label className="flex flex-row gap-2 justify-center items-center">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  className="accent-purple-800"
+                />
+                Female
+              </label>
+            </div>
+          </fieldset>
+          <Input
+            required
+            type="password"
+            placeholder="Password"
+            name="password"
+            className="text-center"
+          />
+          <Input
+            required
+            type="password"
+            placeholder="Confirm Password"
+            name="confirm_password"
+            className="text-center"
+          />
+          {error && (
+            <p className="text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full">
+              {error}
+            </p>
+          )}
+          <Button type="submit" className="px-4 w-full">
+            Register
+          </Button>
+          <p>Already have an account?</p>
+          <Link
+            to="/login"
+            className={`text-${colorsOnly.accent}-500 px-4 w-full text-center underline`}
+          >
+            Login
+          </Link>
+        </Form>
+      </div>
+    </>
   );
 }

@@ -1,51 +1,39 @@
-import { Link } from "@remix-run/react";
-import { AiOutlineHome } from "react-icons/ai";
+import { Link, useNavigate } from "@remix-run/react";
 import { config } from "~/lib/config";
-import { Room } from "~/types/Room";
 import { SerializeDate } from "~/types/SerializeDate";
-import { LinkButton } from "../FormElements/LinkButton";
+import { User } from "~/types/User";
+import { Button } from "../FormElements/Button";
 
 interface Props {
-  room?: SerializeDate<Room>;
-  share?: boolean;
-  home?: boolean;
+  user?: SerializeDate<User>;
 }
 
-export default function Header({ room, share = true, home = false }: Props) {
-  return room ? (
-    <header className="border-b-[1px] border-gray-700 p-8 pb-2">
-      <>
-        <div className="w-full relative flex items-center justify-around">
-          {home && (
-            <LinkButton
-              color="secondary"
-              to={`/`}
-              className="flex items-center justify-center w-[fit-content] rounded-full absolute left-0 text-lg"
-            >
-              <AiOutlineHome />
-            </LinkButton>
-          )}
-          <h1 className="w-full font-black m-0 p-0 text-5xl text-center font-heading">
-            {room.name || config.appName}
-          </h1>
-          {/* {share && room && (
-            <RoomCodeShare
-              className="absolute right-0"
-              room={room}
-              withInput={false}
-            />
-          )} */}
-        </div>
+export default function Header({ user }: Props) {
+  const navigate = useNavigate();
 
-        {share && room && (
-          <p className="w-full text-center text-gray-600">
-            Room Code: {room.id}
-          </p>
-        )}
-      </>
+  const handleLogout = () => {
+    navigate("/login");
+  };
+
+  return user ? (
+    <header className="border-b-[1px] border-purple-700 p-8 pb-2">
+      <div className="w-full relative flex items-center justify-around">
+        <Link to="/" className="cursor-pointer">
+          <h1 className="w-full mb-4 font-black text-5xl text-center font-heading">
+            {config.appName}
+          </h1>
+        </Link>
+        <Button
+          color="secondary"
+          onClick={handleLogout}
+          className="flex items-center justify-center w-[fit-content] px-4 rounded-full absolute left-0 text-lg"
+        >
+          Logout
+        </Button>
+      </div>
     </header>
   ) : (
-    <header className="border-b-[1px] border-gray-700 p-8 pb-2">
+    <header className="border-b-[1px] border-purple-700 p-8 pb-2">
       <Link to="/" className="cursor-pointer">
         <h1 className="w-full mb-4 font-black text-5xl text-center font-heading">
           {config.appName}

@@ -4,34 +4,33 @@
 
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/api/index.js
-    10:12   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
-    10:39   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
-    15:100  warning  Unexpected use of comma operator                                                              no-sequences
-    49:58   warning  Unexpected use of comma operator                                                              no-sequences
-   263:21   warning  Unexpected use of comma operator                                                              no-sequences
-   275:11   warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
-   275:46   warning  Unexpected use of comma operator                                                              no-sequences
-   283:86   warning  Unexpected use of comma operator                                                              no-sequences
-   290:17   warning  Unexpected use of comma operator                                                              no-sequences
-   356:30   warning  Unexpected use of comma operator                                                              no-sequences
-   494:40   warning  'webPush' is assigned a value but never used                                                  no-unused-vars
-   496:3    warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
-   496:23   warning  Unexpected use of comma operator                                                              no-sequences
-   502:40   warning  Unexpected use of comma operator                                                              no-sequences
-   507:6    warning  Unexpected use of comma operator                                                              no-sequences
-   573:5    warning  'likeWithUsersSchema' is assigned a value but never used                                      no-unused-vars
-   628:48   warning  Unexpected use of comma operator                                                              no-sequences
-   635:34   warning  Unexpected use of comma operator                                                              no-sequences
-   649:32   warning  Unexpected use of comma operator                                                              no-sequences
-   671:40   warning  Unexpected use of comma operator                                                              no-sequences
-   685:48   warning  Unexpected use of comma operator                                                              no-sequences
-   688:50   warning  Unexpected use of comma operator                                                              no-sequences
-   696:54   warning  Unexpected use of comma operator                                                              no-sequences
-   703:84   warning  Redundant Boolean call                                                                        no-extra-boolean-cast
-   913:39   warning  Unexpected use of comma operator                                                              no-sequences
-   917:40   warning  Unexpected use of comma operator                                                              no-sequences
-   927:38   warning  Unexpected use of comma operator                                                              no-sequences
-  1293:3    error    'assets' is not defined                                                                       no-undef
+   11:12   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+   11:39   warning  Unexpected mix of '&&' and '||'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+   16:100  warning  Unexpected use of comma operator                                                              no-sequences
+   53:58   warning  Unexpected use of comma operator                                                              no-sequences
+  136:21   warning  Unexpected use of comma operator                                                              no-sequences
+  148:11   warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
+  148:46   warning  Unexpected use of comma operator                                                              no-sequences
+  156:86   warning  Unexpected use of comma operator                                                              no-sequences
+  163:17   warning  Unexpected use of comma operator                                                              no-sequences
+  189:30   warning  Unexpected use of comma operator                                                              no-sequences
+  295:40   warning  'webPush' is assigned a value but never used                                                  no-unused-vars
+  297:3    warning  Expected an assignment or function call and instead saw an expression                         no-unused-expressions
+  297:23   warning  Unexpected use of comma operator                                                              no-sequences
+  303:40   warning  Unexpected use of comma operator                                                              no-sequences
+  308:6    warning  Unexpected use of comma operator                                                              no-sequences
+  424:5    warning  'likeWithUsersSchema' is assigned a value but never used                                      no-unused-vars
+  479:48   warning  Unexpected use of comma operator                                                              no-sequences
+  486:34   warning  Unexpected use of comma operator                                                              no-sequences
+  500:32   warning  Unexpected use of comma operator                                                              no-sequences
+  522:40   warning  Unexpected use of comma operator                                                              no-sequences
+  536:48   warning  Unexpected use of comma operator                                                              no-sequences
+  539:50   warning  Unexpected use of comma operator                                                              no-sequences
+  547:54   warning  Unexpected use of comma operator                                                              no-sequences
+  554:84   warning  Redundant Boolean call                                                                        no-extra-boolean-cast
+  702:39   warning  Unexpected use of comma operator                                                              no-sequences
+  706:40   warning  Unexpected use of comma operator                                                              no-sequences
+  716:38   warning  Unexpected use of comma operator                                                              no-sequences
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/components/FormElements/Button/index.tsx
    2:1   warning  Imports "ButtonHTMLAttributes" and "PropsWithChildren" are only used as types  @typescript-eslint/consistent-type-imports
@@ -53,8 +52,8 @@
   9:25  warning  Component definition is missing display name                                     react/display-name
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/components/Header/index.tsx
+  3:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
   4:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
-  5:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/entry.client.tsx
   53:52  warning  Unnecessary escape character: \-  no-useless-escape
@@ -85,21 +84,21 @@
   1:1  warning  Import "User" is only used as types  @typescript-eslint/consistent-type-imports
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/root.tsx
-  82:6  warning  React Hook React.useEffect has a missing dependency: 'matches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  81:6  warning  React Hook React.useEffect has a missing dependency: 'matches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/routes/app/$userId.tsx
     1:1   warning  Imports "ActionFunction" and "LoaderFunction" are only used as types                                                   @typescript-eslint/consistent-type-imports
     5:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-   11:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
    12:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
    13:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-  122:21  warning  Redundant Boolean call                                                                                                 no-extra-boolean-cast
-  126:6   warning  React Hook useEffect has a missing dependency: 'currentUser.gender'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   14:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
+  123:21  warning  Redundant Boolean call                                                                                                 no-extra-boolean-cast
+  127:6   warning  React Hook useEffect has a missing dependency: 'currentUser.gender'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/routes/index.tsx
    1:1  warning  Import "ActionFunction" is only used as types                             @typescript-eslint/consistent-type-imports
    4:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
-  11:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
+  12:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/routes/login.tsx
   1:1  warning  Import "ActionFunction" is only used as types                             @typescript-eslint/consistent-type-imports
@@ -111,7 +110,6 @@
 /Users/bhekanik/dev/hobby-apps/apps/matcher/routes/resources/subscribe.ts
   1:10  warning  'PushNotification' is defined but never used  @typescript-eslint/no-unused-vars
 
-✖ 68 problems (1 error, 67 warnings)
+✖ 67 problems (0 errors, 67 warnings)
   0 errors and 32 warnings potentially fixable with the `--fix` option.
 
- ELIFECYCLE  Command failed with exit code 1.

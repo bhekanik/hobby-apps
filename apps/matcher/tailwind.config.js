@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Waiting for the Sunrise", "cursive"],
+        heading: ["Rubik Vinyl", "cursive"],
       },
     },
   },

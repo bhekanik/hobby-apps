@@ -12,7 +12,7 @@ export const Button = forwardRef<
   PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement> & Props>
 >(({ children, className, textColor, color = "primary", ...props }, ref) => {
   const btnClasses = classnames(
-    `p-2 flex text-bold border-[1px] border-gray-400 justify-center rounded-full`,
+    `p-2 flex text-bold border-[1px] border-purple-400 justify-center rounded-full`,
     `${colors[color]}-800`,
     `hover:${colors[color]}-500`,
     `hover:text-green-500`,
