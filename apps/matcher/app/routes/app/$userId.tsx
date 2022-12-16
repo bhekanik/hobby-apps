@@ -7,7 +7,11 @@ import { Button } from "~/components/FormElements/Button";
 import { AppLayout } from "~/layouts/AppLayout";
 import { badRequest } from "~/lib/badRequest";
 import { config } from "~/lib/config";
-import { createLikes, getLikesByToOrFrom } from "~/models/likes.server.";
+import {
+  createLikes,
+  deleteLikes,
+  getLikesByToOrFrom,
+} from "~/models/likes.server.";
 import { getAllUsers, getUser, requireUserId } from "~/models/users.server.";
 import { LikeWithUsers } from "~/types/Like";
 import { SerializeDate } from "~/types/SerializeDate";
@@ -47,17 +51,26 @@ export const action: ActionFunction = async ({ request, ...rest }) => {
   try {
     const userId = await requireUserId(request);
     const formData = await request.formData();
-    const { from, ...likesObject } = Object.fromEntries(formData);
-    const likeIds = Object.values(likesObject);
+    const { like, dislike } = Object.fromEntries(formData);
 
-    const likes = likeIds.map((like) => ({
-      to: like as string,
-      from: userId,
-    }));
+    if (like) {
+      const likes = [
+        {
+          to: like as string,
+          from: userId,
+        },
+      ];
+      const result = await createLikes(likes);
+      return json(result);
+    }
 
-    const result = await createLikes(likes);
+    console.log("dislike:", dislike);
+    if (dislike) {
+      const result = await deleteLikes(dislike as string);
+      console.log("result:", result);
 
-    return json(result);
+      return json(result);
+    }
   } catch (error) {
     console.log("error:", error);
     return badRequest({
@@ -152,13 +165,26 @@ export default function Index() {
           <ul className="flex flex-col gap-4">
             {likes?.map((like) => (
               <li key={like.id} className="flex gap-4">
-                {`- ${like.to.firstname} ${like.to.lastname} (${
-                  like.to.whatsapp_username
-                }) ${
-                  likedByMap[like.to.id as string]
-                    ? "- MATCHED 🎉. Why don't you slide into their DMS and say hi."
-                    : ""
-                }`}
+                <Form method="post" className="flex gap-4 items-center">
+                  <Button
+                    type="submit"
+                    id={like.id}
+                    name="dislike"
+                    className="accent-purple-800 px-4 py-0"
+                    value={like.id}
+                  >
+                    Dislike
+                  </Button>
+                  <p>
+                    {`${like.to.firstname} ${like.to.lastname} (${
+                      like.to.whatsapp_username
+                    }) ${
+                      likedByMap[like.to.id as string]
+                        ? "- MATCHED 🎉. Why don't you slide into their DMS and say hi."
+                        : ""
+                    }`}
+                  </p>
+                </Form>
               </li>
             ))}
           </ul>
@@ -179,27 +205,24 @@ export default function Index() {
             <h2 className="text-xl font-bold">
               Here are the people you have not liked
             </h2>
-            <Form method="post" className="flex flex-col gap-4">
-              <ul className="flex flex-col gap-4">
-                {genderFilteredUsers.map((user) => (
-                  <li key={user.id} className="flex gap-4">
-                    <input
-                      type="checkbox"
+            <ul className="flex flex-col gap-4">
+              {genderFilteredUsers.map((user) => (
+                <li key={user.id} className="flex gap-4">
+                  <Form method="post" className="flex gap-4 items-center">
+                    <Button
+                      type="submit"
                       id={user.username}
-                      name={user.username}
-                      className="accent-purple-800"
+                      name="like"
+                      className="accent-purple-800 px-4 py-0"
                       value={user.id}
-                    />
-                    <label
-                      htmlFor={user.username}
-                    >{`${user.firstname} ${user.lastname} (${user.whatsapp_username})`}</label>
-                  </li>
-                ))}
-              </ul>
-              <Button type="submit" className="w-full">
-                Submit
-              </Button>
-            </Form>
+                    >
+                      Like
+                    </Button>
+                    <p>{`${user.firstname} ${user.lastname} (${user.whatsapp_username})`}</p>
+                  </Form>
+                </li>
+              ))}
+            </ul>
           </>
         ) : null}
       </div>

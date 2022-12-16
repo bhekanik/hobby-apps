@@ -44,3 +44,7 @@ export const createLikes = async (
 
   return await xata.db.likes.create(likes);
 };
+
+export const deleteLikes = async (likeToDelete: string) => {
+  return await xata.db.likes.delete(likeToDelete);
+};

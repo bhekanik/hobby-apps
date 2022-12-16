@@ -347,7 +347,7 @@ var register = async (newUser) => {
 };
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-EHMFZVNM.css";
+var app_default = "/build/_assets/app-WG47EZBM.css";
 
 // app/root.tsx
 var import_jsx_runtime5 = require("react/jsx-runtime"), isMount = !0, links = () => [
@@ -605,7 +605,7 @@ var getLikesByToOrFrom = async (options) => {
     return likeSchema.parse(like), like;
   });
   return await xata2.db.likes.create(likes);
-};
+}, deleteLikes = async (likeToDelete) => await xata2.db.likes.delete(likeToDelete);
 
 // app/routes/app/$userId.tsx
 var import_jsx_runtime6 = require("react/jsx-runtime"), loader4 = async ({ params, request }) => {
@@ -620,11 +620,20 @@ var import_jsx_runtime6 = require("react/jsx-runtime"), loader4 = async ({ param
 }, action2 = async ({ request, ...rest }) => {
   var _a;
   try {
-    let userId = await requireUserId(request), formData = await request.formData(), { from, ...likesObject } = Object.fromEntries(formData), likes = Object.values(likesObject).map((like) => ({
-      to: like,
-      from: userId
-    })), result = await createLikes(likes);
-    return (0, import_node5.json)(result);
+    let userId = await requireUserId(request), formData = await request.formData(), { like, dislike } = Object.fromEntries(formData);
+    if (like) {
+      let result = await createLikes([
+        {
+          to: like,
+          from: userId
+        }
+      ]);
+      return (0, import_node5.json)(result);
+    }
+    if (console.log("dislike:", dislike), dislike) {
+      let result = await deleteLikes(dislike);
+      return console.log("result:", result), (0, import_node5.json)(result);
+    }
   } catch (error) {
     return console.log("error:", error), badRequest({
       formError: ((_a = error.issues) == null ? void 0 : _a.reduce(
@@ -685,7 +694,23 @@ function Index() {
             className: "flex flex-col gap-4",
             children: likes == null ? void 0 : likes.map((like) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", {
               className: "flex gap-4",
-              children: `- ${like.to.firstname} ${like.to.lastname} (${like.to.whatsapp_username}) ${likedByMap[like.to.id] ? "- MATCHED \u{1F389}. Why don't you slide into their DMS and say hi." : ""}`
+              children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_react6.Form, {
+                method: "post",
+                className: "flex gap-4 items-center",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Button, {
+                    type: "submit",
+                    id: like.id,
+                    name: "dislike",
+                    className: "accent-purple-800 px-4 py-0",
+                    value: like.id,
+                    children: "Dislike"
+                  }),
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", {
+                    children: `${like.to.firstname} ${like.to.lastname} (${like.to.whatsapp_username}) ${likedByMap[like.to.id] ? "- MATCHED \u{1F389}. Why don't you slide into their DMS and say hi." : ""}`
+                  })
+                ]
+              })
             }, like.id))
           })
         ]
@@ -707,35 +732,28 @@ function Index() {
                 className: "text-xl font-bold",
                 children: "Here are the people you have not liked"
               }),
-              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_react6.Form, {
-                method: "post",
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("ul", {
                 className: "flex flex-col gap-4",
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("ul", {
-                    className: "flex flex-col gap-4",
-                    children: genderFilteredUsers.map((user) => /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("li", {
-                      className: "flex gap-4",
-                      children: [
-                        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("input", {
-                          type: "checkbox",
-                          id: user.username,
-                          name: user.username,
-                          className: "accent-purple-800",
-                          value: user.id
-                        }),
-                        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("label", {
-                          htmlFor: user.username,
-                          children: `${user.firstname} ${user.lastname} (${user.whatsapp_username})`
-                        })
-                      ]
-                    }, user.id))
-                  }),
-                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Button, {
-                    type: "submit",
-                    className: "w-full",
-                    children: "Submit"
+                children: genderFilteredUsers.map((user) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", {
+                  className: "flex gap-4",
+                  children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_react6.Form, {
+                    method: "post",
+                    className: "flex gap-4 items-center",
+                    children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Button, {
+                        type: "submit",
+                        id: user.username,
+                        name: "like",
+                        className: "accent-purple-800 px-4 py-0",
+                        value: user.id,
+                        children: "Like"
+                      }),
+                      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", {
+                        children: `${user.firstname} ${user.lastname} (${user.whatsapp_username})`
+                      })
+                    ]
                   })
-                ]
+                }, user.id))
               })
             ]
           }) : null
@@ -1122,7 +1140,7 @@ function CatchBoundary5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "1d1e783a", entry: { module: "/build/entry.client-FZ6NF3LX.js", imports: ["/build/_shared/chunk-3Q74EVIB.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-U62WZIS4.js", imports: ["/build/_shared/chunk-B5FBTH6A.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-2NP2YLQ7.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CTQERU5V.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-QT3Q7U7M.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-IZG7GJDG.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-2WEMLEIN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-4YHTISHU.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-1D1E783A.js" };
+var assets_manifest_default = { version: "e48518dc", entry: { module: "/build/entry.client-FZ6NF3LX.js", imports: ["/build/_shared/chunk-3Q74EVIB.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-V3NZFSSE.js", imports: ["/build/_shared/chunk-B5FBTH6A.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-DKZYCLNI.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-CTQERU5V.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-QT3Q7U7M.js", imports: ["/build/_shared/chunk-W5UJCLXC.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-IZG7GJDG.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-2WEMLEIN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-4YHTISHU.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-E48518DC.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

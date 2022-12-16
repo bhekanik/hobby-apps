@@ -62,11 +62,11 @@
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/routes/app/$userId.tsx
     1:1   warning  Imports "ActionFunction" and "LoaderFunction" are only used as types                                                   @typescript-eslint/consistent-type-imports
     5:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-   12:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-   13:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-   14:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
-  126:21  warning  Redundant Boolean call                                                                                                 no-extra-boolean-cast
-  130:6   warning  React Hook useEffect has a missing dependency: 'currentUser.gender'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   16:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
+   17:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
+   18:1   warning  All imports in the declaration are only used as types. Use `import type`                                               @typescript-eslint/consistent-type-imports
+  139:21  warning  Redundant Boolean call                                                                                                 no-extra-boolean-cast
+  143:6   warning  React Hook useEffect has a missing dependency: 'currentUser.gender'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 
 /Users/bhekanik/dev/hobby-apps/apps/matcher/app/routes/index.tsx
    1:1  warning  All imports in the declaration are only used as types. Use `import type`  @typescript-eslint/consistent-type-imports
