@@ -6,7 +6,6 @@ import { Button } from "~/components/FormElements/Button";
 import { Input } from "~/components/FormElements/Input";
 import { AppLayout } from "~/layouts/AppLayout";
 import { badRequest } from "~/lib/badRequest";
-import { config } from "~/lib/config";
 import { colorsOnly } from "~/lib/theme/colors";
 import { createUserSession, register } from "~/models/users.server.";
 import { User } from "~/types/User";
@@ -83,14 +82,26 @@ export default function Index() {
 
   return (
     <div className="p-8 flex flex-col items-center gap-4 mx-8">
-      <h1>Welcome to {config.appName}</h1>
-
       <h2>Register to start</h2>
 
       <Form
         className="flex flex-col gap-4 items-center w-full md:px-12"
         method="post"
       >
+        {/* <div className="w-[100px] h-[100px] bg-purple-200 border-[1px solid] overflow-clip rounded-full relative">
+          <button className="absolute bottom-1 border-t-[1px solid] border-black left-[50px] translate-x-[-50%] w-full bg-white text-black bg-opacity-80">
+            Upload
+          </button>
+
+          <img
+            src="https://unsplash.it/900"
+            width="100%"
+            height="100%"
+            alt="profile"
+            className="w-full h-full"
+          />
+        </div>
+        <p>Profile Picture</p> */}
         <Input
           required
           placeholder="Username"

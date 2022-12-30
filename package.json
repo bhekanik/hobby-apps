@@ -14,7 +14,8 @@
     "test:ci": "turbo run test:ci",
     "lint": "turbo run lint",
     "prepare": "husky install",
-    "prettier": "turbo run prettier"
+    "prettier": "turbo run prettier",
+    "flush-packages": "rimraf -rf **/*/node_modules **/*/package-lock.json **/*/pnpm-lock.yaml node_modules package-lock.json pnpm-lock.yaml"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "fixtures": "workspace:1.0.0",
     "formatters": "workspace:1.0.0",
     "husky": "^7.0.4",
+    "rimraf": "^3.0.2",
     "turbo": "^1.6.3",
     "types": "workspace:1.0.0",
     "utils": "workspace:1.0.0"
