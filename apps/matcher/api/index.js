@@ -1,3 +1,4 @@
+"use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -17,9 +18,17 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 )), __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: !0 }), mod);
 
-// <stdin>
-var stdin_exports = {};
-__export(stdin_exports, {
+// server.js
+var server_exports = {};
+__export(server_exports, {
+  default: () => server_default
+});
+module.exports = __toCommonJS(server_exports);
+var import_vercel = require("@remix-run/vercel");
+
+// server-entry-module:@remix-run/dev/server-build
+var server_build_exports = {};
+__export(server_build_exports, {
   assets: () => assets_manifest_default,
   assetsBuildDirectory: () => assetsBuildDirectory,
   entry: () => entry,
@@ -27,24 +36,16 @@ __export(stdin_exports, {
   publicPath: () => publicPath,
   routes: () => routes
 });
-module.exports = __toCommonJS(stdin_exports);
 
 // app/entry.server.tsx
 var entry_server_exports = {};
 __export(entry_server_exports, {
   default: () => handleRequest
 });
-var import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
+var import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_jsx_runtime = require("react/jsx-runtime");
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
   let markup = (0, import_server.renderToString)(
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, {
-      context: remixContext,
-      url: request.url
-    }, void 0, !1, {
-      fileName: "app/entry.server.tsx",
-      lineNumber: 12,
-      columnNumber: 5
-    }, this)
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url })
   );
   return responseHeaders.set("Content-Type", "text/html"), new Response("<!DOCTYPE html>" + markup, {
     headers: responseHeaders,
@@ -109,7 +110,7 @@ var colors = {
 };
 
 // app/components/FormElements/Button/index.tsx
-var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), Button = (0, import_react2.forwardRef)(({ children, className, textColor, color = "primary", ...props }, ref) => {
+var import_jsx_runtime2 = require("react/jsx-runtime"), Button = (0, import_react2.forwardRef)(({ children, className, textColor, color = "primary", ...props }, ref) => {
   let btnClasses = (0, import_classnames.default)(
     "p-2 flex text-bold border-[1px] border-purple-400 justify-center rounded-full",
     `${colors[color]}-800`,
@@ -118,128 +119,46 @@ var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), Button = (0, imp
     textColor ?? "text-white",
     className
   );
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", {
-    ...props,
-    ref,
-    className: btnClasses,
-    children
-  }, void 0, !1, {
-    fileName: "app/components/FormElements/Button/index.tsx",
-    lineNumber: 24,
-    columnNumber: 5
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("button", { ...props, ref, className: btnClasses, children });
 });
 
 // app/components/Header/index.tsx
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+var import_jsx_runtime3 = require("react/jsx-runtime");
 function Header({ user }) {
   let navigate = (0, import_react3.useNavigate)(), handleLogout = () => {
     navigate("/login");
   };
-  return user ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("header", {
-    className: "border-b-[1px] border-purple-700 p-8 pb-2",
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", {
-      className: "w-full relative flex items-center justify-around",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Link, {
-          to: "/",
-          className: "cursor-pointer",
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", {
-            className: "w-full mb-4 font-black text-5xl text-center font-heading",
-            children: config.appName
-          }, void 0, !1, {
-            fileName: "app/components/Header/index.tsx",
-            lineNumber: 22,
-            columnNumber: 11
-          }, this)
-        }, void 0, !1, {
-          fileName: "app/components/Header/index.tsx",
-          lineNumber: 21,
-          columnNumber: 9
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Form, {
-          action: "/logout",
-          method: "post",
-          className: "flex items-center justify-center w-[fit-content] rounded-full absolute left-0",
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(Button, {
+  return user ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("header", { className: "border-b-[1px] border-purple-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "w-full relative flex items-center justify-around", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react3.Link, { to: "/", className: "cursor-pointer", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { className: "w-full mb-4 font-black text-5xl text-center font-heading", children: config.appName }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+      import_react3.Form,
+      {
+        action: "/logout",
+        method: "post",
+        className: "flex items-center justify-center w-[fit-content] rounded-full absolute left-0",
+        children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+          Button,
+          {
             color: "secondary",
             type: "submit",
             onClick: handleLogout,
             className: "flex items-center justify-center w-[fit-content] rounded-full text-sm py-0 px-4",
             children: "Logout"
-          }, void 0, !1, {
-            fileName: "app/components/Header/index.tsx",
-            lineNumber: 31,
-            columnNumber: 11
-          }, this)
-        }, void 0, !1, {
-          fileName: "app/components/Header/index.tsx",
-          lineNumber: 26,
-          columnNumber: 9
-        }, this)
-      ]
-    }, void 0, !0, {
-      fileName: "app/components/Header/index.tsx",
-      lineNumber: 20,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/components/Header/index.tsx",
-    lineNumber: 19,
-    columnNumber: 5
-  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("header", {
-    className: "border-b-[1px] border-purple-700 p-8 pb-2",
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Link, {
-      to: "/",
-      className: "cursor-pointer",
-      children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", {
-        className: "w-full mb-4 font-black text-5xl text-center font-heading",
-        children: config.appName
-      }, void 0, !1, {
-        fileName: "app/components/Header/index.tsx",
-        lineNumber: 45,
-        columnNumber: 9
-      }, this)
-    }, void 0, !1, {
-      fileName: "app/components/Header/index.tsx",
-      lineNumber: 44,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/components/Header/index.tsx",
-    lineNumber: 43,
-    columnNumber: 5
-  }, this);
+          }
+        )
+      }
+    )
+  ] }) }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("header", { className: "border-b-[1px] border-purple-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react3.Link, { to: "/", className: "cursor-pointer", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { className: "w-full mb-4 font-black text-5xl text-center font-heading", children: config.appName }) }) });
 }
 
 // app/layouts/AppLayout/index.tsx
-var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), AppLayout = ({
+var import_jsx_runtime4 = require("react/jsx-runtime"), AppLayout = ({
   children,
   user
-}) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
-  className: "bg-purple-800 w-full relative text-purple-300 px-0 md:p-8 md:pt-0 pt-0 min-h-[100vh] h-full ",
-  children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", {
-    className: "flex p-0 flex-col max-w-4xl w-full mx-auto sticky top-8 bg-purple-800 border-r-[1px] border-l-[1px] border-purple-700 min-h-[100vh]",
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Header, {
-        user
-      }, void 0, !1, {
-        fileName: "app/layouts/AppLayout/index.tsx",
-        lineNumber: 12,
-        columnNumber: 9
-      }, this),
-      children
-    ]
-  }, void 0, !0, {
-    fileName: "app/layouts/AppLayout/index.tsx",
-    lineNumber: 11,
-    columnNumber: 7
-  }, this)
-}, void 0, !1, {
-  fileName: "app/layouts/AppLayout/index.tsx",
-  lineNumber: 10,
-  columnNumber: 5
-}, this);
+}) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "bg-purple-800 w-full relative text-purple-300 px-0 md:p-8 md:pt-0 pt-0 min-h-[100vh] h-full ", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex p-0 flex-col max-w-4xl w-full mx-auto sticky top-8 bg-purple-800 border-r-[1px] border-l-[1px] border-purple-700 min-h-[100vh]", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Header, { user }),
+  children
+] }) });
 
 // app/models/users.server..ts
 var import_node = require("@remix-run/node"), import_bcryptjs = __toESM(require("bcryptjs"));
@@ -320,7 +239,7 @@ if (!sessionSecret)
 var storage = (0, import_node.createCookieSessionStorage)({
   cookie: {
     name: "matcher_session",
-    secure: !1,
+    secure: !0,
     secrets: [sessionSecret],
     sameSite: "lax",
     path: "/",
@@ -395,10 +314,10 @@ var register = async (newUser) => {
 };
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-TNLQAAXO.css";
+var app_default = "/build/_assets/app-IOTKRREC.css";
 
 // app/root.tsx
-var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime"), isMount = !0, links = () => [
+var import_jsx_runtime5 = require("react/jsx-runtime"), isMount = !0, links = () => [
   { rel: "manifest", href: "/resources/manifest.webmanifest" },
   { rel: "stylesheet", href: app_default },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -456,110 +375,35 @@ function App() {
           );
         };
       }
-  }, [location]), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("html", {
-    lang: "en",
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("head", {
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.Meta, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 102,
-            columnNumber: 9
-          }, this),
-          " ",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.Links, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 102,
-            columnNumber: 18
-          }, this)
-        ]
-      }, void 0, !0, {
-        fileName: "app/root.tsx",
-        lineNumber: 101,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("body", {
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(AppLayout, {
-            user,
-            children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.Outlet, {}, void 0, !1, {
-              fileName: "app/root.tsx",
-              lineNumber: 106,
-              columnNumber: 11
-            }, this)
-          }, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 105,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.ScrollRestoration, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 108,
-            columnNumber: 9
-          }, this),
-          " ",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.Scripts, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 108,
-            columnNumber: 31
-          }, this),
-          " ",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react4.LiveReload, {}, void 0, !1, {
-            fileName: "app/root.tsx",
-            lineNumber: 108,
-            columnNumber: 43
-          }, this)
-        ]
-      }, void 0, !0, {
-        fileName: "app/root.tsx",
-        lineNumber: 104,
-        columnNumber: 7
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/root.tsx",
-    lineNumber: 100,
-    columnNumber: 5
-  }, this);
+  }, [location]), /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Meta, {}),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Links, {})
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(AppLayout, { user, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Outlet, {}) }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.ScrollRestoration, {}),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.Scripts, {}),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react4.LiveReload, {})
+    ] })
+  ] });
 }
 function ErrorBoundary({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(AppLayout, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-      className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-          children: [
-            "An unexpected error occurred: ",
-            error.message
-          ]
-        }, void 0, !0, {
-          fileName: "app/root.tsx",
-          lineNumber: 120,
-          columnNumber: 9
-        }, this),
-        ";"
-      ]
-    }, void 0, !0, {
-      fileName: "app/root.tsx",
-      lineNumber: 119,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/root.tsx",
-    lineNumber: 118,
-    columnNumber: 5
-  }, this);
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(AppLayout, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
+      "An unexpected error occurred: ",
+      error.message
+    ] }),
+    ";"
+  ] }) });
 }
 function CatchBoundary() {
   let caught = (0, import_react4.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", {
-      children: "Not found"
-    }, void 0, !1, {
-      fileName: "app/root.tsx",
-      lineNumber: 130,
-      columnNumber: 12
-    }, this);
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { children: "Not found" });
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -712,7 +556,7 @@ var getLikesByToOrFrom = async (options) => {
 }, deleteLikes = async (likeToDelete) => await xata2.db.likes.delete(likeToDelete);
 
 // app/routes/app/$userId.tsx
-var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime"), loader4 = async ({ params, request }) => {
+var import_jsx_runtime6 = require("react/jsx-runtime"), loader4 = async ({ params, request }) => {
   (0, import_tiny_invariant.default)(params.userId), await requireUserId(request);
   let users = await getAllUsers(), currentUser = await getUser(params.userId), likes = currentUser != null && currentUser.id ? await getLikesByToOrFrom({ from: currentUser.id }) : [];
   return {
@@ -773,213 +617,71 @@ function Index() {
     users && setGenderFilteredUsers(
       users.filter((user) => user.gender !== currentUser.gender).filter((user) => !Boolean(likesMap[user.id]))
     );
-  }, [likesMap, users]), /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-    className: "p-8 flex flex-col items-center gap-4 mx-8",
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h1", {
-        children: [
-          "Welcome to ",
-          config.appName,
-          ", ",
-          currentUser.firstname
-        ]
-      }, void 0, !0, {
-        fileName: "app/routes/app/$userId.tsx",
-        lineNumber: 147,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", {
-        children: "The matcher concept is simple, just select the people you might fancy and want to get to know a little more from the list below and click submit. If they also like you, you'll both see MATCHED \u{1F389}. If not then nothing will happen. This will save you from shooting your shot where you're not wanted."
-      }, void 0, !1, {
-        fileName: "app/routes/app/$userId.tsx",
-        lineNumber: 151,
-        columnNumber: 7
-      }, this),
-      likes.length ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-        className: "flex flex-col gap-4 w-full",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h2", {
-            className: "text-xl font-bold",
-            children: "Here are the people you've liked:"
-          }, void 0, !1, {
-            fileName: "app/routes/app/$userId.tsx",
-            lineNumber: 161,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("ul", {
-            className: "flex flex-col gap-4",
-            children: likes == null ? void 0 : likes.map((like) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("li", {
-              className: "flex gap-4",
-              children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react6.Form, {
-                method: "post",
-                className: "flex gap-4 items-center",
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(Button, {
-                    type: "submit",
-                    id: like.id,
-                    name: "dislike",
-                    className: "accent-purple-800 px-4 py-0",
-                    value: like.id,
-                    children: "Dislike"
-                  }, void 0, !1, {
-                    fileName: "app/routes/app/$userId.tsx",
-                    lineNumber: 169,
-                    columnNumber: 19
-                  }, this),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", {
-                    children: `${like.to.firstname} ${like.to.lastname} (${like.to.whatsapp_username}) ${likedByMap[like.to.id] ? "- MATCHED \u{1F389}. Why don't you slide into their DMS and say hi." : ""}`
-                  }, void 0, !1, {
-                    fileName: "app/routes/app/$userId.tsx",
-                    lineNumber: 178,
-                    columnNumber: 19
-                  }, this)
-                ]
-              }, void 0, !0, {
-                fileName: "app/routes/app/$userId.tsx",
-                lineNumber: 168,
-                columnNumber: 17
-              }, this)
-            }, like.id, !1, {
-              fileName: "app/routes/app/$userId.tsx",
-              lineNumber: 167,
-              columnNumber: 15
-            }, this))
-          }, void 0, !1, {
-            fileName: "app/routes/app/$userId.tsx",
-            lineNumber: 165,
-            columnNumber: 11
-          }, this)
-        ]
-      }, void 0, !0, {
-        fileName: "app/routes/app/$userId.tsx",
-        lineNumber: 160,
-        columnNumber: 9
-      }, this) : null,
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-        className: "flex flex-col gap-4 w-full",
-        children: [
-          genderFilteredUsers.length === 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-            children: [
-              "Looks like there are no",
-              " ",
-              currentUser.gender === "male" ? "female" : "male",
-              "s who have registered yet. Share the link to get people to register."
-            ]
-          }, void 0, !0, {
-            fileName: "app/routes/app/$userId.tsx",
-            lineNumber: 196,
-            columnNumber: 11
-          }, this),
-          genderFilteredUsers.length ? /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_jsx_dev_runtime6.Fragment, {
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("h2", {
-                className: "text-xl font-bold",
-                children: "Here are the people you have not liked"
-              }, void 0, !1, {
-                fileName: "app/routes/app/$userId.tsx",
-                lineNumber: 205,
-                columnNumber: 13
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("ul", {
-                className: "flex flex-col gap-4",
-                children: genderFilteredUsers.map((user) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("li", {
-                  className: "flex gap-4",
-                  children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react6.Form, {
-                    method: "post",
-                    className: "flex gap-4 items-center",
-                    children: [
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(Button, {
-                        type: "submit",
-                        id: user.username,
-                        name: "like",
-                        className: "accent-purple-800 px-4 py-0",
-                        value: user.id,
-                        children: "Like"
-                      }, void 0, !1, {
-                        fileName: "app/routes/app/$userId.tsx",
-                        lineNumber: 212,
-                        columnNumber: 21
-                      }, this),
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", {
-                        children: `${user.firstname} ${user.lastname} (${user.whatsapp_username})`
-                      }, void 0, !1, {
-                        fileName: "app/routes/app/$userId.tsx",
-                        lineNumber: 221,
-                        columnNumber: 21
-                      }, this)
-                    ]
-                  }, void 0, !0, {
-                    fileName: "app/routes/app/$userId.tsx",
-                    lineNumber: 211,
-                    columnNumber: 19
-                  }, this)
-                }, user.id, !1, {
-                  fileName: "app/routes/app/$userId.tsx",
-                  lineNumber: 210,
-                  columnNumber: 17
-                }, this))
-              }, void 0, !1, {
-                fileName: "app/routes/app/$userId.tsx",
-                lineNumber: 208,
-                columnNumber: 13
-              }, this)
-            ]
-          }, void 0, !0, {
-            fileName: "app/routes/app/$userId.tsx",
-            lineNumber: 204,
-            columnNumber: 11
-          }, this) : null
-        ]
-      }, void 0, !0, {
-        fileName: "app/routes/app/$userId.tsx",
-        lineNumber: 194,
-        columnNumber: 7
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/routes/app/$userId.tsx",
-    lineNumber: 146,
-    columnNumber: 5
-  }, this);
+  }, [likesMap, users]), /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "p-8 flex flex-col items-center gap-4 mx-8", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("h1", { children: [
+      "Welcome to ",
+      config.appName,
+      ", ",
+      currentUser.firstname
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { children: "The matcher concept is simple, just select the people you might fancy and want to get to know a little more from the list below and click submit. If they also like you, you'll both see MATCHED \u{1F389}. If not then nothing will happen. This will save you from shooting your shot where you're not wanted." }),
+    likes.length ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-col gap-4 w-full", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { className: "text-xl font-bold", children: "Here are the people you've liked:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("ul", { className: "flex flex-col gap-4", children: likes == null ? void 0 : likes.map((like) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", { className: "flex gap-4", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_react6.Form, { method: "post", className: "flex gap-4 items-center", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+          Button,
+          {
+            type: "submit",
+            id: like.id,
+            name: "dislike",
+            className: "accent-purple-800 px-4 py-0",
+            value: like.id,
+            children: "Dislike"
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { children: `${like.to.firstname} ${like.to.lastname} (${like.to.whatsapp_username}) ${likedByMap[like.to.id] ? "- MATCHED \u{1F389}. Why don't you slide into their DMS and say hi." : ""}` })
+      ] }) }, like.id)) })
+    ] }) : null,
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-col gap-4 w-full", children: [
+      genderFilteredUsers.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
+        "Looks like there are no",
+        " ",
+        currentUser.gender === "male" ? "female" : "male",
+        "s who have registered yet. Share the link to get people to register."
+      ] }),
+      genderFilteredUsers.length ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { className: "text-xl font-bold", children: "Here are the people you have not liked" }),
+        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("ul", { className: "flex flex-col gap-4", children: genderFilteredUsers.map((user) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("li", { className: "flex gap-4", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_react6.Form, { method: "post", className: "flex gap-4 items-center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+            Button,
+            {
+              type: "submit",
+              id: user.username,
+              name: "like",
+              className: "accent-purple-800 px-4 py-0",
+              value: user.id,
+              children: "Like"
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { children: `${user.firstname} ${user.lastname} (${user.whatsapp_username})` })
+        ] }) }, user.id)) })
+      ] }) : null
+    ] })
+  ] });
 }
 function ErrorBoundary2({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(AppLayout, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-      className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-          children: [
-            "An unexpected error occurred: ",
-            error.message
-          ]
-        }, void 0, !0, {
-          fileName: "app/routes/app/$userId.tsx",
-          lineNumber: 239,
-          columnNumber: 9
-        }, this),
-        ";"
-      ]
-    }, void 0, !0, {
-      fileName: "app/routes/app/$userId.tsx",
-      lineNumber: 238,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/routes/app/$userId.tsx",
-    lineNumber: 237,
-    columnNumber: 5
-  }, this);
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(AppLayout, { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
+      "An unexpected error occurred: ",
+      error.message
+    ] }),
+    ";"
+  ] }) });
 }
 function CatchBoundary2() {
   let caught = (0, import_react6.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", {
-      children: "Not found"
-    }, void 0, !1, {
-      fileName: "app/routes/app/$userId.tsx",
-      lineNumber: 249,
-      columnNumber: 12
-    }, this);
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { children: "Not found" });
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -992,45 +694,20 @@ __export(logout_exports, {
   loader: () => loader5
 });
 var import_node6 = require("@remix-run/node"), import_react8 = require("@remix-run/react");
-var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime"), action3 = async ({ request }) => logout(request), loader5 = async () => (0, import_node6.redirect)("/");
+var import_jsx_runtime7 = require("react/jsx-runtime"), action3 = async ({ request }) => logout(request), loader5 = async () => (0, import_node6.redirect)("/");
 function ErrorBoundary3({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(AppLayout, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", {
-      className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", {
-          children: [
-            "An unexpected error occurred: ",
-            error.message
-          ]
-        }, void 0, !0, {
-          fileName: "app/routes/logout.tsx",
-          lineNumber: 21,
-          columnNumber: 9
-        }, this),
-        ";"
-      ]
-    }, void 0, !0, {
-      fileName: "app/routes/logout.tsx",
-      lineNumber: 20,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/routes/logout.tsx",
-    lineNumber: 19,
-    columnNumber: 5
-  }, this);
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(AppLayout, { children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { children: [
+      "An unexpected error occurred: ",
+      error.message
+    ] }),
+    ";"
+  ] }) });
 }
 function CatchBoundary3() {
   let caught = (0, import_react8.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", {
-      children: "Not found"
-    }, void 0, !1, {
-      fileName: "app/routes/logout.tsx",
-      lineNumber: 31,
-      columnNumber: 12
-    }, this);
+    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", { children: "Not found" });
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1045,24 +722,16 @@ __export(routes_exports, {
 var import_react10 = require("@remix-run/react"), import_react11 = require("react");
 
 // app/components/FormElements/Input/index.tsx
-var import_classnames2 = __toESM(require("classnames")), import_react9 = require("react"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime"), Input = (0, import_react9.forwardRef)(({ children, className, color = "primary", ...props }, ref) => {
+var import_classnames2 = __toESM(require("classnames")), import_react9 = require("react"), import_jsx_runtime8 = require("react/jsx-runtime"), Input = (0, import_react9.forwardRef)(({ children, className, color = "primary", ...props }, ref) => {
   let inputClasses = (0, import_classnames2.default)(
     "p-2 px-6 w-full bg-purple-700 rounded-full",
     className
   );
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("input", {
-    ...props,
-    ref,
-    className: inputClasses
-  }, void 0, !1, {
-    fileName: "app/components/FormElements/Input/index.tsx",
-    lineNumber: 13,
-    columnNumber: 10
-  }, this);
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { ...props, ref, className: inputClasses });
 });
 
 // app/routes/index.tsx
-var import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), action4 = async ({ request }) => {
+var import_jsx_runtime9 = require("react/jsx-runtime"), action4 = async ({ request }) => {
   var _a;
   try {
     let formData = await request.formData(), {
@@ -1106,234 +775,130 @@ function Index2() {
   let actionData = (0, import_react10.useActionData)(), [error, setError] = (0, import_react11.useState)("");
   return (0, import_react11.useEffect)(() => {
     actionData != null && actionData.formError && setError(actionData.formError);
-  }, [actionData]), /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", {
-    className: "p-8 flex flex-col items-center gap-4 mx-8",
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("h2", {
-        children: "Register to start"
-      }, void 0, !1, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 85,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react10.Form, {
+  }, [actionData]), /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "p-8 flex flex-col items-center gap-4 mx-8", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h2", { children: "Register to start" }),
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+      import_react10.Form,
+      {
         className: "flex flex-col gap-4 items-center w-full md:px-12",
         method: "post",
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
-            required: !0,
-            placeholder: "Username",
-            name: "username",
-            className: "text-center"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 105,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("fieldset", {
-            className: "flex flex-col md:flex-row gap-4 w-full",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+            Input,
+            {
+              required: !0,
+              placeholder: "Username",
+              name: "username",
+              className: "text-center"
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("fieldset", { className: "flex flex-col md:flex-row gap-4 w-full", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+              Input,
+              {
                 required: !0,
                 placeholder: "First Name",
                 name: "firstname",
                 className: "text-center"
-              }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 112,
-                columnNumber: 11
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+              Input,
+              {
                 required: !0,
                 placeholder: "Last Name",
                 name: "lastname",
                 className: "text-center"
-              }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 118,
-                columnNumber: 11
-              }, this)
-            ]
-          }, void 0, !0, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 111,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("fieldset", {
-            className: "flex md:flex-row flex-col gap-4 w-full",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
+              }
+            )
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("fieldset", { className: "flex md:flex-row flex-col gap-4 w-full", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+              Input,
+              {
                 required: !0,
                 placeholder: "Whatsapp Username",
                 name: "whatsapp_username",
                 className: "text-center w-full"
-              }, void 0, !1, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 126,
-                columnNumber: 11
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", {
-                className: "flex flex-row gap-2 justify-center items-center",
-                children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("label", {
-                    className: "flex flex-row gap-2 justify-center items-center",
-                    children: [
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("input", {
-                        type: "radio",
-                        name: "gender",
-                        value: "male",
-                        defaultChecked: !0,
-                        className: "accent-purple-800"
-                      }, void 0, !1, {
-                        fileName: "app/routes/index.tsx",
-                        lineNumber: 135,
-                        columnNumber: 15
-                      }, this),
-                      "Male"
-                    ]
-                  }, void 0, !0, {
-                    fileName: "app/routes/index.tsx",
-                    lineNumber: 134,
-                    columnNumber: 13
-                  }, this),
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("label", {
-                    className: "flex flex-row gap-2 justify-center items-center",
-                    children: [
-                      /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("input", {
-                        type: "radio",
-                        name: "gender",
-                        value: "female",
-                        className: "accent-purple-800"
-                      }, void 0, !1, {
-                        fileName: "app/routes/index.tsx",
-                        lineNumber: 145,
-                        columnNumber: 15
-                      }, this),
-                      "Female"
-                    ]
-                  }, void 0, !0, {
-                    fileName: "app/routes/index.tsx",
-                    lineNumber: 144,
-                    columnNumber: 13
-                  }, this)
-                ]
-              }, void 0, !0, {
-                fileName: "app/routes/index.tsx",
-                lineNumber: 133,
-                columnNumber: 11
-              }, this)
-            ]
-          }, void 0, !0, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 125,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
-            required: !0,
-            type: "password",
-            placeholder: "Password",
-            name: "password",
-            className: "text-center"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 155,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, {
-            required: !0,
-            type: "password",
-            placeholder: "Confirm Password",
-            name: "confirm_password",
-            className: "text-center"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 162,
-            columnNumber: 9
-          }, this),
-          error && /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("p", {
-            className: "text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full",
-            children: error
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 170,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Button, {
-            type: "submit",
-            className: "px-4 w-full",
-            children: "Register"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 174,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("p", {
-            children: "Already have an account?"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 177,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_react10.Link, {
-            to: "/login",
-            className: `text-${colorsOnly.accent}-500 px-4 w-full text-center underline`,
-            children: "Login"
-          }, void 0, !1, {
-            fileName: "app/routes/index.tsx",
-            lineNumber: 178,
-            columnNumber: 9
-          }, this)
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex flex-row gap-2 justify-center items-center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+                  "input",
+                  {
+                    type: "radio",
+                    name: "gender",
+                    value: "male",
+                    defaultChecked: !0,
+                    className: "accent-purple-800"
+                  }
+                ),
+                "Male"
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+                  "input",
+                  {
+                    type: "radio",
+                    name: "gender",
+                    value: "female",
+                    className: "accent-purple-800"
+                  }
+                ),
+                "Female"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+            Input,
+            {
+              required: !0,
+              type: "password",
+              placeholder: "Password",
+              name: "password",
+              className: "text-center"
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+            Input,
+            {
+              required: !0,
+              type: "password",
+              placeholder: "Confirm Password",
+              name: "confirm_password",
+              className: "text-center"
+            }
+          ),
+          error && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full", children: error }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Button, { type: "submit", className: "px-4 w-full", children: "Register" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { children: "Already have an account?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+            import_react10.Link,
+            {
+              to: "/login",
+              className: `text-${colorsOnly.accent}-500 px-4 w-full text-center underline`,
+              children: "Login"
+            }
+          )
         ]
-      }, void 0, !0, {
-        fileName: "app/routes/index.tsx",
-        lineNumber: 87,
-        columnNumber: 7
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 84,
-    columnNumber: 5
-  }, this);
+      }
+    )
+  ] });
 }
 function ErrorBoundary4({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(AppLayout, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", {
-      className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", {
-          children: [
-            "An unexpected error occurred: ",
-            error.message
-          ]
-        }, void 0, !0, {
-          fileName: "app/routes/index.tsx",
-          lineNumber: 195,
-          columnNumber: 9
-        }, this),
-        ";"
-      ]
-    }, void 0, !0, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 194,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/routes/index.tsx",
-    lineNumber: 193,
-    columnNumber: 5
-  }, this);
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(AppLayout, { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { children: [
+      "An unexpected error occurred: ",
+      error.message
+    ] }),
+    ";"
+  ] }) });
 }
 function CatchBoundary4() {
   let caught = (0, import_react10.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", {
-      children: "Not found"
-    }, void 0, !1, {
-      fileName: "app/routes/index.tsx",
-      lineNumber: 205,
-      columnNumber: 12
-    }, this);
+    return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { children: "Not found" });
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1346,7 +911,7 @@ __export(login_exports, {
   default: () => Index3
 });
 var import_react12 = require("@remix-run/react"), import_react13 = require("react");
-var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), action5 = async ({ request }) => {
+var import_jsx_runtime10 = require("react/jsx-runtime"), action5 = async ({ request }) => {
   var _a;
   try {
     let formData = await request.formData(), { username: username_form_value, password: password_form_value } = Object.fromEntries(formData), username = username_form_value.trim().toLowerCase(), password = password_form_value.trim(), user = await login(username, password);
@@ -1370,139 +935,63 @@ function Index3() {
   let actionData = (0, import_react12.useActionData)(), [error, setError] = (0, import_react13.useState)("");
   return (0, import_react13.useEffect)(() => {
     actionData != null && actionData.formError && setError(actionData.formError);
-  }, [actionData]), /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", {
-    className: "p-8 flex flex-col items-center gap-4 mx-8",
-    children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h1", {
-        children: [
-          "Welcome to ",
-          config.appName
-        ]
-      }, void 0, !0, {
-        fileName: "app/routes/login.tsx",
-        lineNumber: 57,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h2", {
-        children: "Login to start"
-      }, void 0, !1, {
-        fileName: "app/routes/login.tsx",
-        lineNumber: 59,
-        columnNumber: 7
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react12.Form, {
+  }, [actionData]), /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "p-8 flex flex-col items-center gap-4 mx-8", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("h1", { children: [
+      "Welcome to ",
+      config.appName
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h2", { children: "Login to start" }),
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
+      import_react12.Form,
+      {
         className: "flex flex-col gap-4 items-center w-full px-12",
         method: "post",
         children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Input, {
-            required: !0,
-            placeholder: "Username",
-            name: "username",
-            className: "text-center"
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 65,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Input, {
-            type: "password",
-            placeholder: "Password",
-            name: "password",
-            className: "text-center"
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 71,
-            columnNumber: 9
-          }, this),
-          error && /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", {
-            className: "text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full",
-            children: error
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 78,
-            columnNumber: 11
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Button, {
-            type: "submit",
-            className: "px-4 w-full",
-            children: "Login"
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 82,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", {
-            children: "Don't have an account?"
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 85,
-            columnNumber: 9
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react12.Link, {
-            to: "/",
-            className: "px-4 w-full text-center underline",
-            children: "Register"
-          }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 86,
-            columnNumber: 9
-          }, this)
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+            Input,
+            {
+              required: !0,
+              placeholder: "Username",
+              name: "username",
+              className: "text-center"
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+            Input,
+            {
+              type: "password",
+              placeholder: "Password",
+              name: "password",
+              className: "text-center"
+            }
+          ),
+          error && /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "text-red-500 bg-red-700 bg-opacity-20 px-8 w-full text-center py-2 rounded-full", children: error }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Button, { type: "submit", className: "px-4 w-full", children: "Login" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { children: "Don't have an account?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react12.Link, { to: "/", className: "px-4 w-full text-center underline", children: "Register" })
         ]
-      }, void 0, !0, {
-        fileName: "app/routes/login.tsx",
-        lineNumber: 61,
-        columnNumber: 7
-      }, this)
-    ]
-  }, void 0, !0, {
-    fileName: "app/routes/login.tsx",
-    lineNumber: 56,
-    columnNumber: 5
-  }, this);
+      }
+    )
+  ] });
 }
 function ErrorBoundary5({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(AppLayout, {
-    children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", {
-      className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10",
-      children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", {
-          children: [
-            "An unexpected error occurred: ",
-            error.message
-          ]
-        }, void 0, !0, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 100,
-          columnNumber: 9
-        }, this),
-        ";"
-      ]
-    }, void 0, !0, {
-      fileName: "app/routes/login.tsx",
-      lineNumber: 99,
-      columnNumber: 7
-    }, this)
-  }, void 0, !1, {
-    fileName: "app/routes/login.tsx",
-    lineNumber: 98,
-    columnNumber: 5
-  }, this);
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(AppLayout, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+      "An unexpected error occurred: ",
+      error.message
+    ] }),
+    ";"
+  ] }) });
 }
 function CatchBoundary5() {
   let caught = (0, import_react12.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", {
-      children: "Not found"
-    }, void 0, !1, {
-      fileName: "app/routes/login.tsx",
-      lineNumber: 110,
-      columnNumber: 12
-    }, this);
+    return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { children: "Not found" });
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "3af630de", entry: { module: "/build/entry.client-5B7YRPAG.js", imports: ["/build/_shared/chunk-G5KCF6IS.js", "/build/_shared/chunk-5KL4PAQL.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-RDCELKO5.js", imports: ["/build/_shared/chunk-KTXCFTGE.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-D6DMJDIB.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-GFZTGWN7.js", imports: ["/build/_shared/chunk-AGGYGI4N.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-BXC4O7OY.js", imports: ["/build/_shared/chunk-AGGYGI4N.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-5IZYRIEV.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-QZTIQTCF.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-DLABAWZK.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-3AF630DE.js" };
+var assets_manifest_default = { version: "dd03f0f8", entry: { module: "/build/entry.client-RKUS3B77.js", imports: ["/build/_shared/chunk-YY5SIAPC.js", "/build/_shared/chunk-Q3IECNXJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-QG6B2ILC.js", imports: ["/build/_shared/chunk-7SPQ2DR7.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/app/$userId": { id: "routes/app/$userId", parentId: "root", path: "app/:userId", index: void 0, caseSensitive: void 0, module: "/build/routes/app/$userId-DCLBX37C.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-YG6BRKLX.js", imports: ["/build/_shared/chunk-MICLXRRO.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-XRBBM76L.js", imports: ["/build/_shared/chunk-MICLXRRO.js"], hasAction: !0, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/logout": { id: "routes/logout", parentId: "root", path: "logout", index: void 0, caseSensitive: void 0, module: "/build/routes/logout-VL4OJHTY.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-2WEMLEIN.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-4YHTISHU.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-DD03F0F8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -1563,13 +1052,8 @@ var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath 
     module: login_exports
   }
 };
+
+// server.js
+var server_default = (0, import_vercel.createRequestHandler)({ build: server_build_exports, mode: "production" });
 // Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  assets,
-  assetsBuildDirectory,
-  entry,
-  future,
-  publicPath,
-  routes
-});
-//# sourceMappingURL=index.js.map
+0 && (module.exports = {});

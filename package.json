@@ -2,33 +2,17 @@
   "name": "hobby-apps",
   "version": "1.0.0",
   "description": "",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "dotenv -e .env -- turbo run dev",
-    "dev:prod": "dotenv -e .env.prod -- turbo run dev",
-    "build": "turbo run build",
-    "lint-staged": "turbo run lint-staged",
-    "test": "turbo run test",
-    "test:ci": "turbo run test:ci",
-    "lint": "turbo run lint",
+    "dev": "pnpm nx run-many --target=dev --all",
+    "test": "pnpm nx run-many --target=test --all",
+    "lint": "pnpm nx run-many --target=lint --all",
+    "build": "pnpm nx run-many --target=build --all",
     "prepare": "husky install",
-    "prettier": "turbo run prettier",
     "flush-packages": "rimraf -rf **/*/node_modules **/*/package-lock.json **/*/pnpm-lock.yaml node_modules package-lock.json pnpm-lock.yaml"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bhekanik/hobby-apps.git"
-  },
-  "devDependencies": {
-    "fixtures": "workspace:1.0.0",
-    "formatters": "workspace:1.0.0",
-    "husky": "^7.0.4",
-    "rimraf": "^3.0.2",
-    "turbo": "^1.6.3",
-    "types": "workspace:1.0.0",
-    "utils": "workspace:1.0.0"
   },
   "author": "Bhekani Khumalo",
   "license": "ISC",
@@ -37,6 +21,11 @@
   },
   "homepage": "https://github.com/bhekanik/hobby-apps#readme",
   "dependencies": {
-    "dotenv-cli": "^6.0.0"
+    "husky": "^7.0.4"
+  },
+  "devDependencies": {
+    "@nrwl/nx-cloud": "latest",
+    "nx": "15.4.2",
+    "rimraf": "^3.0.2"
   }
 }

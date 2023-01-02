@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm test:ci
+pnpm nx affected --target=lint
+pnpm nx affected --target=build
+pnpm nx affected --target=test

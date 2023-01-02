@@ -1,9 +1,0 @@
-{
-  "extends": "tsconfig/lib.json",
-  "compilerOptions": {
-    "outDir": "./dist",
-    "esModuleInterop": true
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", "dist"]
-}

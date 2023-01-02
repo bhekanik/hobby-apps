@@ -1,0 +1,125 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "build:css",
+          "format",
+          "generate:css",
+          "lint",
+          "start",
+          "build:remix",
+          "build:worker",
+          "prebuild",
+          "prettier",
+          "test:ci",
+          "test",
+          "build:esm",
+          "build:cjs"
+        ],
+        "accessToken": "NTgyYjRjNjctMzM4Zi00NDI4LThkOGYtYjllNDM5YzhhMWE3fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "build:css": {
+      "dependsOn": [
+        "^build:css"
+      ],
+      "outputs": [
+        "{projectRoot}/app/styles/app.css"
+      ]
+    },
+    "dev": {
+      "dependsOn": [
+        "^dev"
+      ]
+    },
+    "dev:css": {
+      "dependsOn": [
+        "^dev:css"
+      ]
+    },
+    "generate:css": {
+      "dependsOn": [
+        "^generate:css"
+      ],
+      "outputs": [
+        "{projectRoot}/app/styles/tailwind.css"
+      ]
+    },
+    "start": {
+      "dependsOn": [
+        "^start"
+      ]
+    },
+    "build:remix": {
+      "dependsOn": [
+        "^build:remix"
+      ],
+      "outputs": [
+        "{projectRoot}/public/build"
+      ]
+    },
+    "build:worker": {
+      "dependsOn": [
+        "^build:worker"
+      ],
+      "outputs": [
+        "{projectRoot}/public/entry.worker.js"
+      ]
+    },
+    "dev:remix": {
+      "dependsOn": [
+        "^dev:remix"
+      ]
+    },
+    "dev:worker": {
+      "dependsOn": [
+        "^dev:worker"
+      ]
+    },
+    "prebuild": {
+      "dependsOn": [
+        "^prebuild"
+      ]
+    },
+    "test:ci": {
+      "dependsOn": [
+        "^test:ci"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "build:esm": {
+      "dependsOn": [
+        "^build:esm"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "build:cjs": {
+      "dependsOn": [
+        "^build:cjs"
+      ],
+      "outputs": [
+        "{projectRoot}/dist/cjs"
+      ]
+    }
+  },
+  "affected": {
+    "defaultBase": "dev"
+  },
+  "defaultBase": "main"
+}

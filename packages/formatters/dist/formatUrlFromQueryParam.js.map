@@ -1,1 +1,0 @@
-{"version":3,"file":"formatUrlFromQueryParam.js","sourceRoot":"","sources":["../src/formatUrlFromQueryParam.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,uBAAuB,GAAG,CAAC,GAAW,EAAE,EAAE;IACrD,IAAI,CAAC,GAAG;QAAE,OAAO,EAAE,CAAC;IAEpB,OAAO,SAAS,CAAC,kBAAkB,CAAC,GAAG,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC"}
