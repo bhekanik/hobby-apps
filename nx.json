@@ -119,7 +119,7 @@
     }
   },
   "affected": {
-    "defaultBase": "dev"
+    "defaultBase": "main"
   },
   "defaultBase": "main"
 }

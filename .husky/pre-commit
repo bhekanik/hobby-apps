@@ -6,3 +6,6 @@ npx lint-staged
 
 cd ../matcher
 npx lint-staged
+
+cd ../just-working-out
+npx lint-staged
