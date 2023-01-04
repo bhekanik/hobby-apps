@@ -1,9 +1,10 @@
 <script>
+	import { config } from '$lib/config';
 	import { format } from 'date-fns';
 	import NavItem from './NavItem.svelte';
 
-	let today = format(new Date(), 'yyyy-LL-dd');
-	let day = format(new Date(), 'EEEE');
+	let today = format(new Date(), config.dateFormat);
+	let day = format(new Date(), config.dayFormat);
 </script>
 
 <header

@@ -1,6 +1,6 @@
+import type { Weight } from '$lib/xata';
 import { getXataClient } from '$lib/xataClient';
 import type { Actions } from '@sveltejs/kit';
-import { format } from 'date-fns';
 
 const xata = getXataClient();
 
@@ -8,14 +8,17 @@ export const actions: Actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 		const weight = data.get('weight') as string;
+		const date = data.get('date') as string;
 		const unit = data.get('unit') as string;
 
-		const record = await xata.db.weight.create({
+		const newWeightLog: Omit<Weight, 'id'> = {
 			created_at: new Date(),
-			date: format(new Date(), 'yyyy-LL-dd'),
+			date,
 			weight: +weight,
 			unit: unit
-		});
+		};
+
+		const record = await xata.db.weight.create(newWeightLog);
 
 		return { success: true, record };
 	}

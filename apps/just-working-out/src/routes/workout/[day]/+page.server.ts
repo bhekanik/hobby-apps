@@ -1,3 +1,4 @@
+import { config } from '$lib/config';
 import { getWorkouts } from '$lib/server/getWorkouts';
 import { error } from '@sveltejs/kit';
 import Case from 'case';
@@ -7,7 +8,7 @@ import type { PageServerLoad } from './$types';
 export const load = (async ({ params }) => {
 	const day = Case.sentence(params.day);
 
-	const workouts = await getWorkouts({ 'fields.day': day ?? format(new Date(), 'EEEE') });
+	const workouts = await getWorkouts({ 'fields.day': day ?? format(new Date(), config.dayFormat) });
 
 	if (workouts) {
 		return { workout: workouts[0] };

@@ -2,10 +2,27 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import LogWeightFormFields from '$lib/components/LogWeightFormFields.svelte';
-	import { format } from 'date-fns';
+	import { config } from '$lib/config';
+	import { add, format, parseISO, sub } from 'date-fns';
+
+	$: date = new Date(parseISO($page.params.date));
 </script>
 
-{#if Object.keys($page.data).length}
+<div class="flex justify-between w-full mb-4">
+	<a
+		class="flex-1 text-left"
+		href={`/weight-tracker/${format(sub(date, { days: 1 }), config.dateFormat)}`}>Previous Day</a
+	>
+	<a class="flex-1 text-center" href={`/weight-tracker/${format(new Date(), config.dateFormat)}`}
+		>{$page.params.date === format(new Date(), config.dateFormat) ? '' : 'Today'}</a
+	>
+	<a
+		class="flex-1 text-right"
+		href={`/weight-tracker/${format(add(date, { days: 1 }), config.dateFormat)}`}>Next Day</a
+	>
+</div>
+
+{#if $page.data.id}
 	<div class="w-full flex flex-col items-center gap-4 p-8">
 		<p class="text-3xl">{$page.data.weight} <span class="text-zinc-500">{$page.data.unit}</span></p>
 		<a
@@ -19,6 +36,7 @@
 		Add your weight for {format(new Date(), 'EEEE, d LLLL yyyy')}
 	</p>
 	<form method="post" class="w-full flex flex-col items-center gap-4 p-8" use:enhance>
-		<LogWeightFormFields />
+		<input type="hidden" name="date" value={format(date, config.dateFormat)} />
+		<LogWeightFormFields value={$page.data.previousDayWeight ?? 50} />
 	</form>
 {/if}

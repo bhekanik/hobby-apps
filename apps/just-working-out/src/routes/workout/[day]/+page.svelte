@@ -7,6 +7,7 @@
 	import CoolDown from '$lib/components/CoolDown.svelte';
 	import ExerciseList from '$lib/components/ExerciseList.svelte';
 	import WarmUp from '$lib/components/WarmUp.svelte';
+	import { config } from '$lib/config';
 	import { add, format, sub } from 'date-fns';
 	import type { PageData } from '../$types';
 
@@ -20,14 +21,22 @@
 	<span class="text-zinc-500">{format(new Date(), 'EEEE, d LLL')}</span>
 </div>
 <div class="flex justify-between w-full mb-4">
-	<a class="flex-1 text-left" href={`/workout/${format(sub(currentDate, { days: 1 }), 'EEEE')}`}
-		>{$page.params.day === format(sub(new Date(), { days: 1 }), 'EEEE') ? '' : 'Yesterday'}</a
+	<a
+		class="flex-1 text-left"
+		href={`/workout/${format(sub(currentDate, { days: 1 }), config.dayFormat)}`}
+		>{$page.params.day === format(sub(new Date(), { days: 1 }), config.dayFormat)
+			? ''
+			: 'Yesterday'}</a
 	>
-	<a class="flex-1 text-center" href={`/workout/${format(new Date(), 'EEEE')}`}
-		>{$page.params.day === format(new Date(), 'EEEE') ? '' : 'Today'}</a
+	<a class="flex-1 text-center" href={`/workout/${format(new Date(), config.dayFormat)}`}
+		>{$page.params.day === format(new Date(), config.dayFormat) ? '' : 'Today'}</a
 	>
-	<a class="flex-1 text-right" href={`/workout/${format(add(currentDate, { days: 1 }), 'EEEE')}`}
-		>{$page.params.day === format(add(new Date(), { days: 1 }), 'EEEE') ? '' : 'Tomorrow'}</a
+	<a
+		class="flex-1 text-right"
+		href={`/workout/${format(add(currentDate, { days: 1 }), config.dayFormat)}`}
+		>{$page.params.day === format(add(new Date(), { days: 1 }), config.dayFormat)
+			? ''
+			: 'Tomorrow'}</a
 	>
 </div>
 
