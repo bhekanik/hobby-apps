@@ -4,7 +4,7 @@
 	export let exercise: IExercise;
 </script>
 
-<li class="pb-2 relative">
+<li class="pb-4 relative">
 	<h4 class="text-md font-light">{exercise.fields.name}</h4>
 	{#if exercise.fields.sets}
 		<span class="text-3xl text-[#30d158]">{exercise.fields.sets} sets</span>

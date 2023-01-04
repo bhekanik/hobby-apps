@@ -6,7 +6,7 @@
 	export let workout: Entry<IWorkoutFields>;
 </script>
 
-<ul class="border-b-[1px] border-zinc-700">
+<ul class="grid md:grid-cols-2">
 	{#each workout.fields.exercises as exercise}
 		<Exercise {exercise} />
 	{/each}

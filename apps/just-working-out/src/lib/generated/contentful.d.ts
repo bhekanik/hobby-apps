@@ -145,6 +145,9 @@ export interface IWorkoutFields {
 
 	/** Cooldown Duration */
 	cooldownDuration: number;
+
+	/** order */
+	order: number;
 }
 
 export interface IWorkout extends Entry<IWorkoutFields> {
