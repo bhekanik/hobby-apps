@@ -2,7 +2,7 @@ import { getWorkouts } from '$lib/server/getWorkouts';
 import { error } from '@sveltejs/kit';
 import Case from 'case';
 import { format } from 'date-fns';
-import type { PageServerLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
 	const day = Case.sentence(params.day);

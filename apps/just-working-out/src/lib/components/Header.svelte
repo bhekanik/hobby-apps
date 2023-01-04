@@ -1,6 +1,9 @@
 <script>
 	import { format } from 'date-fns';
 	import NavItem from './NavItem.svelte';
+
+	let today = format(new Date(), 'yyyy-LL-dd');
+	let day = format(new Date(), 'EEEE');
 </script>
 
 <header
@@ -12,7 +15,8 @@
 
 	<nav>
 		<ul class="flex gap-2 md:gap-4">
-			<NavItem href={`/workout/${format(new Date(), 'EEEE')}`}>Workout</NavItem>
+			<NavItem href="/workout/{day}">Workout</NavItem>
+			<NavItem href="/weight-tracker/{today}">Weight Tracker</NavItem>
 			<NavItem href="/schedule">Schedule</NavItem>
 		</ul>
 	</nav>

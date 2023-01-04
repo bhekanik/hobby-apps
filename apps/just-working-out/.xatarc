@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Bhekani-Khumalo-s-workspace-sem5mg.eu-west-1.xata.sh/db/just-working-out",
+  "codegen": {
+    "output": "src/lib/xata.ts"
+  }
+}

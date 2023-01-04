@@ -104,8 +104,8 @@ export default function Index() {
 
   useEffect(() => {
     if (likes) {
-      const map = likes.reduce<Record<string, SerializeDate<User>>>(
-        (acc, like) => {
+      const map = likes.reduce(
+        (acc: Record<string, SerializeDate<User>>, like: LikeWithUsers) => {
           acc[like.to.id as string] = like.to;
           return acc;
         },
@@ -118,8 +118,8 @@ export default function Index() {
 
   useEffect(() => {
     if (likedBy) {
-      const map = likedBy.reduce<Record<string, SerializeDate<User>>>(
-        (acc, like) => {
+      const map = likedBy.reduce(
+        (acc: Record<string, SerializeDate<User>>, like: LikeWithUsers) => {
           acc[like.from.id as string] = like.from;
           return acc;
         },
@@ -134,8 +134,8 @@ export default function Index() {
     if (users) {
       setGenderFilteredUsers(
         users
-          .filter((user) => user.gender !== currentUser.gender)
-          .filter((user) => {
+          .filter((user: User) => user.gender !== currentUser.gender)
+          .filter((user: User) => {
             return !Boolean(likesMap[user.id as string]);
           })
       );
@@ -163,7 +163,7 @@ export default function Index() {
           </h2>
 
           <ul className="flex flex-col gap-4">
-            {likes?.map((like) => (
+            {likes?.map((like: LikeWithUsers) => (
               <li key={like.id} className="flex gap-4">
                 <Form method="post" className="flex gap-4 items-center">
                   <Button
