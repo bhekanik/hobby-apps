@@ -24,7 +24,9 @@
 
 {#if $page.data.id}
 	<div class="w-full flex flex-col items-center gap-4 p-8">
-		<p class="text-3xl">{$page.data.weight} <span class="text-zinc-500">{$page.data.unit}</span></p>
+		<p class="text-3xl text-custom-blue">
+			{$page.data.weight} <span class="text-zinc-500">{$page.data.unit}</span>
+		</p>
 		<a
 			class="text-xl p-4 text-custom-green hover:text-custom-red"
 			href="/weight-tracker/{$page.params.date}/edit">Edit</a
