@@ -3,9 +3,9 @@
 	import '../app.css';
 </script>
 
-<div class="h-[100vh] w-[100vw] bg-zinc-900 text-white">
+<div class="h-[100vh] w-[100vw] bg-zinc-900 text-white font-inter">
 	<Header />
-	<div class="p-8">
+	<div class="p-8 overflow-auto">
 		<slot />
 	</div>
 </div>

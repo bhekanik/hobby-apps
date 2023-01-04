@@ -12,15 +12,20 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"lint-staged": "lint-staged"
+		"lint-staged": "lint-staged",
+		"codegen": "contentful-typescript-codegen --output src/lib/generated/contentful.d.ts"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
+		"@types/node": "^18.11.18",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.13",
+		"contentful-management": "^10.26.0",
+		"contentful-typescript-codegen": "^3.4.0",
+		"dotenv": "^16.0.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -40,5 +45,10 @@
 		"src/**/*.{ts,tsx,svelte}": "eslint --cache --fix",
 		"src/**/*.{ts,tsx,css,md,svelte}": "prettier --write",
 		"src/**/*.{test,spec}.{ts,tsx,svelte}": "vitest related --run"
+	},
+	"dependencies": {
+		"case": "^1.6.3",
+		"contentful": "^9.2.14",
+		"date-fns": "^2.29.3"
 	}
 }

@@ -2,11 +2,11 @@
   "cSpell.words": [
     "apikey",
     "Authz",
-    "cloudinary",
-    "xata",
     "bbox",
     "Chakra",
+    "cloudinary",
     "Cloudinary",
+    "cooldown",
     "Crowdsourced",
     "dealbase",
     "Dealflow",
@@ -26,6 +26,7 @@
     "Signup",
     "sourcename",
     "supabase",
-    "upsert"
+    "upsert",
+    "xata"
   ]
 }
