@@ -10,10 +10,8 @@
 
 	<nav>
 		<ul class="flex gap-4">
-			<NavItem href="/">Home</NavItem>
 			<NavItem href="/schedule">Schedule</NavItem>
 			<NavItem href={`/workout/${format(new Date(), 'EEEE')}`}>Workout</NavItem>
-			<NavItem href="/meal-plan">Meal Plan</NavItem>
 		</ul>
 	</nav>
 </header>
