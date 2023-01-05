@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Case from 'case';
-	import { format, parseISO } from 'date-fns';
+	import { format } from 'date-fns';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	$: date = data.date ? new Date(parseISO(data.date)) : new Date($page.params.date);
+	$: date = data.date ?? new Date($page.params.date);
 </script>
 
 <div class="flex flex-col justify-between items-center mb-4">

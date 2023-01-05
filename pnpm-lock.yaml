@@ -40,6 +40,7 @@ importers:
       postcss: ^8.4.20
       prettier: ^2.8.0
       prettier-plugin-svelte: ^2.8.1
+      simple-statistics: ^7.8.0
       svelte: ^3.54.0
       svelte-check: ^2.9.2
       svelte-motion: ^0.11.5
@@ -53,6 +54,7 @@ importers:
       contentful: 9.2.14
       d3: 7.8.0
       date-fns: 2.29.3
+      simple-statistics: 7.8.0
     devDependencies:
       '@playwright/test': 1.29.1
       '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.1
@@ -9990,6 +9992,10 @@ packages:
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
+
+  /simple-statistics/7.8.0:
+    resolution: {integrity: sha512-lTWbfJc0u6GZhBojLOrlHJMTHu6PdUjSsYLrpiH902dVBiYJyWlN/LdSoG8b5VvfG1D30gIBgarqMNeNmU5nAA==}
+    dev: false
 
   /sirv/2.0.2:
     resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}

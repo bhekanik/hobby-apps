@@ -1,6 +1,6 @@
 import type { Weight } from '$lib/xata';
 import { getXataClient } from '$lib/xataClient';
-import type { Actions } from '@sveltejs/kit';
+import type { Actions } from '../$types';
 
 const xata = getXataClient();
 
@@ -13,7 +13,7 @@ export const actions: Actions = {
 
 		const newWeightLog: Omit<Weight, 'id'> = {
 			created_at: new Date(),
-			date,
+			date: new Date(date),
 			weight: +weight,
 			unit: unit
 		};

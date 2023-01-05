@@ -1,17 +1,23 @@
 <script lang="ts">
 	import type { Weight } from '$lib/xata';
 	import * as d3 from 'd3';
-	import { format, parseISO } from 'date-fns';
+	import { format } from 'date-fns';
+	import * as ss from 'simple-statistics';
 	import colors from 'tailwindcss/colors';
 	import type { PageData } from './$types';
 
 	let height: number;
 	let width: number;
 
+	type Filter = 'week' | 'month' | 'quarter' | 'half' | 'year';
+
+	let filter: Filter = 'month';
+
 	export let data: PageData;
-	const weight = data.records.map((w) => ({ ...w, date: parseISO(w.date as string) })) ?? [];
+	const weight = data.records.map((w) => ({ ...w, date: w.date })) ?? [];
 
 	let result: string | null = '';
+	let trendline: string | null = '';
 
 	let margin = {
 		top: 20,
@@ -40,6 +46,13 @@
 			.y((d) => yScale(d.weight));
 
 		result = line(weight);
+
+		const regression = ss.linearRegression(weight.map((w) => [+w.date, w.weight]));
+		const regressionLine = ss.linearRegressionLine(regression);
+
+		const trendLineData = xScale.domain().map((x) => ({ date: x, weight: regressionLine(+x) }));
+
+		trendline = line(trendLineData as unknown as Weight[]);
 	}
 </script>
 
@@ -48,7 +61,23 @@
 </div>
 
 <div class="w-full h-[500px] text-custom-red" bind:clientHeight={height} bind:clientWidth={width}>
-	<svg class="bg-zinc-800" viewBox="0 0 {width} {height}">
+	<div class="flex gap-4 justify-between items-center w-full text-white">
+		<h2 class="mt-2 mb-4 text-2xl px-8 w-full">Weight Chart</h2>
+		<div class="flex gap-4 items-center justify-center">
+			<p>Last</p>
+			<select bind:value={filter} name="filter" class="bg-zinc-900 pr-0 outline-none text-center">
+				<option value="week">Week</option>
+				<option value="month">Month</option>
+				<option value="quarter">Quarter</option>
+				<option value="half">6 Months</option>
+				<option value="year">Year</option>
+				<option />
+			</select>
+			<a href="/?filter={filter}" class="p-4 text-custom-green hover:text-custom-red">Refresh</a>
+		</div>
+	</div>
+
+	<svg class="bg-zinc-800 rounded-3xl p-8" viewBox="0 0 {width} {height}">
 		{#each yScale.ticks(5) as max}
 			<g transform="translate(10,{yScale(max)})" class="text-zinc-200">
 				<line
@@ -70,6 +99,13 @@
 		{/each}
 
 		<path d={result} fill="none" stroke-width="2" stroke="currentColor" />
+		<path
+			stroke-dasharray="6,6"
+			d={trendline}
+			fill="none"
+			stroke-width="2"
+			stroke={colors.green[500]}
+		/>
 
 		{#each weight as weight}
 			<circle

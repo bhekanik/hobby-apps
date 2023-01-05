@@ -12,7 +12,7 @@ export const actions: Actions = {
 		const unit = data.get('unit') as string;
 
 		await xata.db.weight.update(id, {
-			date,
+			date: new Date(date as string),
 			weight: +weight,
 			unit: unit
 		});

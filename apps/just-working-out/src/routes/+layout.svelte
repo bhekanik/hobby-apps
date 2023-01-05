@@ -3,9 +3,9 @@
 	import '../app.css';
 </script>
 
-<div class="h-[100%] w-[100%] min-h-screen bg-zinc-900 text-white font-inter">
+<div class="flex flex-col h-[100%] w-[100%] min-h-screen bg-zinc-900 text-white font-inter">
 	<Header />
-	<div class="p-8 overflow-auto">
+	<div class="p-8 overflow-auto flex-1">
 		<slot />
 	</div>
 </div>

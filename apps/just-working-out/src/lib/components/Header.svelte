@@ -8,9 +8,9 @@
 </script>
 
 <header
-	class="flex flex-col md:flex-row pt-8 md:pt-0 gap-4 w-full justify-between items-center px-8"
+	class="flex flex-col md:flex-row pt-8 md:pt-0 gap-4 w-full justify-between items-center px-8 sticky top-0 bg-zinc-900 z-50"
 >
-	<h1 class="text-2xl font-light text-custom-blue">
+	<h1 class="text-2xl font-bold text-custom-blue">
 		<a href="/">Just Working Out</a>
 	</h1>
 
