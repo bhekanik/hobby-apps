@@ -14,7 +14,7 @@
 	let filter: Filter = 'month';
 
 	export let data: PageData;
-	const weight = data.records.map((w) => ({ ...w, date: w.date })) ?? [];
+	$: weight = data.records.map((w) => ({ ...w, date: w.date })) ?? [];
 
 	let result: string | null = '';
 	let trendline: string | null = '';
