@@ -90,8 +90,8 @@ export const getRoomImageUrl = (
     { flags: "layer_apply", gravity: "north_west", x: 40, y: 215 },
     {
       color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 850,
-      height: 250,
+      width: room.type === "poll" ? 1000 : 850,
+      height: 350,
       crop: "fit",
       overlay: {
         font_family: "Open Sans",
@@ -104,34 +104,12 @@ export const getRoomImageUrl = (
             : `${room?.name || "Unnamed Room"}`,
       },
     },
-    { flags: "layer_apply", gravity: "north_west", x: 300, y: 200 },
     {
-      color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 950,
-      height: 50,
-      crop: "fit",
-      overlay: {
-        font_family: "Open Sans",
-        font_size: 40,
-        text_align: "left",
-        text: `Room Code:`,
-      },
+      flags: "layer_apply",
+      gravity: "north_west",
+      x: room.type === "poll" ? 130 : 300,
+      y: 200,
     },
-    { flags: "layer_apply", gravity: "south_west", x: 40, y: 130 },
-    {
-      color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 850,
-      height: 320,
-      crop: "fit",
-      overlay: {
-        font_family: "Open Sans",
-        font_size: 60,
-        font_weight: "bold",
-        text_align: "left",
-        text: `${room?.id}`,
-      },
-    },
-    { flags: "layer_apply", gravity: "south_west", x: 300, y: 115 },
   ];
 
   try {

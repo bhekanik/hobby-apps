@@ -38,18 +38,12 @@ interface LoaderData {
 
 export const meta: MetaFunction = ({ data }) => {
   return {
-    title: `${config.appName} - Room Name: ${
-      data.room?.name || "Unnamed Room"
-    }`,
-    "twitter:title": `${config.appName} - Room Name: ${
-      data.room?.name || "Unnamed Room"
-    }`,
-    "og:title": `${config.appName} - Room Name: ${
-      data.room?.name || "Unnamed Room"
-    }`,
-    description: config.appDescription,
-    "twitter:description": config.appDescription,
-    "og:description": config.appDescription,
+    title: `${config.appName} -  ${data.poll?.question || ""}`,
+    "twitter:title": `${config.appName} - ${data.poll?.question || ""}`,
+    "og:title": `${config.appName} - ${data.poll?.question || ""}`,
+    description: "Anonymous Poll",
+    "twitter:description": "Anonymous Poll",
+    "og:description": "Anonymous Poll",
     "og:image": data.url,
     "og:image:width": "1200",
     "og:image:height": "630",
