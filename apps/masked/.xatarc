@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Bhekani-Khumalo-s-workspace-sem5mg.eu-west-1.xata.sh/db/ccy-confessions",
+  "codegen": {
+    "output": "app/xata.ts"
+  }
+}
