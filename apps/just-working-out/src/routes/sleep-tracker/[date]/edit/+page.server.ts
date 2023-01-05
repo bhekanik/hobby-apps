@@ -11,12 +11,12 @@ export const actions: Actions = {
 		const value = data.get('value') as string;
 		const unit = data.get('unit') as string;
 
-		await xata.db.weight.update(id, {
+		await xata.db.sleep.update(id, {
 			date: new Date(date as string),
 			value: +value,
 			unit: unit
 		});
 
-		throw redirect(302, `/weight-tracker/${date}`);
+		throw redirect(302, `/sleep-tracker/${date}`);
 	}
 };

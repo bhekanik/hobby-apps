@@ -1,4 +1,4 @@
-import type { Weight } from '$lib/xata';
+import type { Sleep, Weight } from '$lib/xata';
 import { getXataClient } from '$lib/xataClient';
 import { sub } from 'date-fns';
 import type { PageServerLoad } from './$types';
@@ -17,6 +17,8 @@ export const load = (async ({ url }) => {
 		}
 	};
 
-	const records = await xata.db.weight.filter(filterQuery).sort('date', 'asc').getAll();
-	return { records: records as Weight[] };
+	const weight = await xata.db.weight.filter(filterQuery).sort('date', 'asc').getAll();
+	const sleep = await xata.db.sleep.filter(filterQuery).sort('date', 'asc').getAll();
+
+	return { weight: weight as Weight[], sleep: sleep as Sleep[] };
 }) satisfies PageServerLoad;

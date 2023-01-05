@@ -12,7 +12,7 @@ export const tables = [
 				notNull: true,
 				defaultValue: '2023-01-04T14:21:02.599Z'
 			},
-			{ name: 'weight', type: 'float', notNull: true, defaultValue: '0' },
+			{ name: 'value', type: 'float', notNull: true, defaultValue: '0' },
 			{ name: 'unit', type: 'string', notNull: true, defaultValue: 'kg' },
 			{
 				name: 'date',
@@ -20,6 +20,25 @@ export const tables = [
 				notNull: true,
 				defaultValue: '2023-01-05T01:39:52.101Z'
 			}
+		]
+	},
+	{
+		name: 'sleep',
+		columns: [
+			{
+				name: 'created_at',
+				type: 'datetime',
+				notNull: true,
+				defaultValue: '2023-01-05T02:22:39.25Z'
+			},
+			{ name: 'value', type: 'float', notNull: true, defaultValue: '0' },
+			{
+				name: 'date',
+				type: 'datetime',
+				notNull: true,
+				defaultValue: '2023-01-05T02:23:50.31Z'
+			},
+			{ name: 'unit', type: 'string', notNull: true, defaultValue: 'hrs' }
 		]
 	}
 ] as const;
@@ -30,8 +49,12 @@ export type InferredTypes = SchemaInference<SchemaTables>;
 export type Weight = InferredTypes['weight'];
 export type WeightRecord = Weight & XataRecord;
 
+export type Sleep = InferredTypes['sleep'];
+export type SleepRecord = Sleep & XataRecord;
+
 export type DatabaseSchema = {
 	weight: WeightRecord;
+	sleep: SleepRecord;
 };
 
 export const DatabaseClient = buildClient();

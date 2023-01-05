@@ -5,12 +5,12 @@
 
 <fieldset class="flex gap-4 bg-zinc-800 p-8 pr-11 rounded-3xl">
 	<label class="flex flex-col gap-4 items-center">
-		Weight
+		Hours
 		<input
 			type="number"
 			name="value"
-			min={50.0}
-			max={90.0}
+			min={0.0}
+			max={24.0}
 			step={0.1}
 			{value}
 			class="bg-zinc-800 p-4 text-2xl text-center outline-none"
@@ -18,9 +18,9 @@
 	</label>
 	<label class="flex flex-col gap-4 items-center">
 		Unit
-		<select name="unit" value="kg" class="bg-zinc-800 p-4 pr-0 text-2xl outline-none text-center">
-			<option value="kg">KG</option>
-			<option value="lbs">LBS</option>
+		<select name="unit" value="hrs" class="bg-zinc-800 p-4 pr-0 text-2xl outline-none text-center">
+			<option value="hrs">HRS</option>
+			<option value="mins">MINS</option>
 		</select>
 	</label>
 </fieldset>

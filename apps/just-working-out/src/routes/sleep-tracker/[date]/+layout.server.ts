@@ -1,4 +1,4 @@
-import type { Weight } from '$lib/xata';
+import type { Sleep } from '$lib/xata';
 import { getXataClient } from '$lib/xataClient';
 import { sub } from 'date-fns';
 import type { LayoutServerLoad } from './$types';
@@ -7,12 +7,12 @@ const xata = getXataClient();
 
 export const load = (async ({ params }) => {
 	const date = params.date;
-	const record = await xata.db.weight.filter({ date: new Date(date) }).getFirst();
-	const previousDayRecord = await xata.db.weight
+	const record = await xata.db.sleep.filter({ date: new Date(date) }).getFirst();
+	const previousDayRecord = await xata.db.sleep
 		.filter({ date: sub(new Date(date), { days: 1 }) })
 		.getFirst();
 
-	return { ...record, previousDayWeight: previousDayRecord?.value } as Weight & {
-		previousDayWeight?: number;
+	return { ...record, previousDaySleep: previousDayRecord?.value } as Sleep & {
+		previousDaySleep?: number;
 	};
 }) satisfies LayoutServerLoad;

@@ -16,9 +16,9 @@
 
 	<nav>
 		<ul class="flex gap-2 md:gap-4">
-			<NavItem href="/">Home</NavItem>
-			<NavItem href="/workout/{day}">Workout</NavItem>
 			<NavItem href="/weight-tracker/{today}">Weight Tracker</NavItem>
+			<NavItem href="/sleep-tracker/{today}">Sleep Tracker</NavItem>
+			<NavItem href="/workout/{day}">Workout</NavItem>
 			<NavItem href="/schedule">Schedule</NavItem>
 		</ul>
 	</nav>
