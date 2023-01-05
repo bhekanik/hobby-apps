@@ -27,6 +27,7 @@ import { getRoom } from "~/models/rooms.server.";
 import { Choice } from "~/types/Choice";
 import { Poll } from "~/types/Poll";
 import { Room } from "~/types/Room";
+import { SerializeDate } from "~/types/SerializeDate";
 
 interface LoaderData {
   room: Room;
@@ -63,11 +64,12 @@ export const loader: LoaderFunction = async ({ params }) => {
   const room = await getRoom(params.roomId);
   const poll = await getRoomPoll(params.roomId);
   let choices = null;
+
   if (poll) {
     choices = await getChoices(poll.id);
   }
 
-  const url = getRoomImageUrl(room, params.theme as ThemeColor);
+  const url = getRoomImageUrl(room, params.theme as ThemeColor, poll);
 
   return json({
     room,
@@ -121,7 +123,7 @@ export default function Index() {
         <Form method="post" className="flex flex-col p-8 gap-4">
           <h3 className="text-3xl">{poll.question}</h3>
           <div className="flex flex-col gap-2 w-full justify-start items-start">
-            {choices.map((choice: Choice) => (
+            {choices.map((choice: SerializeDate<Choice>) => (
               <label
                 key={choice.id}
                 className="flex flex-row gap-2 justify-start items-center w-full"

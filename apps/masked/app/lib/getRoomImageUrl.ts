@@ -6,7 +6,8 @@ import { config, ThemeColor } from "./config";
 
 export const getRoomImageUrl = (
   room: Readonly<SelectedPick<RoomsRecord, ["*"]> | null>,
-  theme?: ThemeColor
+  theme?: ThemeColor,
+  poll?: any
 ) => {
   if (!room) return "";
 
@@ -70,7 +71,7 @@ export const getRoomImageUrl = (
         font_family: "Open Sans",
         font_size: 30,
         text_align: "left",
-        text: config.appDescription,
+        text: room.type === "poll" ? "Anonymous Poll" : config.appDescription,
       },
     },
     { flags: "layer_apply", gravity: "north_west", x: 40, y: 140 },
@@ -83,7 +84,7 @@ export const getRoomImageUrl = (
         font_family: "Open Sans",
         font_size: 40,
         text_align: "left",
-        text: `Room Name: `,
+        text: room.type === "poll" ? "Poll: " : "Room Name: ",
       },
     },
     { flags: "layer_apply", gravity: "north_west", x: 40, y: 215 },
@@ -97,7 +98,10 @@ export const getRoomImageUrl = (
         font_size: 60,
         font_weight: "bold",
         text_align: "left",
-        text: `${room?.name || "Unnamed Room"}`,
+        text:
+          room.type === "poll"
+            ? poll?.question ?? ""
+            : `${room?.name || "Unnamed Room"}`,
       },
     },
     { flags: "layer_apply", gravity: "north_west", x: 300, y: 200 },
