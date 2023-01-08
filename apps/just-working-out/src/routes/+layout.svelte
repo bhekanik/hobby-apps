@@ -5,7 +5,7 @@
 
 <div class="flex flex-col h-[100%] w-[100%] min-h-screen bg-zinc-900 text-white font-inter">
 	<Header />
-	<div class="p-8 overflow-auto flex-1">
+	<div class="p-8">
 		<slot />
 	</div>
 </div>

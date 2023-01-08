@@ -9,7 +9,7 @@
 	import WarmUp from '$lib/components/WarmUp.svelte';
 	import { config } from '$lib/config';
 	import { add, format, sub } from 'date-fns';
-	import type { PageData } from '../$types';
+	import type { PageData } from './$types';
 
 	let currentDate = new Date();
 

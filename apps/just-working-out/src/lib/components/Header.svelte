@@ -8,14 +8,14 @@
 </script>
 
 <header
-	class="flex flex-col md:flex-row pt-8 md:pt-0 gap-4 w-full justify-between items-center px-8 sticky top-0 bg-zinc-900 z-50"
+	class="flex flex-col md:flex-row pt-8 md:pt-0 gap-4 w-full justify-between items-center px-8 sticky top-0 bg-zinc-900 z-50 pb-4"
 >
 	<h1 class="text-2xl font-bold text-custom-blue">
 		<a href="/">Just Working Out</a>
 	</h1>
 
 	<nav>
-		<ul class="flex gap-2 md:gap-4">
+		<ul class="flex items-center gap-2 md:gap-4">
 			<NavItem href="/weight-tracker/{today}">Weight Tracker</NavItem>
 			<NavItem href="/sleep-tracker/{today}">Sleep Tracker</NavItem>
 			<NavItem href="/workout/{day}">Workout</NavItem>
