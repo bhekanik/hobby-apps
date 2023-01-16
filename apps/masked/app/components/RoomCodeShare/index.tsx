@@ -28,7 +28,7 @@ export const RoomCodeShare = forwardRef<
 
       setRoomLink(
         `${origin}/${config.roomsPath}${share ? `/share` : ""}/${room.id}${
-          poll ? `/poll` : ""
+          poll ? `/poll` : "/posts"
         }`
       );
     }

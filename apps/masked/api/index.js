@@ -1,4 +1,3 @@
-"use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -28,16 +27,9 @@ var require_pwa_utils = __commonJS({
   }
 });
 
-// server.js
-var server_exports = {};
-__export(server_exports, {
-  default: () => server_default
-});
-module.exports = __toCommonJS(server_exports);
-
-// server-entry-module:@remix-run/dev/server-build
-var server_build_exports = {};
-__export(server_build_exports, {
+// <stdin>
+var stdin_exports = {};
+__export(stdin_exports, {
   assets: () => assets_manifest_default,
   assetsBuildDirectory: () => assetsBuildDirectory,
   entry: () => entry,
@@ -45,16 +37,21 @@ __export(server_build_exports, {
   publicPath: () => publicPath,
   routes: () => routes
 });
+module.exports = __toCommonJS(stdin_exports);
 
 // app/entry.server.tsx
 var entry_server_exports = {};
 __export(entry_server_exports, {
   default: () => handleRequest
 });
-var import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_jsx_runtime = require("react/jsx-runtime");
+var import_react = require("@remix-run/react"), import_server = require("react-dom/server"), import_jsx_dev_runtime = require("react/jsx-dev-runtime");
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
   let markup = (0, import_server.renderToString)(
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url })
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
+      fileName: "app/entry.server.tsx",
+      lineNumber: 12,
+      columnNumber: 5
+    }, this)
   );
   return responseHeaders.set("Content-Type", "text/html"), new Response("<!DOCTYPE html>" + markup, {
     headers: responseHeaders,
@@ -114,7 +111,7 @@ var colors = {
 };
 
 // app/components/FormElements/LinkButton/index.tsx
-var import_jsx_runtime2 = require("react/jsx-runtime"), LinkButton = (0, import_react3.forwardRef)(({ children, className, color = "primary", to, ...props }, ref) => {
+var import_jsx_dev_runtime2 = require("react/jsx-dev-runtime"), LinkButton = (0, import_react3.forwardRef)(({ children, className, color = "primary", to, ...props }, ref) => {
   let btnClasses = (0, import_classnames.default)(
     "p-2 px-4 flex text-bold border-[1px] border-gray-400 text-white items-center whitespace-nowrap justify-center rounded-full",
     `${colors[color]}-800`,
@@ -122,40 +119,96 @@ var import_jsx_runtime2 = require("react/jsx-runtime"), LinkButton = (0, import_
     "hover:text-green-500",
     className
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Link, { to, ...props, ref, className: btnClasses, children });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Link, { to, ...props, ref, className: btnClasses, children }, void 0, !1, {
+    fileName: "app/components/FormElements/LinkButton/index.tsx",
+    lineNumber: 24,
+    columnNumber: 5
+  }, this);
 });
 
 // app/components/Header/index.tsx
-var import_jsx_runtime3 = require("react/jsx-runtime");
+var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
 function Header({ room, share = !0, home = !1 }) {
-  return room ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("header", { className: "border-b-[1px] border-gray-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_jsx_runtime3.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "w-full relative flex items-center justify-around", children: [
-      home && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+  return room ? /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("header", { className: "border-b-[1px] border-gray-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_jsx_dev_runtime3.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "w-full relative flex items-center justify-around", children: [
+      home && /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(
         LinkButton,
         {
           color: "secondary",
           to: "/",
           className: "flex items-center justify-center w-[fit-content] rounded-full absolute left-0 text-lg",
-          children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_ai.AiOutlineHome, {})
-        }
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_ai.AiOutlineHome, {}, void 0, !1, {
+            fileName: "app/components/Header/index.tsx",
+            lineNumber: 25,
+            columnNumber: 15
+          }, this)
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/components/Header/index.tsx",
+          lineNumber: 20,
+          columnNumber: 13
+        },
+        this
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { className: "w-full font-black m-0 p-0 text-5xl text-center font-heading", children: room.name || config.appName })
-    ] }),
-    share && room && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "w-full text-center text-gray-600", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { className: "w-full font-black m-0 p-0 text-5xl text-center font-heading", children: room.name || config.appName }, void 0, !1, {
+        fileName: "app/components/Header/index.tsx",
+        lineNumber: 28,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/components/Header/index.tsx",
+      lineNumber: 18,
+      columnNumber: 9
+    }, this),
+    share && room && /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "w-full text-center text-gray-600", children: [
       "Room Code: ",
       room.id
-    ] })
-  ] }) }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("header", { className: "border-b-[1px] border-gray-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(import_react4.Link, { to: "/", className: "cursor-pointer", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { className: "w-full mb-4 font-black text-5xl text-center font-heading", children: config.appName }) }) });
+    ] }, void 0, !0, {
+      fileName: "app/components/Header/index.tsx",
+      lineNumber: 41,
+      columnNumber: 11
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/components/Header/index.tsx",
+    lineNumber: 17,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/components/Header/index.tsx",
+    lineNumber: 16,
+    columnNumber: 5
+  }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("header", { className: "border-b-[1px] border-gray-700 p-8 pb-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react4.Link, { to: "/", className: "cursor-pointer", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { className: "w-full mb-4 font-black text-5xl text-center font-heading", children: config.appName }, void 0, !1, {
+    fileName: "app/components/Header/index.tsx",
+    lineNumber: 50,
+    columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/components/Header/index.tsx",
+    lineNumber: 49,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/components/Header/index.tsx",
+    lineNumber: 48,
+    columnNumber: 5
+  }, this);
 }
 
 // app/layouts/AppLayout/index.tsx
-var import_jsx_runtime4 = require("react/jsx-runtime"), AppLayout = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "bg-gray-800 w-full relative text-gray-300 px-0 md:p-8 md:pt-0 pt-0 min-h-[100vh] h-full ", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "flex p-0 flex-col max-w-4xl w-full mx-auto sticky top-8 bg-gray-800 border-r-[1px] border-l-[1px] border-gray-700 min-h-[100vh]", children }) });
+var import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), AppLayout = ({ children }) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "bg-gray-800 w-full relative text-gray-300 px-0 md:p-8 md:pt-0 pt-0 min-h-[100vh] h-full ", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "flex p-0 flex-col max-w-4xl w-full mx-auto sticky top-8 bg-gray-800 border-r-[1px] border-l-[1px] border-gray-700 min-h-[100vh]", children }, void 0, !1, {
+  fileName: "app/layouts/AppLayout/index.tsx",
+  lineNumber: 6,
+  columnNumber: 7
+}, this) }, void 0, !1, {
+  fileName: "app/layouts/AppLayout/index.tsx",
+  lineNumber: 5,
+  columnNumber: 5
+}, this);
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-VOONZ3MB.css";
+var app_default = "/build/_assets/app-OHH36CX5.css";
 
 // app/root.tsx
-var import_jsx_runtime5 = require("react/jsx-runtime"), isMount = !0, links = () => [
+var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime"), isMount = !0, links = () => [
   { rel: "manifest", href: "/resources/manifest.webmanifest" },
   { rel: "stylesheet", href: app_default },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -208,39 +261,99 @@ function App() {
           );
         };
       }
-  }, [location]), /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("html", { lang: "en", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Meta, {}),
+  }, [location]), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.Meta, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 87,
+        columnNumber: 9
+      }, this),
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Links, {})
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("body", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Outlet, {}),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.Links, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 87,
+        columnNumber: 18
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 86,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.Outlet, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 90,
+        columnNumber: 9
+      }, this),
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.ScrollRestoration, {}),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.ScrollRestoration, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 90,
+        columnNumber: 20
+      }, this),
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.Scripts, {}),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.Scripts, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 90,
+        columnNumber: 42
+      }, this),
       " ",
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_react5.LiveReload, {})
-    ] })
-  ] });
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_react5.LiveReload, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 90,
+        columnNumber: 54
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 89,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/root.tsx",
+    lineNumber: 85,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/root.tsx",
+      lineNumber: 102,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/root.tsx",
+      lineNumber: 101,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/root.tsx",
+        lineNumber: 105,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 104,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/root.tsx",
+    lineNumber: 100,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary() {
   let caught = (0, import_react5.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { children: "Not found" });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+      fileName: "app/root.tsx",
+      lineNumber: 115,
+      columnNumber: 12
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -330,40 +443,59 @@ __export(results_exports, {
 var import_node2 = require("@remix-run/node"), import_react11 = require("@remix-run/react"), import_tiny_invariant = __toESM(require("tiny-invariant"));
 
 // app/components/ChoiceResult/index.tsx
-var import_react7 = require("react"), import_jsx_runtime6 = require("react/jsx-runtime"), ChoiceResult = ({ choice, totalVotes }) => {
+var import_react7 = require("react"), import_jsx_dev_runtime6 = require("react/jsx-dev-runtime"), ChoiceResult = ({ choice, totalVotes }) => {
   let percentageContainerRef = (0, import_react7.useRef)(null), sizeRef = (0, import_react7.useRef)(null);
   return (0, import_react7.useEffect)(() => {
     choice && sizeRef.current && (sizeRef.current.style.width = `${(choice.votes / totalVotes * 100).toFixed(0)}%`);
-  }, [choice, sizeRef]), /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
+  }, [choice, sizeRef]), /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
     "div",
     {
       ref: percentageContainerRef,
       className: "flex flex-row justify-start items-center w-full rounded-full relative border-[1px] border-solid border-gray-500",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("span", { className: "px-8 w-full", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("span", { className: "px-8 w-full", children: [
           choice.description,
           ": ",
           choice.votes,
           " (",
           (choice.votes / totalVotes * 100).toFixed(2),
           "%)"
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+        ] }, void 0, !0, {
+          fileName: "app/components/ChoiceResult/index.tsx",
+          lineNumber: 29,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
           "div",
           {
             ref: sizeRef,
             className: `h-full bg-blue-500 absolute w-[${(choice.votes / totalVotes * 100).toFixed(0)}%] opacity-30`
-          }
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/ChoiceResult/index.tsx",
+            lineNumber: 33,
+            columnNumber: 7
+          },
+          this
         )
       ]
     },
-    choice.id
+    choice.id,
+    !0,
+    {
+      fileName: "app/components/ChoiceResult/index.tsx",
+      lineNumber: 24,
+      columnNumber: 5
+    },
+    this
   );
 };
 
 // app/components/FormElements/Button/index.tsx
 var import_classnames2 = __toESM(require("classnames")), import_react8 = require("react");
-var import_jsx_runtime7 = require("react/jsx-runtime"), Button = (0, import_react8.forwardRef)(({ children, className, textColor, color = "primary", ...props }, ref) => {
+var import_jsx_dev_runtime7 = require("react/jsx-dev-runtime"), Button = (0, import_react8.forwardRef)(({ children, className, textColor, color = "primary", ...props }, ref) => {
   let btnClasses = (0, import_classnames2.default)(
     "p-2 flex text-bold border-[1px] border-gray-400 justify-center rounded-full",
     `${colors[color]}-800`,
@@ -372,29 +504,37 @@ var import_jsx_runtime7 = require("react/jsx-runtime"), Button = (0, import_reac
     textColor ?? "text-white",
     className
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("button", { ...props, ref, className: btnClasses, children });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("button", { ...props, ref, className: btnClasses, children }, void 0, !1, {
+    fileName: "app/components/FormElements/Button/index.tsx",
+    lineNumber: 24,
+    columnNumber: 5
+  }, this);
 });
 
 // app/components/RoomCodeShare/index.tsx
 var import_classnames4 = __toESM(require("classnames")), import_react10 = require("react"), import_ai2 = require("react-icons/ai");
 
 // app/components/FormElements/Input/index.tsx
-var import_classnames3 = __toESM(require("classnames")), import_react9 = require("react"), import_jsx_runtime8 = require("react/jsx-runtime"), Input = (0, import_react9.forwardRef)(({ children, className, color = "primary", ...props }, ref) => {
+var import_classnames3 = __toESM(require("classnames")), import_react9 = require("react"), import_jsx_dev_runtime8 = require("react/jsx-dev-runtime"), Input = (0, import_react9.forwardRef)(({ children, className, color = "primary", ...props }, ref) => {
   let inputClasses = (0, import_classnames3.default)(
     "p-2 px-6 w-full bg-gray-700 rounded-full",
     className
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { ...props, ref, className: inputClasses });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("input", { ...props, ref, className: inputClasses }, void 0, !1, {
+    fileName: "app/components/FormElements/Input/index.tsx",
+    lineNumber: 13,
+    columnNumber: 10
+  }, this);
 });
 
 // app/components/RoomCodeShare/index.tsx
-var import_pwa_utils = __toESM(require_pwa_utils()), import_jsx_runtime9 = require("react/jsx-runtime"), RoomCodeShare = (0, import_react10.forwardRef)(({ room, withInput = !0, share, poll, className, ...props }, ref) => {
+var import_pwa_utils = __toESM(require_pwa_utils()), import_jsx_dev_runtime9 = require("react/jsx-dev-runtime"), RoomCodeShare = (0, import_react10.forwardRef)(({ room, withInput = !0, share, poll, className, ...props }, ref) => {
   let [copiedText, setCopiedText] = (0, import_react10.useState)(""), [roomLink, setRoomLink] = (0, import_react10.useState)("");
   (0, import_react10.useEffect)(() => {
     if (room && typeof window < "u") {
       let origin = window.location.origin;
       setRoomLink(
-        `${origin}/${config.roomsPath}${share ? "/share" : ""}/${room.id}${poll ? "/poll" : ""}`
+        `${origin}/${config.roomsPath}${share ? "/share" : ""}/${room.id}${poll ? "/poll" : "/posts"}`
       );
     }
   }, [room]);
@@ -409,7 +549,7 @@ var import_pwa_utils = __toESM(require_pwa_utils()), import_jsx_runtime9 = requi
       "Come join our room in the Masked app."
     ), await navigator.share({ url: roomLink });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
     "div",
     {
       className: (0, import_classnames4.default)(
@@ -420,35 +560,75 @@ var import_pwa_utils = __toESM(require_pwa_utils()), import_jsx_runtime9 = requi
       ref,
       ...props,
       children: [
-        withInput && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Input, { value: roomLink, disabled: !0 }),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+        withInput && /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Input, { value: roomLink, disabled: !0 }, void 0, !1, {
+          fileName: "app/components/RoomCodeShare/index.tsx",
+          lineNumber: 64,
+          columnNumber: 21
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
           Button,
           {
             onClick: handleCopy,
             "aria-label": "copy",
             color: "secondary",
             className: "flex items-center justify-center text-lg",
-            children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_ai2.AiOutlineCopy, {})
-          }
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_ai2.AiOutlineCopy, {}, void 0, !1, {
+              fileName: "app/components/RoomCodeShare/index.tsx",
+              lineNumber: 72,
+              columnNumber: 9
+            }, this)
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/RoomCodeShare/index.tsx",
+            lineNumber: 66,
+            columnNumber: 7
+          },
+          this
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(
           Button,
           {
             onClick: handleShare,
             color: "secondary",
             className: "flex items-center justify-center text-lg",
-            children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_ai2.AiOutlineShareAlt, {})
-          }
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(import_ai2.AiOutlineShareAlt, {}, void 0, !1, {
+              fileName: "app/components/RoomCodeShare/index.tsx",
+              lineNumber: 80,
+              columnNumber: 9
+            }, this)
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/RoomCodeShare/index.tsx",
+            lineNumber: 75,
+            columnNumber: 7
+          },
+          this
         ),
-        copiedText && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "absolute left-[30%] top-2 bg-slate-800 border-2 text-white rounded p-1", children: copiedText })
+        copiedText && /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("span", { className: "absolute left-[30%] top-2 bg-slate-800 border-2 text-white rounded p-1", children: copiedText }, void 0, !1, {
+          fileName: "app/components/RoomCodeShare/index.tsx",
+          lineNumber: 83,
+          columnNumber: 9
+        }, this)
       ]
-    }
+    },
+    void 0,
+    !0,
+    {
+      fileName: "app/components/RoomCodeShare/index.tsx",
+      lineNumber: 55,
+      columnNumber: 5
+    },
+    this
   );
 });
 
 // app/lib/getRoomImageUrl.ts
 var import_cloudinary = require("cloudinary"), import_date_fns = require("date-fns");
-var getRoomImageUrl = (room, theme) => {
+var getRoomImageUrl = (room, theme, poll) => {
   if (!room)
     return "";
   import_cloudinary.v2.config({
@@ -510,7 +690,7 @@ var getRoomImageUrl = (room, theme) => {
         font_family: "Open Sans",
         font_size: 30,
         text_align: "left",
-        text: config.appDescription
+        text: room.type === "poll" ? "Anonymous Poll" : config.appDescription
       }
     },
     { flags: "layer_apply", gravity: "north_west", x: 40, y: 140 },
@@ -523,51 +703,29 @@ var getRoomImageUrl = (room, theme) => {
         font_family: "Open Sans",
         font_size: 40,
         text_align: "left",
-        text: "Room Name: "
+        text: room.type === "poll" ? "Poll: " : "Room Name: "
       }
     },
     { flags: "layer_apply", gravity: "north_west", x: 40, y: 215 },
     {
       color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 850,
-      height: 250,
+      width: room.type === "poll" ? 1e3 : 850,
+      height: 350,
       crop: "fit",
       overlay: {
         font_family: "Open Sans",
         font_size: 60,
         font_weight: "bold",
         text_align: "left",
-        text: `${(room == null ? void 0 : room.name) || "Unnamed Room"}`
+        text: room.type === "poll" ? (poll == null ? void 0 : poll.question) ?? "" : `${(room == null ? void 0 : room.name) || "Unnamed Room"}`
       }
     },
-    { flags: "layer_apply", gravity: "north_west", x: 300, y: 200 },
     {
-      color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 950,
-      height: 50,
-      crop: "fit",
-      overlay: {
-        font_family: "Open Sans",
-        font_size: 40,
-        text_align: "left",
-        text: "Room Code:"
-      }
-    },
-    { flags: "layer_apply", gravity: "south_west", x: 40, y: 130 },
-    {
-      color: config.colors[theme ?? config.theme].foregroundColor,
-      width: 850,
-      height: 320,
-      crop: "fit",
-      overlay: {
-        font_family: "Open Sans",
-        font_size: 60,
-        font_weight: "bold",
-        text_align: "left",
-        text: `${room == null ? void 0 : room.id}`
-      }
-    },
-    { flags: "layer_apply", gravity: "south_west", x: 300, y: 115 }
+      flags: "layer_apply",
+      gravity: "north_west",
+      x: room.type === "poll" ? 130 : 300,
+      y: 200
+    }
   ];
   try {
     return import_cloudinary.v2.url(
@@ -753,7 +911,7 @@ var createRoom = async (name, type, secret) => {
 };
 
 // app/routes/r/$roomId/poll/results.tsx
-var import_jsx_runtime10 = require("react/jsx-runtime"), meta2 = ({ data }) => {
+var import_jsx_dev_runtime10 = require("react/jsx-dev-runtime"), meta2 = ({ data }) => {
   var _a, _b, _c;
   return {
     title: `${config.appName} - Room Name: ${((_a = data.room) == null ? void 0 : _a.name) || "Unnamed Room"}`,
@@ -782,32 +940,103 @@ var import_jsx_runtime10 = require("react/jsx-runtime"), meta2 = ({ data }) => {
 };
 function Index() {
   let { room, poll, url, choices } = (0, import_react11.useLoaderData)(), totalVotes = choices.reduce((acc, cur) => acc + cur.votes, 0);
-  return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Header, { room, home: !0 }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RoomCodeShare, { poll: !0, className: "w-full", room }) })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "flex flex-col p-8 gap-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { className: "text-3xl", children: poll.question }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "flex flex-col gap-2 w-full justify-start items-start", children: choices.map((choice) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 77,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(RoomCodeShare, { poll: !0, className: "w-full", room }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 79,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 78,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/results.tsx",
+      lineNumber: 76,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col p-8 gap-4", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h3", { className: "text-3xl", children: poll.question }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 84,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col gap-2 w-full justify-start items-start", children: choices.map((choice) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
         ChoiceResult,
         {
           choice,
           totalVotes
         },
-        choice.id
-      )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_react11.Form, { method: "get", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Button, { type: "submit", className: "px-8", children: "Get latest results" }) })
-    ] }) })
-  ] });
+        choice.id,
+        !1,
+        {
+          fileName: "app/routes/r/$roomId/poll/results.tsx",
+          lineNumber: 87,
+          columnNumber: 15
+        },
+        this
+      )) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 85,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react11.Form, { method: "get", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Button, { type: "submit", className: "px-8", children: "Get latest results" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 95,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 94,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/results.tsx",
+      lineNumber: 83,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/poll/results.tsx",
+      lineNumber: 82,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/poll/results.tsx",
+    lineNumber: 75,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary2() {
   let caught = (0, import_react11.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 112,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 111,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 115,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/results.tsx",
+        lineNumber: 114,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/results.tsx",
+      lineNumber: 110,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -825,7 +1054,7 @@ var import_node4 = require("@remix-run/node"), import_react15 = require("@remix-
 
 // app/components/ConfessionPageFooter/index.tsx
 var import_react12 = require("@remix-run/react"), import_date_fns2 = require("date-fns"), import_react13 = require("react"), import_ai3 = require("react-icons/ai");
-var import_pwa_utils2 = __toESM(require_pwa_utils()), import_jsx_runtime11 = require("react/jsx-runtime");
+var import_pwa_utils2 = __toESM(require_pwa_utils()), import_jsx_dev_runtime11 = require("react/jsx-dev-runtime");
 function ConfessionPageFooter({
   confession,
   room,
@@ -846,12 +1075,16 @@ function ConfessionPageFooter({
   let handleShare = async () => {
     (0, import_pwa_utils2.WebShareLink)(confessionLInk, confession.title, confession.content), await navigator.share({ url: confessionLInk });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex gap-4 border-t-[1px] border-b-[1px] border-gray-700 py-2 px-8 w-full items-center justify-end", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "w-full text-gray-400 text-md text-left", children: `${(0, import_date_fns2.formatDistance)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "flex gap-4 border-t-[1px] border-b-[1px] border-gray-700 py-2 px-8 w-full items-center justify-end", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "w-full text-gray-400 text-md text-left", children: `${(0, import_date_fns2.formatDistance)(
       new Date((confession == null ? void 0 : confession.created_at) ?? new Date().toISOString()),
       new Date()
-    )}` }),
-    (room == null ? void 0 : room.type) === "ama" && /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
+    )}` }, void 0, !1, {
+      fileName: "app/components/ConfessionPageFooter/index.tsx",
+      lineNumber: 68,
+      columnNumber: 7
+    }, this),
+    (room == null ? void 0 : room.type) === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
       Button,
       {
         color: "secondary",
@@ -859,21 +1092,45 @@ function ConfessionPageFooter({
         textColor: "text-gray-400",
         className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full flex flex-row items-center justify-center gap-2",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_ai3.AiOutlineComment, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "text-gray-500", children: comments == null ? void 0 : comments.length })
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_ai3.AiOutlineComment, {}, void 0, !1, {
+            fileName: "app/components/ConfessionPageFooter/index.tsx",
+            lineNumber: 82,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("span", { className: "text-gray-500", children: comments == null ? void 0 : comments.length }, void 0, !1, {
+            fileName: "app/components/ConfessionPageFooter/index.tsx",
+            lineNumber: 83,
+            columnNumber: 11
+          }, this)
         ]
-      }
+      },
+      void 0,
+      !0,
+      {
+        fileName: "app/components/ConfessionPageFooter/index.tsx",
+        lineNumber: 76,
+        columnNumber: 9
+      },
+      this
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
       fetcher.Form,
       {
         method: "post",
         className: "flex flex-row items-center justify-between",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "hidden", name: "id", value: confession == null ? void 0 : confession.id }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("input", { type: "hidden", name: "likes", value: confession == null ? void 0 : confession.likes }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("fieldset", { className: "flex flex-row items-center justify-between", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("input", { type: "hidden", name: "id", value: confession == null ? void 0 : confession.id }, void 0, !1, {
+            fileName: "app/components/ConfessionPageFooter/index.tsx",
+            lineNumber: 95,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("input", { type: "hidden", name: "likes", value: confession == null ? void 0 : confession.likes }, void 0, !1, {
+            fileName: "app/components/ConfessionPageFooter/index.tsx",
+            lineNumber: 96,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("fieldset", { className: "flex flex-row items-center justify-between", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
               Button,
               {
                 type: "submit",
@@ -882,11 +1139,27 @@ function ConfessionPageFooter({
                 color: "secondary",
                 textColor: "text-gray-400",
                 className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full",
-                children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_ai3.AiOutlineDislike, {})
-              }
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_ai3.AiOutlineDislike, {}, void 0, !1, {
+                  fileName: "app/components/ConfessionPageFooter/index.tsx",
+                  lineNumber: 106,
+                  columnNumber: 13
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ConfessionPageFooter/index.tsx",
+                lineNumber: 98,
+                columnNumber: 11
+              },
+              this
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "text-lg p-2 w-10 text-center text-gray-500", children: getOptimisticLikes() ?? confession.likes }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("span", { className: "text-lg p-2 w-10 text-center text-gray-500", children: getOptimisticLikes() ?? confession.likes }, void 0, !1, {
+              fileName: "app/components/ConfessionPageFooter/index.tsx",
+              lineNumber: 108,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
               Button,
               {
                 type: "submit",
@@ -895,24 +1168,64 @@ function ConfessionPageFooter({
                 color: "secondary",
                 textColor: "text-gray-400",
                 className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full",
-                children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_ai3.AiOutlineLike, {})
-              }
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_ai3.AiOutlineLike, {}, void 0, !1, {
+                  fileName: "app/components/ConfessionPageFooter/index.tsx",
+                  lineNumber: 119,
+                  columnNumber: 13
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ConfessionPageFooter/index.tsx",
+                lineNumber: 111,
+                columnNumber: 11
+              },
+              this
             )
-          ] })
+          ] }, void 0, !0, {
+            fileName: "app/components/ConfessionPageFooter/index.tsx",
+            lineNumber: 97,
+            columnNumber: 9
+          }, this)
         ]
-      }
+      },
+      void 0,
+      !0,
+      {
+        fileName: "app/components/ConfessionPageFooter/index.tsx",
+        lineNumber: 87,
+        columnNumber: 7
+      },
+      this
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
       Button,
       {
         onClick: handleShare,
         color: "secondary",
         textColor: "text-gray-400",
         className: "border-none flex items-center justify-center text-lg",
-        children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_ai3.AiOutlineShareAlt, {})
-      }
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(import_ai3.AiOutlineShareAlt, {}, void 0, !1, {
+          fileName: "app/components/ConfessionPageFooter/index.tsx",
+          lineNumber: 129,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/components/ConfessionPageFooter/index.tsx",
+        lineNumber: 123,
+        columnNumber: 7
+      },
+      this
     )
-  ] });
+  ] }, void 0, !0, {
+    fileName: "app/components/ConfessionPageFooter/index.tsx",
+    lineNumber: 67,
+    columnNumber: 5
+  }, this);
 }
 
 // app/hooks/useClickOutside.tsx
@@ -1131,7 +1444,7 @@ var xata5 = getXataClient(), getConfession = async (confessionId) => await xata5
 };
 
 // app/routes/m/share/$confessionId.tsx
-var import_jsx_runtime12 = require("react/jsx-runtime"), meta3 = ({ data }) => ({
+var import_jsx_dev_runtime12 = require("react/jsx-dev-runtime"), meta3 = ({ data }) => ({
   title: data.confession.title,
   "twitter:title": data.confession.title,
   "og:title": data.confession.title,
@@ -1193,37 +1506,77 @@ function Index2() {
     let formData = new FormData(e.target), content = (_a = commentRef.current) == null ? void 0 : _a.innerText;
     formData.set("comment", content), formData.set("id", confession.id), formData.set("_action", "comment"), fetcher.submit(formData, { method: "post" });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Header, { room, share: !1 }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex items-center justify-center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Header, { room, share: !1 }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 150,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex items-center justify-center", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
           LinkButton,
           {
             color: "secondary",
             to: `/${config.roomsPath}/share/${confession.room.id}`,
             className: "w-[fit-content] absolute left-4 border-none bg-none hover:bg-none",
-            children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_ai4.AiOutlineArrowLeft, {})
-          }
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_ai4.AiOutlineArrowLeft, {}, void 0, !1, {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 158,
+              columnNumber: 13
+            }, this)
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/m/share/$confessionId.tsx",
+            lineNumber: 153,
+            columnNumber: 11
+          },
+          this
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_react15.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_react15.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }, void 0, !1, {
+          fileName: "app/routes/m/share/$confessionId.tsx",
+          lineNumber: 162,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/m/share/$confessionId.tsx",
+          lineNumber: 161,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 152,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 167,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
         ConfessionPageFooter,
         {
           confession,
           room,
           comments,
           onOpenComment
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/share/$confessionId.tsx",
+          lineNumber: 168,
+          columnNumber: 9
+        },
+        this
       ),
-      isCommenting && /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+      isCommenting && /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
         "div",
         {
           ref: commentContainerRef,
           className: "ml-8 px-4 pt-0 pl-0 pb-2 border-l-[1px] border-gray-700",
-          children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
             fetcher.Form,
             {
               method: "post",
@@ -1231,22 +1584,50 @@ function Index2() {
               className: "flex flex-col px-8 pb-2",
               onSubmit: handleSubmit,
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
                       Button,
                       {
                         color: "secondary",
                         onClick: () => onOpenComment(!1),
                         className: "hover:bg-slate-600 border-none bg-none text-lg p-2 rounded-full",
-                        children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_ai4.AiOutlineClose, {})
-                      }
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(import_ai4.AiOutlineClose, {}, void 0, !1, {
+                          fileName: "app/routes/m/share/$confessionId.tsx",
+                          lineNumber: 192,
+                          columnNumber: 21
+                        }, this)
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/m/share/$confessionId.tsx",
+                        lineNumber: 187,
+                        columnNumber: 19
+                      },
+                      this
                     ),
-                    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "text-gray-400", children: "Type your comment below" })
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "hidden", name: "id", value: confession.id }),
-                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("input", { type: "hidden", name: "poster", value: "Anonymous" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("span", { className: "text-gray-400", children: "Type your comment below" }, void 0, !1, {
+                      fileName: "app/routes/m/share/$confessionId.tsx",
+                      lineNumber: 194,
+                      columnNumber: 19
+                    }, this)
+                  ] }, void 0, !0, {
+                    fileName: "app/routes/m/share/$confessionId.tsx",
+                    lineNumber: 186,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("input", { type: "hidden", name: "id", value: confession.id }, void 0, !1, {
+                    fileName: "app/routes/m/share/$confessionId.tsx",
+                    lineNumber: 197,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("input", { type: "hidden", name: "poster", value: "Anonymous" }, void 0, !1, {
+                    fileName: "app/routes/m/share/$confessionId.tsx",
+                    lineNumber: 198,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
                     Button,
                     {
                       name: "_action",
@@ -1254,36 +1635,92 @@ function Index2() {
                       value: "comment",
                       className: "text-sm py-1 flex items-center justify-center",
                       children: "Comment"
-                    }
+                    },
+                    void 0,
+                    !1,
+                    {
+                      fileName: "app/routes/m/share/$confessionId.tsx",
+                      lineNumber: 200,
+                      columnNumber: 17
+                    },
+                    this
                   )
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+                ] }, void 0, !0, {
+                  fileName: "app/routes/m/share/$confessionId.tsx",
+                  lineNumber: 185,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
                   "div",
                   {
                     ref: commentRef,
                     className: "p-0 rounded-3xl px-6 py-6 bg-gray-700 outline-none border-t-[1px] border-gray-700"
-                  }
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/routes/m/share/$confessionId.tsx",
+                    lineNumber: 210,
+                    columnNumber: 15
+                  },
+                  this
                 )
               ]
-            }
+            },
+            void 0,
+            !0,
+            {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 179,
+              columnNumber: 13
+            },
+            this
           )
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/share/$confessionId.tsx",
+          lineNumber: 175,
+          columnNumber: 11
+        },
+        this
       )
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "border-gray-700", children: comments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 149,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "border-gray-700", children: comments.map((comment) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
       "div",
       {
         className: "ml-8 pl-8 border-b-[1px] border-l-[1px] border-gray-700",
-        children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex flex-col", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex flex-row gap-2 justify-between items-center py-2 pt-4", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("h3", { className: "font-bold text-sm flex-1 whitespace-nowrap text-ellipsis", children: comment.poster ?? "Room Owner" }),
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { children: "\xB7" }),
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "w-full text-gray-400 text-sm text-left", children: `${(0, import_date_fns4.formatDistance)(
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-row gap-2 justify-between items-center py-2 pt-4", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h3", { className: "font-bold text-sm flex-1 whitespace-nowrap text-ellipsis", children: comment.poster ?? "Room Owner" }, void 0, !1, {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 228,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("span", { children: "\xB7" }, void 0, !1, {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 231,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "w-full text-gray-400 text-sm text-left", children: `${(0, import_date_fns4.formatDistance)(
               new Date(comment.created_at),
               new Date()
-            )}` })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+            )}` }, void 0, !1, {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 232,
+              columnNumber: 19
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/m/share/$confessionId.tsx",
+            lineNumber: 227,
+            columnNumber: 17
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(
             import_react_clamp_lines.default,
             {
               text: comment.content,
@@ -1294,33 +1731,104 @@ function Index2() {
               lessText: "(click for less)",
               innerElement: "p",
               className: "mb-6"
-            }
+            },
+            void 0,
+            !1,
+            {
+              fileName: "app/routes/m/share/$confessionId.tsx",
+              lineNumber: 240,
+              columnNumber: 17
+            },
+            this
           )
-        ] })
+        ] }, void 0, !0, {
+          fileName: "app/routes/m/share/$confessionId.tsx",
+          lineNumber: 226,
+          columnNumber: 15
+        }, this)
       },
-      comment.id
-    )) }) })
-  ] });
+      comment.id,
+      !1,
+      {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 222,
+        columnNumber: 13
+      },
+      this
+    )) }, void 0, !1, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 220,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 219,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/share/$confessionId.tsx",
+    lineNumber: 148,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary2({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 265,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 264,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 268,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 267,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/share/$confessionId.tsx",
+    lineNumber: 263,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary3() {
   let caught = (0, import_react15.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 281,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 280,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 284,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/share/$confessionId.tsx",
+        lineNumber: 283,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/share/$confessionId.tsx",
+      lineNumber: 279,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1334,15 +1842,15 @@ __export(poll_exports, {
   meta: () => meta4
 });
 var import_node5 = require("@remix-run/node"), import_react17 = require("@remix-run/react"), import_react18 = require("react"), import_tiny_invariant3 = __toESM(require("tiny-invariant"));
-var import_jsx_runtime13 = require("react/jsx-runtime"), meta4 = ({ data }) => {
+var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime"), meta4 = ({ data }) => {
   var _a, _b, _c;
   return {
-    title: `${config.appName} - Room Name: ${((_a = data.room) == null ? void 0 : _a.name) || "Unnamed Room"}`,
-    "twitter:title": `${config.appName} - Room Name: ${((_b = data.room) == null ? void 0 : _b.name) || "Unnamed Room"}`,
-    "og:title": `${config.appName} - Room Name: ${((_c = data.room) == null ? void 0 : _c.name) || "Unnamed Room"}`,
-    description: config.appDescription,
-    "twitter:description": config.appDescription,
-    "og:description": config.appDescription,
+    title: `${config.appName} -  ${((_a = data.poll) == null ? void 0 : _a.question) || ""}`,
+    "twitter:title": `${config.appName} - ${((_b = data.poll) == null ? void 0 : _b.question) || ""}`,
+    "og:title": `${config.appName} - ${((_c = data.poll) == null ? void 0 : _c.question) || ""}`,
+    description: "Anonymous Poll",
+    "twitter:description": "Anonymous Poll",
+    "og:description": "Anonymous Poll",
     "og:image": data.url,
     "og:image:width": "1200",
     "og:image:height": "630",
@@ -1353,7 +1861,7 @@ var import_jsx_runtime13 = require("react/jsx-runtime"), meta4 = ({ data }) => {
   (0, import_tiny_invariant3.default)(params.roomId);
   let room = await getRoom(params.roomId), poll = await getRoomPoll(params.roomId), choices = null;
   poll && (choices = await getChoices(poll.id));
-  let url = getRoomImageUrl(room, params.theme);
+  let url = getRoomImageUrl(room, params.theme, poll);
   return (0, import_node5.json)({
     room,
     poll,
@@ -1374,44 +1882,123 @@ function Index3() {
   let { room, poll, url, choices } = (0, import_react17.useLoaderData)(), actionData = (0, import_react17.useActionData)(), navigate = (0, import_react17.useNavigate)();
   return (0, import_react18.useEffect)(() => {
     !actionData || actionData.choice && navigate(`/${config.roomsPath}/${room.id}/poll/results`);
-  }, [actionData]), /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Header, { room, home: !0 }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(RoomCodeShare, { share: !0, className: "w-full", room }) })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(import_react17.Form, { method: "post", className: "flex flex-col p-8 gap-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h3", { className: "text-3xl", children: poll.question }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex flex-col gap-2 w-full justify-start items-start", children: choices.map((choice) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+  }, [actionData]), /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 111,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(RoomCodeShare, { share: !0, className: "w-full", room }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 113,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 112,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/index.tsx",
+      lineNumber: 110,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_react17.Form, { method: "post", className: "flex flex-col p-8 gap-4", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("h3", { className: "text-3xl", children: poll.question }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 118,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col gap-2 w-full justify-start items-start", children: choices.map((choice) => /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
         "label",
         {
           className: "flex flex-row gap-2 justify-start items-center w-full",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("input", { type: "hidden", name: choice.id, value: choice.votes }),
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("input", { type: "hidden", name: choice.id, value: choice.votes }, void 0, !1, {
+              fileName: "app/routes/r/$roomId/poll/index.tsx",
+              lineNumber: 125,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
               "input",
               {
                 type: "radio",
                 name: "vote",
                 value: choice.id,
                 className: "accent-gray-800"
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/r/$roomId/poll/index.tsx",
+                lineNumber: 126,
+                columnNumber: 17
+              },
+              this
             ),
             choice.description
           ]
         },
-        choice.id
-      )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Button, { type: "submit", children: "Submit Vote" })
-    ] }) })
-  ] });
+        choice.id,
+        !0,
+        {
+          fileName: "app/routes/r/$roomId/poll/index.tsx",
+          lineNumber: 121,
+          columnNumber: 15
+        },
+        this
+      )) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 119,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Button, { type: "submit", children: "Submit Vote" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 136,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/index.tsx",
+      lineNumber: 117,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/poll/index.tsx",
+      lineNumber: 116,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/poll/index.tsx",
+    lineNumber: 109,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary4() {
   let caught = (0, import_react17.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 150,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 149,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 153,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/poll/index.tsx",
+        lineNumber: 152,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/poll/index.tsx",
+      lineNumber: 148,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1428,19 +2015,35 @@ __export(confessionId_exports2, {
 var import_node6 = require("@remix-run/node"), import_react19 = require("@remix-run/react"), import_react20 = require("react"), import_ai5 = require("react-icons/ai"), import_tiny_invariant4 = __toESM(require("tiny-invariant"));
 
 // app/components/CommentsList/index.tsx
-var import_date_fns5 = require("date-fns"), import_react_clamp_lines2 = __toESM(require("react-clamp-lines")), import_jsx_runtime14 = require("react/jsx-runtime");
+var import_date_fns5 = require("date-fns"), import_react_clamp_lines2 = __toESM(require("react-clamp-lines")), import_jsx_dev_runtime14 = require("react/jsx-dev-runtime");
 function CommentsList({ comments }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "border-gray-700", children: comments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "border-gray-700", children: comments.map((comment) => /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
     "div",
     {
       className: "ml-8 pl-8 border-b-[1px] border-l-[1px] border-gray-700",
-      children: /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex flex-col", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex flex-row gap-2 justify-between items-center py-2 pt-4", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h3", { className: "font-bold text-sm flex-1 whitespace-nowrap text-ellipsis", children: comment.poster ?? "Room Owner" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { children: "\xB7" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "w-full text-gray-400 text-sm text-left", children: `${(0, import_date_fns5.formatDistance)(new Date(comment.created_at), new Date())}` })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "flex flex-col", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "flex flex-row gap-2 justify-between items-center py-2 pt-4", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("h3", { className: "font-bold text-sm flex-1 whitespace-nowrap text-ellipsis", children: comment.poster ?? "Room Owner" }, void 0, !1, {
+            fileName: "app/components/CommentsList/index.tsx",
+            lineNumber: 23,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("span", { children: "\xB7" }, void 0, !1, {
+            fileName: "app/components/CommentsList/index.tsx",
+            lineNumber: 26,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "w-full text-gray-400 text-sm text-left", children: `${(0, import_date_fns5.formatDistance)(new Date(comment.created_at), new Date())}` }, void 0, !1, {
+            fileName: "app/components/CommentsList/index.tsx",
+            lineNumber: 27,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/components/CommentsList/index.tsx",
+          lineNumber: 22,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)(
           import_react_clamp_lines2.default,
           {
             text: comment.content,
@@ -1451,16 +2054,39 @@ function CommentsList({ comments }) {
             lessText: "(click for less)",
             innerElement: "p",
             className: "mb-6"
-          }
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/CommentsList/index.tsx",
+            lineNumber: 32,
+            columnNumber: 13
+          },
+          this
         )
-      ] })
+      ] }, void 0, !0, {
+        fileName: "app/components/CommentsList/index.tsx",
+        lineNumber: 21,
+        columnNumber: 11
+      }, this)
     },
-    comment.id
-  )) });
+    comment.id,
+    !1,
+    {
+      fileName: "app/components/CommentsList/index.tsx",
+      lineNumber: 17,
+      columnNumber: 9
+    },
+    this
+  )) }, void 0, !1, {
+    fileName: "app/components/CommentsList/index.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, this);
 }
 
 // app/routes/m/ama/$confessionId.tsx
-var import_jsx_runtime15 = require("react/jsx-runtime"), meta5 = ({ data }) => ({
+var import_jsx_dev_runtime15 = require("react/jsx-dev-runtime"), meta5 = ({ data }) => ({
   title: data.confession.title,
   "twitter:title": data.confession.title,
   "og:title": data.confession.title,
@@ -1522,37 +2148,77 @@ function Index4() {
     let formData = new FormData(e.target), content = (_a = commentRef.current) == null ? void 0 : _a.innerText;
     formData.set("comment", content), formData.set("id", confession.id), formData.set("_action", "comment"), fetcher.submit(formData, { method: "post" });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Header, { room, share: !1 }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center justify-center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(Header, { room, share: !1 }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 150,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex items-center justify-center", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
           LinkButton,
           {
             color: "secondary",
             to: `/${config.roomsPath}/${confession.room.id}/ama/posts`,
             className: "w-[fit-content] absolute left-4 border-none bg-none hover:bg-none",
-            children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_ai5.AiOutlineArrowLeft, {})
-          }
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_ai5.AiOutlineArrowLeft, {}, void 0, !1, {
+              fileName: "app/routes/m/ama/$confessionId.tsx",
+              lineNumber: 158,
+              columnNumber: 13
+            }, this)
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/m/ama/$confessionId.tsx",
+            lineNumber: 153,
+            columnNumber: 11
+          },
+          this
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_react19.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_react19.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }, void 0, !1, {
+          fileName: "app/routes/m/ama/$confessionId.tsx",
+          lineNumber: 162,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/m/ama/$confessionId.tsx",
+          lineNumber: 161,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 152,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 167,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
         ConfessionPageFooter,
         {
           confession,
           room,
           comments,
           onOpenComment
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/ama/$confessionId.tsx",
+          lineNumber: 168,
+          columnNumber: 9
+        },
+        this
       ),
-      isCommenting && /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+      isCommenting && /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
         "div",
         {
           ref: commentContainerRef,
           className: "ml-8 px-4 pt-0 pl-0 pb-2 border-l-[1px] border-gray-700",
-          children: /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
             fetcher.Form,
             {
               method: "post",
@@ -1560,22 +2226,50 @@ function Index4() {
               className: "flex flex-col px-8 pb-2",
               onSubmit: handleSubmit,
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
                       Button,
                       {
                         color: "secondary",
                         onClick: () => onOpenComment(!1),
                         className: "hover:bg-slate-600 border-none bg-none text-lg p-2 rounded-full",
-                        children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_ai5.AiOutlineClose, {})
-                      }
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(import_ai5.AiOutlineClose, {}, void 0, !1, {
+                          fileName: "app/routes/m/ama/$confessionId.tsx",
+                          lineNumber: 192,
+                          columnNumber: 21
+                        }, this)
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/m/ama/$confessionId.tsx",
+                        lineNumber: 187,
+                        columnNumber: 19
+                      },
+                      this
                     ),
-                    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-gray-400", children: "Type your comment below" })
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("input", { type: "hidden", name: "id", value: confession.id }),
-                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("input", { type: "hidden", name: "poster", value: "Room Owner" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("span", { className: "text-gray-400", children: "Type your comment below" }, void 0, !1, {
+                      fileName: "app/routes/m/ama/$confessionId.tsx",
+                      lineNumber: 194,
+                      columnNumber: 19
+                    }, this)
+                  ] }, void 0, !0, {
+                    fileName: "app/routes/m/ama/$confessionId.tsx",
+                    lineNumber: 186,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("input", { type: "hidden", name: "id", value: confession.id }, void 0, !1, {
+                    fileName: "app/routes/m/ama/$confessionId.tsx",
+                    lineNumber: 197,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("input", { type: "hidden", name: "poster", value: "Room Owner" }, void 0, !1, {
+                    fileName: "app/routes/m/ama/$confessionId.tsx",
+                    lineNumber: 198,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
                     Button,
                     {
                       name: "_action",
@@ -1583,44 +2277,136 @@ function Index4() {
                       value: "comment",
                       className: "text-sm py-1 flex items-center justify-center",
                       children: "Comment"
-                    }
+                    },
+                    void 0,
+                    !1,
+                    {
+                      fileName: "app/routes/m/ama/$confessionId.tsx",
+                      lineNumber: 200,
+                      columnNumber: 17
+                    },
+                    this
                   )
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+                ] }, void 0, !0, {
+                  fileName: "app/routes/m/ama/$confessionId.tsx",
+                  lineNumber: 185,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(
                   "div",
                   {
                     ref: commentRef,
                     className: "p-0 rounded-3xl px-6 py-6 bg-gray-700 outline-none border-t-[1px] border-gray-700"
-                  }
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/routes/m/ama/$confessionId.tsx",
+                    lineNumber: 210,
+                    columnNumber: 15
+                  },
+                  this
                 )
               ]
-            }
+            },
+            void 0,
+            !0,
+            {
+              fileName: "app/routes/m/ama/$confessionId.tsx",
+              lineNumber: 179,
+              columnNumber: 13
+            },
+            this
           )
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/ama/$confessionId.tsx",
+          lineNumber: 175,
+          columnNumber: 11
+        },
+        this
       )
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(CommentsList, { comments }) })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 149,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(CommentsList, { comments }, void 0, !1, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 220,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 219,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/ama/$confessionId.tsx",
+    lineNumber: 148,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary3({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 232,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 231,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 235,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 234,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/ama/$confessionId.tsx",
+    lineNumber: 230,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary5() {
   let caught = (0, import_react19.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 248,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 247,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime15.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 251,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/ama/$confessionId.tsx",
+        lineNumber: 250,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/ama/$confessionId.tsx",
+      lineNumber: 246,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1638,7 +2424,7 @@ var import_node7 = require("@remix-run/node"), import_react23 = require("@remix-
 
 // app/components/CardFooter/index.tsx
 var import_react21 = require("@remix-run/react"), import_date_fns6 = require("date-fns"), import_react22 = require("react"), import_ai6 = require("react-icons/ai");
-var import_pwa_utils3 = __toESM(require_pwa_utils()), import_jsx_runtime16 = require("react/jsx-runtime");
+var import_pwa_utils3 = __toESM(require_pwa_utils()), import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
 function CardFooter({
   confession,
   room,
@@ -1662,12 +2448,16 @@ function CardFooter({
   let handleShare = async () => {
     (0, import_pwa_utils3.WebShareLink)(confessionLInk, confession.title, confession.content), await navigator.share({ url: confessionLInk });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex gap-4 border-t-[1px] border-b-[1px] border-gray-700 py-2 px-8 w-full items-center justify-end", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "w-full text-gray-400 text-md text-left", children: `${(0, import_date_fns6.formatDistance)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "flex gap-4 border-t-[1px] border-b-[1px] border-gray-700 py-2 px-8 w-full items-center justify-end", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "w-full text-gray-400 text-md text-left", children: `${(0, import_date_fns6.formatDistance)(
       new Date((confession == null ? void 0 : confession.created_at) ?? new Date().toISOString()),
       new Date()
-    )}` }),
-    (room == null ? void 0 : room.type) === "ama" && /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+    )}` }, void 0, !1, {
+      fileName: "app/components/CardFooter/index.tsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, this),
+    (room == null ? void 0 : room.type) === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
       Button,
       {
         color: "secondary",
@@ -1675,21 +2465,45 @@ function CardFooter({
         textColor: "text-gray-400",
         className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full flex flex-row items-center justify-center gap-2",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_ai6.AiOutlineComment, {}),
-          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "", children: comments == null ? void 0 : comments.length })
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_ai6.AiOutlineComment, {}, void 0, !1, {
+            fileName: "app/components/CardFooter/index.tsx",
+            lineNumber: 86,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "", children: comments == null ? void 0 : comments.length }, void 0, !1, {
+            fileName: "app/components/CardFooter/index.tsx",
+            lineNumber: 87,
+            columnNumber: 11
+          }, this)
         ]
-      }
+      },
+      void 0,
+      !0,
+      {
+        fileName: "app/components/CardFooter/index.tsx",
+        lineNumber: 80,
+        columnNumber: 9
+      },
+      this
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
       fetcher.Form,
       {
         method: "post",
         className: "flex flex-row items-center justify-between",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("input", { type: "hidden", name: "id", value: confession == null ? void 0 : confession.id }),
-          /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("input", { type: "hidden", name: "likes", value: confession == null ? void 0 : confession.likes }),
-          /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("fieldset", { className: "flex flex-row items-center justify-between", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("input", { type: "hidden", name: "id", value: confession == null ? void 0 : confession.id }, void 0, !1, {
+            fileName: "app/components/CardFooter/index.tsx",
+            lineNumber: 99,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("input", { type: "hidden", name: "likes", value: confession == null ? void 0 : confession.likes }, void 0, !1, {
+            fileName: "app/components/CardFooter/index.tsx",
+            lineNumber: 100,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("fieldset", { className: "flex flex-row items-center justify-between", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
               Button,
               {
                 type: "submit",
@@ -1698,11 +2512,27 @@ function CardFooter({
                 color: "secondary",
                 textColor: "text-gray-400",
                 className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full",
-                children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_ai6.AiOutlineDislike, {})
-              }
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_ai6.AiOutlineDislike, {}, void 0, !1, {
+                  fileName: "app/components/CardFooter/index.tsx",
+                  lineNumber: 110,
+                  columnNumber: 13
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/CardFooter/index.tsx",
+                lineNumber: 102,
+                columnNumber: 11
+              },
+              this
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: "text-lg p-2 w-10 text-center text-gray-400", children: getOptimisticLikes() ?? confession.likes }),
-            /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { className: "text-lg p-2 w-10 text-center text-gray-400", children: getOptimisticLikes() ?? confession.likes }, void 0, !1, {
+              fileName: "app/components/CardFooter/index.tsx",
+              lineNumber: 112,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
               Button,
               {
                 type: "submit",
@@ -1711,28 +2541,68 @@ function CardFooter({
                 color: "secondary",
                 textColor: "text-gray-400",
                 className: "border-none hover:bg-slate-600 bg-none text-lg p-2 rounded-full",
-                children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_ai6.AiOutlineLike, {})
-              }
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_ai6.AiOutlineLike, {}, void 0, !1, {
+                  fileName: "app/components/CardFooter/index.tsx",
+                  lineNumber: 123,
+                  columnNumber: 13
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/CardFooter/index.tsx",
+                lineNumber: 115,
+                columnNumber: 11
+              },
+              this
             )
-          ] })
+          ] }, void 0, !0, {
+            fileName: "app/components/CardFooter/index.tsx",
+            lineNumber: 101,
+            columnNumber: 9
+          }, this)
         ]
-      }
+      },
+      void 0,
+      !0,
+      {
+        fileName: "app/components/CardFooter/index.tsx",
+        lineNumber: 91,
+        columnNumber: 7
+      },
+      this
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
       Button,
       {
         onClick: handleShare,
         color: "secondary",
         textColor: "text-gray-400",
         className: "border-none flex items-center justify-center text-lg",
-        children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_ai6.AiOutlineShareAlt, {})
-      }
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_ai6.AiOutlineShareAlt, {}, void 0, !1, {
+          fileName: "app/components/CardFooter/index.tsx",
+          lineNumber: 133,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/components/CardFooter/index.tsx",
+        lineNumber: 127,
+        columnNumber: 7
+      },
+      this
     )
-  ] });
+  ] }, void 0, !0, {
+    fileName: "app/components/CardFooter/index.tsx",
+    lineNumber: 71,
+    columnNumber: 5
+  }, this);
 }
 
 // app/routes/r/$roomId/ama/posts.tsx
-var import_jsx_runtime17 = require("react/jsx-runtime"), meta6 = ({ data }) => {
+var import_jsx_dev_runtime17 = require("react/jsx-dev-runtime"), meta6 = ({ data }) => {
   var _a, _b, _c;
   return {
     title: `${config.appName} - Room Name: ${((_a = data.room) == null ? void 0 : _a.name) || "Unnamed Room"}`,
@@ -1811,27 +2681,75 @@ function Index5() {
     let formData = new FormData(e.target), content = (_a = commentRef.current) == null ? void 0 : _a.innerText;
     formData.set("comment", content), formData.set("id", id), formData.set("_action", "comment"), submit(formData, { method: "post" });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Header, { room, home: !0 }),
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(RoomCodeShare, { share: !0, className: "w-full", room }) })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: room.type === "ama" && secret !== room.secret ? /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "p-8", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 198,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(RoomCodeShare, { share: !0, className: "w-full", room }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 200,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 199,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 197,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: room.type === "ama" && secret !== room.secret ? /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "p-8", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
       Input,
       {
         placeholder: "Room Secret",
         onChange: handleChange,
         required: room.type === "ama"
-      }
-    ) }) : /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("ul", { className: "flex flex-col gap-1 overflow-auto", children: [
-      confessions.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col gap-4 p-8 pb-0 items-center justify-center w-full h-full", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("p", { children: "No posts yet. Share the link to get the ball rolling." }) }),
-      confessions == null ? void 0 : confessions.map((confession) => /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 206,
+        columnNumber: 13
+      },
+      this
+    ) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 205,
+      columnNumber: 11
+    }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("ul", { className: "flex flex-col gap-1 overflow-auto", children: [
+      confessions.length === 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col gap-4 p-8 pb-0 items-center justify-center w-full h-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("p", { children: "No posts yet. Share the link to get the ball rolling." }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 216,
+        columnNumber: 17
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 215,
+        columnNumber: 15
+      }, this),
+      confessions == null ? void 0 : confessions.map((confession) => /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
         "li",
         {
           className: "flex flex-col gap-2 hover:drop-shadow-md border-b-[1px] border-gray-700",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex items-center justify-between px-8 pt-4", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_react23.Link, { to: `/${config.postsPath}/ama/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("h3", { className: "font-bold text-lg flex-1 whitespace-nowrap text-ellipsis", children: confession.title }) }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_react23.Link, { to: `/${config.postsPath}/ama/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex items-center justify-between px-8 pt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react23.Link, { to: `/${config.postsPath}/ama/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("h3", { className: "font-bold text-lg flex-1 whitespace-nowrap text-ellipsis", children: confession.title }, void 0, !1, {
+              fileName: "app/routes/r/$roomId/ama/posts.tsx",
+              lineNumber: 227,
+              columnNumber: 21
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/r/$roomId/ama/posts.tsx",
+              lineNumber: 226,
+              columnNumber: 19
+            }, this) }, void 0, !1, {
+              fileName: "app/routes/r/$roomId/ama/posts.tsx",
+              lineNumber: 225,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react23.Link, { to: `/${config.postsPath}/ama/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
               import_react_clamp_lines3.default,
               {
                 text: confession.content,
@@ -1842,9 +2760,21 @@ function Index5() {
                 lessText: "(click for less)",
                 innerElement: "p",
                 className: "px-8 pb-4"
-              }
-            ) }),
-            /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                lineNumber: 234,
+                columnNumber: 19
+              },
+              this
+            ) }, void 0, !1, {
+              fileName: "app/routes/r/$roomId/ama/posts.tsx",
+              lineNumber: 233,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
               CardFooter,
               {
                 comments: comments.filter((c) => c.post.id === confession.id),
@@ -1852,18 +2782,26 @@ function Index5() {
                 room,
                 share: room.type === "ama",
                 onOpenComment: (open) => onOpenComment(open, confession.id)
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                lineNumber: 246,
+                columnNumber: 17
+              },
+              this
             ),
-            isCommenting && currentPost === confession.id && /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(
+            isCommenting && currentPost === confession.id && /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
               import_react23.Form,
               {
                 method: "post",
                 className: "flex flex-col px-8 pb-2",
                 onSubmit: (e) => handleSubmit(e, confession.id),
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
                         Button,
                         {
                           color: "secondary",
@@ -1871,14 +2809,42 @@ function Index5() {
                             onOpenComment(!1, currentPost);
                           },
                           className: "hover:bg-slate-600 border-none bg-none text-lg p-2 rounded-full",
-                          children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_ai7.AiOutlineClose, {})
-                        }
+                          children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_ai7.AiOutlineClose, {}, void 0, !1, {
+                            fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                            lineNumber: 271,
+                            columnNumber: 27
+                          }, this)
+                        },
+                        void 0,
+                        !1,
+                        {
+                          fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                          lineNumber: 264,
+                          columnNumber: 25
+                        },
+                        this
                       ),
-                      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("span", { className: "text-gray-400", children: "Type your comment below" })
-                    ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("input", { type: "hidden", name: "id", value: confession.id }),
-                    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("input", { type: "hidden", name: "poster", value: "Room Owner" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+                      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("span", { className: "text-gray-400", children: "Type your comment below" }, void 0, !1, {
+                        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                        lineNumber: 273,
+                        columnNumber: 25
+                      }, this)
+                    ] }, void 0, !0, {
+                      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                      lineNumber: 263,
+                      columnNumber: 23
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("input", { type: "hidden", name: "id", value: confession.id }, void 0, !1, {
+                      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                      lineNumber: 278,
+                      columnNumber: 23
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("input", { type: "hidden", name: "poster", value: "Room Owner" }, void 0, !1, {
+                      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                      lineNumber: 279,
+                      columnNumber: 23
+                    }, this),
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
                       Button,
                       {
                         name: "_action",
@@ -1886,45 +2852,132 @@ function Index5() {
                         value: "comment",
                         className: "text-sm py-1 flex items-center justify-center",
                         children: "Comment"
-                      }
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                        lineNumber: 281,
+                        columnNumber: 23
+                      },
+                      this
                     )
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+                  ] }, void 0, !0, {
+                    fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                    lineNumber: 262,
+                    columnNumber: 21
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
                     "div",
                     {
                       ref: commentRef,
                       className: "p-0 rounded-3xl px-6 py-6 bg-gray-700 outline-none border-t-[1px] border-gray-700"
-                    }
+                    },
+                    void 0,
+                    !1,
+                    {
+                      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                      lineNumber: 291,
+                      columnNumber: 21
+                    },
+                    this
                   )
                 ]
-              }
+              },
+              void 0,
+              !0,
+              {
+                fileName: "app/routes/r/$roomId/ama/posts.tsx",
+                lineNumber: 257,
+                columnNumber: 19
+              },
+              this
             )
           ]
         },
-        confession.id
+        confession.id,
+        !0,
+        {
+          fileName: "app/routes/r/$roomId/ama/posts.tsx",
+          lineNumber: 221,
+          columnNumber: 15
+        },
+        this
       ))
-    ] }) })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 213,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 203,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/ama/posts.tsx",
+    lineNumber: 196,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary4({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 312,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 311,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 315,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 314,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/ama/posts.tsx",
+    lineNumber: 310,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary6() {
   let caught = (0, import_react23.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 328,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 327,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 331,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/ama/posts.tsx",
+        lineNumber: 330,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/ama/posts.tsx",
+      lineNumber: 326,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -1968,7 +3021,7 @@ __export(confessionId_exports3, {
   meta: () => meta7
 });
 var import_node8 = require("@remix-run/node"), import_react25 = require("@remix-run/react"), import_react26 = require("react"), import_ai8 = require("react-icons/ai"), import_tiny_invariant6 = __toESM(require("tiny-invariant"));
-var import_jsx_runtime18 = require("react/jsx-runtime"), meta7 = ({ data }) => ({
+var import_jsx_dev_runtime18 = require("react/jsx-dev-runtime"), meta7 = ({ data }) => ({
   title: data.confession.title,
   "twitter:title": data.confession.title,
   "og:title": data.confession.title,
@@ -2030,37 +3083,77 @@ function Index6() {
     let formData = new FormData(e.target), content = (_a = commentRef.current) == null ? void 0 : _a.innerText;
     formData.set("comment", content), formData.set("id", confession.id), formData.set("_action", "comment"), fetcher.submit(formData, { method: "post" });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Header, { room, share: !1 }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex items-center justify-center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col max-w-4xl w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Header, { room, share: !1 }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 150,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex items-center justify-center", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
           LinkButton,
           {
             color: "secondary",
             to: `/${config.roomsPath}/${confession.room.id}/posts`,
             className: "w-[fit-content] absolute left-4 border-none bg-none hover:bg-none",
-            children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_ai8.AiOutlineArrowLeft, {})
-          }
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_ai8.AiOutlineArrowLeft, {}, void 0, !1, {
+              fileName: "app/routes/m/$confessionId.tsx",
+              lineNumber: 158,
+              columnNumber: 13
+            }, this)
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/m/$confessionId.tsx",
+            lineNumber: 153,
+            columnNumber: 11
+          },
+          this
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_react25.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_react25.Link, { to: `/${config.postsPath}/${confession == null ? void 0 : confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h3", { className: "font-bold pb-2 pt-4 text-2xl flex-1 whitespace-nowrap text-ellipsis", children: confession == null ? void 0 : confession.title }, void 0, !1, {
+          fileName: "app/routes/m/$confessionId.tsx",
+          lineNumber: 162,
+          columnNumber: 13
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/m/$confessionId.tsx",
+          lineNumber: 161,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 152,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "mb-4 text-lg px-8", children: confession == null ? void 0 : confession.content }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 167,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
         ConfessionPageFooter,
         {
           confession,
           room,
           comments,
           onOpenComment
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/$confessionId.tsx",
+          lineNumber: 168,
+          columnNumber: 9
+        },
+        this
       ),
-      isCommenting && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+      isCommenting && /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
         "div",
         {
           ref: commentContainerRef,
           className: "ml-8 px-4 pt-0 pl-0 pb-2 border-l-[1px] border-gray-700",
-          children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+          children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
             fetcher.Form,
             {
               method: "post",
@@ -2068,22 +3161,50 @@ function Index6() {
               className: "flex flex-col px-8 pb-2",
               onSubmit: handleSubmit,
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
                       Button,
                       {
                         color: "secondary",
                         onClick: () => onOpenComment(!1),
                         className: "hover:bg-slate-600 border-none bg-none text-lg p-2 rounded-full",
-                        children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_ai8.AiOutlineClose, {})
-                      }
+                        children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_ai8.AiOutlineClose, {}, void 0, !1, {
+                          fileName: "app/routes/m/$confessionId.tsx",
+                          lineNumber: 192,
+                          columnNumber: 21
+                        }, this)
+                      },
+                      void 0,
+                      !1,
+                      {
+                        fileName: "app/routes/m/$confessionId.tsx",
+                        lineNumber: 187,
+                        columnNumber: 19
+                      },
+                      this
                     ),
-                    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("span", { className: "text-gray-400", children: "Type your comment below" })
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("input", { type: "hidden", name: "id", value: confession.id }),
-                  /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("input", { type: "hidden", name: "poster", value: "Room Owner" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("span", { className: "text-gray-400", children: "Type your comment below" }, void 0, !1, {
+                      fileName: "app/routes/m/$confessionId.tsx",
+                      lineNumber: 194,
+                      columnNumber: 19
+                    }, this)
+                  ] }, void 0, !0, {
+                    fileName: "app/routes/m/$confessionId.tsx",
+                    lineNumber: 186,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("input", { type: "hidden", name: "id", value: confession.id }, void 0, !1, {
+                    fileName: "app/routes/m/$confessionId.tsx",
+                    lineNumber: 197,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("input", { type: "hidden", name: "poster", value: "Room Owner" }, void 0, !1, {
+                    fileName: "app/routes/m/$confessionId.tsx",
+                    lineNumber: 198,
+                    columnNumber: 17
+                  }, this),
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
                     Button,
                     {
                       name: "_action",
@@ -2091,44 +3212,136 @@ function Index6() {
                       value: "comment",
                       className: "text-sm py-1 flex items-center justify-center",
                       children: "Comment"
-                    }
+                    },
+                    void 0,
+                    !1,
+                    {
+                      fileName: "app/routes/m/$confessionId.tsx",
+                      lineNumber: 200,
+                      columnNumber: 17
+                    },
+                    this
                   )
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                ] }, void 0, !0, {
+                  fileName: "app/routes/m/$confessionId.tsx",
+                  lineNumber: 185,
+                  columnNumber: 15
+                }, this),
+                /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
                   "div",
                   {
                     ref: commentRef,
                     className: "p-0 rounded-3xl px-6 py-6 bg-gray-700 outline-none border-t-[1px] border-gray-700"
-                  }
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/routes/m/$confessionId.tsx",
+                    lineNumber: 210,
+                    columnNumber: 15
+                  },
+                  this
                 )
               ]
-            }
+            },
+            void 0,
+            !0,
+            {
+              fileName: "app/routes/m/$confessionId.tsx",
+              lineNumber: 179,
+              columnNumber: 13
+            },
+            this
           )
-        }
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/m/$confessionId.tsx",
+          lineNumber: 175,
+          columnNumber: 11
+        },
+        this
       )
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(CommentsList, { comments }) })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 149,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col pb-0 hover:drop-shadow-md h-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(CommentsList, { comments }, void 0, !1, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 220,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 219,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/$confessionId.tsx",
+    lineNumber: 148,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary5({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 232,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 231,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 235,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 234,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/m/$confessionId.tsx",
+    lineNumber: 230,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary7() {
   let caught = (0, import_react25.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 248,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 247,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 251,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/m/$confessionId.tsx",
+        lineNumber: 250,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/m/$confessionId.tsx",
+      lineNumber: 246,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -2145,14 +3358,14 @@ __export(roomId_exports, {
 var import_node9 = require("@remix-run/node"), import_react28 = require("@remix-run/react"), import_react29 = require("react"), import_tiny_invariant7 = __toESM(require("tiny-invariant"));
 
 // app/components/FormElements/Textarea/index.tsx
-var import_classnames5 = __toESM(require("classnames")), import_framer_motion = require("framer-motion"), import_react27 = require("react"), import_jsx_runtime19 = require("react/jsx-runtime"), Textarea = (0, import_react27.forwardRef)(
+var import_classnames5 = __toESM(require("classnames")), import_framer_motion = require("framer-motion"), import_react27 = require("react"), import_jsx_dev_runtime19 = require("react/jsx-dev-runtime"), Textarea = (0, import_react27.forwardRef)(
   ({ children, className, color = "primary", onClickAway, rows, ...props }, ref) => {
     let inputClasses = (0, import_classnames5.default)(
       "p-4 w-full bg-gray-700 rounded-3xl overflow-auto",
       className,
       !(className != null && className.includes("px-")) && "px-6"
     );
-    return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime19.jsxDEV)(
       import_framer_motion.motion.textarea,
       {
         ...props,
@@ -2162,7 +3375,14 @@ var import_classnames5 = __toESM(require("classnames")), import_framer_motion = 
         ref,
         className: inputClasses
       },
-      rows
+      rows,
+      !1,
+      {
+        fileName: "app/components/FormElements/Textarea/index.tsx",
+        lineNumber: 26,
+        columnNumber: 7
+      },
+      this
     );
   }
 );
@@ -2207,7 +3427,7 @@ var getMainAppImageUrl = (theme) => {
 };
 
 // app/routes/r/$roomId/index.tsx
-var import_jsx_runtime20 = require("react/jsx-runtime"), action7 = async ({ request }) => {
+var import_jsx_dev_runtime20 = require("react/jsx-dev-runtime"), action7 = async ({ request }) => {
   let formData = await request.formData(), { question, roomId, ...choices } = Object.fromEntries(formData);
   try {
     let poll = await createPoll(question, roomId), choicePromises = [];
@@ -2269,30 +3489,82 @@ function Index7() {
   }, [pollCreated, setPollCreated] = (0, import_react29.useState)(!1), actionData = (0, import_react28.useActionData)();
   return (0, import_react29.useEffect)(() => {
     !actionData || actionData.poll && actionData.choices && setPollCreated(!0);
-  }, [actionData]), /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Header, { room, home: !0 }),
-    /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { className: "w-full flex flex-col gap-2 px-8", children: [
-      room.type !== "poll" && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(import_jsx_runtime20.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("p", { className: "w-full text-center mb-2", children: [
+  }, [actionData]), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 136,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "w-full flex flex-col gap-2 px-8", children: [
+      room.type !== "poll" && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_jsx_dev_runtime20.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("p", { className: "w-full text-center mb-2", children: [
           "Your Room Link. Use this link to access your room.",
           " ",
-          room.type === "ama" ? /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { children: "You will need your secret to see the posts." }) : /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { children: "Share this with anyone you want to invite to the room." })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(RoomCodeShare, { room })
-      ] }),
-      room.type === "poll" && pollCreated && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(import_jsx_runtime20.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("p", { className: "w-full text-center mb-2", children: [
+          room.type === "ama" ? /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("span", { children: "You will need your secret to see the posts." }, void 0, !1, {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 143,
+            columnNumber: 17
+          }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("span", { children: "Share this with anyone you want to invite to the room." }, void 0, !1, {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 145,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 140,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(RoomCodeShare, { room }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 151,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 139,
+        columnNumber: 11
+      }, this),
+      room.type === "poll" && pollCreated && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_jsx_dev_runtime20.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("p", { className: "w-full text-center mb-2", children: [
           "Your Room Link. Use this link to access your room.",
           " ",
-          /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { children: "Share this with anyone you want to invite to the room." })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(RoomCodeShare, { poll: !0, room })
-      ] }),
-      room.type === "ama" && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { className: "py-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("p", { className: "w-full text-center mb-4", children: "Your share Link. This is used to add posts to your room." }),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(RoomCodeShare, { room, share: !0 })
-      ] }),
-      room.type === "ama" && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("span", { children: "Share this with anyone you want to invite to the room." }, void 0, !1, {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 159,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 157,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(RoomCodeShare, { poll: !0, room }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 164,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 156,
+        columnNumber: 11
+      }, this),
+      room.type === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "py-4", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("p", { className: "w-full text-center mb-4", children: "Your share Link. This is used to add posts to your room." }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 170,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(RoomCodeShare, { room, share: !0 }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 173,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 169,
+        columnNumber: 11
+      }, this),
+      room.type === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
         LinkButton,
         {
           to: `/${config.roomsPath}/${room.id}/ama/posts`,
@@ -2301,9 +3573,17 @@ function Index7() {
             "Enter Room",
             room.name && `: ${room.name}`
           ]
-        }
+        },
+        void 0,
+        !0,
+        {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 178,
+          columnNumber: 11
+        },
+        this
       ),
-      room.type === "default" && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
+      room.type === "default" && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
         LinkButton,
         {
           to: `/${config.roomsPath}/${room.id}/posts`,
@@ -2312,11 +3592,23 @@ function Index7() {
             "Enter Room",
             room.name && `: ${room.name}`
           ]
-        }
+        },
+        void 0,
+        !0,
+        {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 187,
+          columnNumber: 11
+        },
+        this
       ),
-      room.type === "poll" && !pollCreated && /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_react28.Form, { method: "post", className: "my-4", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("fieldset", { className: "flex gap-2 flex-col", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Input, { type: "hidden", name: "roomId", value: room.id }),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+      room.type === "poll" && !pollCreated && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_react28.Form, { method: "post", className: "my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("fieldset", { className: "flex gap-2 flex-col", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Input, { type: "hidden", name: "roomId", value: room.id }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 198,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
           Textarea,
           {
             rows: 3,
@@ -2324,32 +3616,80 @@ function Index7() {
             required: !0,
             className: "w-full p-2 bg-gray-700",
             placeholder: "Ask a question."
-          }
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 199,
+            columnNumber: 15
+          },
+          this
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("fieldset", { className: "flex flex-col gap-2", children: [
-          choices.map((choice, index) => /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("fieldset", { className: "flex gap-2 flex-1", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("fieldset", { className: "flex flex-col gap-2", children: [
+          choices.map((choice, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("fieldset", { className: "flex gap-2 flex-1", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
               Input,
               {
                 name: choice.name,
                 required: choice.required,
                 placeholder: choice.placeholder
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/r/$roomId/index.tsx",
+                lineNumber: 210,
+                columnNumber: 21
+              },
+              this
             ),
-            index > 1 && /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+            index > 1 && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
               Button,
               {
                 className: "flex items-center flex-1",
                 onClick: () => handleRemoveChoice(index),
                 children: "\u2A09"
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/r/$roomId/index.tsx",
+                lineNumber: 216,
+                columnNumber: 23
+              },
+              this
             )
-          ] }, choice.name)),
-          /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Button, { className: "flex items-center", onClick: handleAddChoice, children: "+" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Button, { type: "submit", children: '"Submit"' })
-      ] }) }),
-      room.type === "poll" && pollCreated && /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
+          ] }, choice.name, !0, {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 209,
+            columnNumber: 19
+          }, this)),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Button, { className: "flex items-center", onClick: handleAddChoice, children: "+" }, void 0, !1, {
+            fileName: "app/routes/r/$roomId/index.tsx",
+            lineNumber: 225,
+            columnNumber: 17
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 207,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Button, { type: "submit", children: '"Submit"' }, void 0, !1, {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 230,
+          columnNumber: 15
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 197,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 196,
+        columnNumber: 11
+      }, this),
+      room.type === "poll" && pollCreated && /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(
         LinkButton,
         {
           to: `/${config.roomsPath}/${room.id}/poll`,
@@ -2358,30 +3698,86 @@ function Index7() {
             "Open Poll",
             room.name && `: ${room.name}`
           ]
-        }
+        },
+        void 0,
+        !0,
+        {
+          fileName: "app/routes/r/$roomId/index.tsx",
+          lineNumber: 236,
+          columnNumber: 11
+        },
+        this
       )
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 137,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/index.tsx",
+    lineNumber: 135,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary6({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 254,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 253,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 257,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 256,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/index.tsx",
+    lineNumber: 252,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary8() {
   let caught = (0, import_react28.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 270,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 269,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 273,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/index.tsx",
+        lineNumber: 272,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/index.tsx",
+      lineNumber: 268,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -2402,7 +3798,7 @@ var import_react32 = require("@remix-run/react"), import_react33 = require("reac
 
 // app/components/CommentForm/index.tsx
 var import_react30 = require("@remix-run/react"), import_react31 = require("react"), import_ai9 = require("react-icons/ai");
-var import_jsx_runtime21 = require("react/jsx-runtime"), CommentForm = ({ confession, onOpenComment, share }) => {
+var import_jsx_dev_runtime21 = require("react/jsx-dev-runtime"), CommentForm = ({ confession, onOpenComment, share }) => {
   let commentRef = (0, import_react31.useRef)(null), fetcher = (0, import_react30.useFetcher)();
   (0, import_react31.useEffect)(() => {
     commentRef.current && (commentRef.current.contentEditable = "true", commentRef.current.focus());
@@ -2418,7 +3814,7 @@ var import_jsx_runtime21 = require("react/jsx-runtime"), CommentForm = ({ confes
     let formData = new FormData(e.target), content = (_a = commentRef.current) == null ? void 0 : _a.innerText;
     formData.set("comment", content), formData.set("id", confession.id), formData.set("_action", "comment"), fetcher.submit(formData, { method: "post" });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
     fetcher.Form,
     {
       method: "post",
@@ -2426,29 +3822,61 @@ var import_jsx_runtime21 = require("react/jsx-runtime"), CommentForm = ({ confes
       className: "flex flex-col px-8 pb-2",
       onSubmit: handleSubmit,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "flex flex-row justify-between items-center py-2 border-t-[1px] border-gray-700", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "flex items-center justify-center gap-2 text-gray-500", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
               Button,
               {
                 color: "secondary",
                 onClick: () => onOpenComment(!1),
                 className: "hover:bg-slate-600 border-none bg-none text-lg p-2 rounded-full",
-                children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_ai9.AiOutlineClose, {})
-              }
+                children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_ai9.AiOutlineClose, {}, void 0, !1, {
+                  fileName: "app/components/CommentForm/index.tsx",
+                  lineNumber: 61,
+                  columnNumber: 13
+                }, this)
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/CommentForm/index.tsx",
+                lineNumber: 56,
+                columnNumber: 11
+              },
+              this
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("span", { className: "text-gray-400", children: "Type your comment below" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("input", { type: "hidden", name: "id", value: confession.id }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("span", { className: "text-gray-400", children: "Type your comment below" }, void 0, !1, {
+              fileName: "app/components/CommentForm/index.tsx",
+              lineNumber: 63,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/components/CommentForm/index.tsx",
+            lineNumber: 55,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("input", { type: "hidden", name: "id", value: confession.id }, void 0, !1, {
+            fileName: "app/components/CommentForm/index.tsx",
+            lineNumber: 66,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
             "input",
             {
               type: "hidden",
               name: "poster",
               value: share ? "Anonymous" : "Room Owner"
-            }
+            },
+            void 0,
+            !1,
+            {
+              fileName: "app/components/CommentForm/index.tsx",
+              lineNumber: 67,
+              columnNumber: 9
+            },
+            this
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
             Button,
             {
               name: "_action",
@@ -2456,37 +3884,77 @@ var import_jsx_runtime21 = require("react/jsx-runtime"), CommentForm = ({ confes
               value: "comment",
               className: "text-sm py-1 flex items-center justify-center",
               children: "Comment"
-            }
+            },
+            void 0,
+            !1,
+            {
+              fileName: "app/components/CommentForm/index.tsx",
+              lineNumber: 73,
+              columnNumber: 9
+            },
+            this
           )
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(
+        ] }, void 0, !0, {
+          fileName: "app/components/CommentForm/index.tsx",
+          lineNumber: 54,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
           "div",
           {
             ref: commentRef,
             className: "p-0 rounded-3xl px-6 py-6 bg-gray-700 outline-none border-t-[1px] border-gray-700"
-          }
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/CommentForm/index.tsx",
+            lineNumber: 83,
+            columnNumber: 7
+          },
+          this
         )
       ]
-    }
+    },
+    void 0,
+    !0,
+    {
+      fileName: "app/components/CommentForm/index.tsx",
+      lineNumber: 48,
+      columnNumber: 5
+    },
+    this
   );
 };
 
 // app/components/ConfessionCard/index.tsx
-var import_jsx_runtime22 = require("react/jsx-runtime");
+var import_jsx_dev_runtime22 = require("react/jsx-dev-runtime");
 function ConfessionCard({ confession, room, comments }) {
   let [isCommenting, setIsCommenting] = (0, import_react33.useState)(!1), onOpenComment = (open) => {
     setIsCommenting(open);
   }, [fieldSetRef] = useClickOutside(
     () => onOpenComment(!1)
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(
     "li",
     {
       ref: fieldSetRef,
       className: "flex flex-col gap-2 hover:drop-shadow-md border-b-[1px] border-gray-700",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "flex items-center justify-between px-8 pt-4", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_react32.Link, { to: `/${config.postsPath}/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h3", { className: "font-bold text-lg flex-1 whitespace-nowrap text-ellipsis", children: confession.title }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_react32.Link, { to: `/${config.postsPath}/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("div", { className: "flex items-center justify-between px-8 pt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(import_react32.Link, { to: `/${config.postsPath}/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)("h3", { className: "font-bold text-lg flex-1 whitespace-nowrap text-ellipsis", children: confession.title }, void 0, !1, {
+          fileName: "app/components/ConfessionCard/index.tsx",
+          lineNumber: 40,
+          columnNumber: 11
+        }, this) }, void 0, !1, {
+          fileName: "app/components/ConfessionCard/index.tsx",
+          lineNumber: 39,
+          columnNumber: 9
+        }, this) }, void 0, !1, {
+          fileName: "app/components/ConfessionCard/index.tsx",
+          lineNumber: 38,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(import_react32.Link, { to: `/${config.postsPath}/${confession.id}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(
           import_react_clamp_lines4.default,
           {
             text: confession.content,
@@ -2497,9 +3965,21 @@ function ConfessionCard({ confession, room, comments }) {
             lessText: "(click for less)",
             innerElement: "p",
             className: "px-8 pb-4"
-          }
-        ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/ConfessionCard/index.tsx",
+            lineNumber: 47,
+            columnNumber: 9
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/components/ConfessionCard/index.tsx",
+          lineNumber: 46,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(
           CardFooter,
           {
             comments,
@@ -2507,18 +3987,37 @@ function ConfessionCard({ confession, room, comments }) {
             room,
             share: room.type === "ama",
             onOpenComment
-          }
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/components/ConfessionCard/index.tsx",
+            lineNumber: 59,
+            columnNumber: 7
+          },
+          this
         ),
-        isCommenting && /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(CommentForm, { confession, onOpenComment })
+        isCommenting && /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(CommentForm, { confession, onOpenComment }, void 0, !1, {
+          fileName: "app/components/ConfessionCard/index.tsx",
+          lineNumber: 68,
+          columnNumber: 9
+        }, this)
       ]
     },
-    confession.id
+    confession.id,
+    !0,
+    {
+      fileName: "app/components/ConfessionCard/index.tsx",
+      lineNumber: 33,
+      columnNumber: 5
+    },
+    this
   );
 }
 
 // app/components/ConfessionForm/index.tsx
 var import_react34 = require("@remix-run/react"), import_react35 = require("react");
-var import_jsx_runtime23 = require("react/jsx-runtime"), ConfessionForm = ({ room }) => {
+var import_jsx_dev_runtime23 = require("react/jsx-dev-runtime"), ConfessionForm = ({ room }) => {
   let fetcher = (0, import_react34.useFetcher)(), formRef = (0, import_react35.useRef)(null), titleRef = (0, import_react35.useRef)(null);
   (0, import_react35.useEffect)(() => {
     var _a, _b, _c, _d;
@@ -2530,22 +4029,30 @@ var import_jsx_runtime23 = require("react/jsx-runtime"), ConfessionForm = ({ roo
   return (0, import_react35.useEffect)(() => {
     var _a;
     room.type === "ama" && ((_a = fetcher.data) == null ? void 0 : _a.id) && navigate(`/${config.postsPath}/share/${fetcher.data.id}`);
-  }, [room, fetcher.data]), /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+  }, [room, fetcher.data]), /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(
     fetcher.Form,
     {
       ref: formRef,
       method: "post",
       className: "flex gap-2 flex-col mb-4 px-8",
-      children: /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)(
+      children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(
         "fieldset",
         {
           ref: fieldSetRef,
           className: "flex gap-2 flex-col",
           disabled: isAdding,
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Input, { type: "hidden", name: "roomId", value: room.id }),
-            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Input, { ref: titleRef, name: "title", required: !0, placeholder: "Post Title" }),
-            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(Input, { type: "hidden", name: "roomId", value: room.id }, void 0, !1, {
+              fileName: "app/components/ConfessionForm/index.tsx",
+              lineNumber: 59,
+              columnNumber: 9
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(Input, { ref: titleRef, name: "title", required: !0, placeholder: "Post Title" }, void 0, !1, {
+              fileName: "app/components/ConfessionForm/index.tsx",
+              lineNumber: 60,
+              columnNumber: 9
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(
               Textarea,
               {
                 rows,
@@ -2554,18 +4061,46 @@ var import_jsx_runtime23 = require("react/jsx-runtime"), ConfessionForm = ({ roo
                 required: !0,
                 className: "w-full p-2 bg-gray-700",
                 placeholder: "Type your post here."
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/components/ConfessionForm/index.tsx",
+                lineNumber: 61,
+                columnNumber: 9
+              },
+              this
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Button, { type: "submit", name: "_action", value: "create", disabled: isAdding, children: isAdding ? "Submitting..." : "Submit" })
+            /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(Button, { type: "submit", name: "_action", value: "create", disabled: isAdding, children: isAdding ? "Submitting..." : "Submit" }, void 0, !1, {
+              fileName: "app/components/ConfessionForm/index.tsx",
+              lineNumber: 69,
+              columnNumber: 9
+            }, this)
           ]
-        }
+        },
+        void 0,
+        !0,
+        {
+          fileName: "app/components/ConfessionForm/index.tsx",
+          lineNumber: 54,
+          columnNumber: 7
+        },
+        this
       )
-    }
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/components/ConfessionForm/index.tsx",
+      lineNumber: 49,
+      columnNumber: 5
+    },
+    this
   );
 };
 
 // app/routes/r/$roomId/posts.tsx
-var import_jsx_runtime24 = require("react/jsx-runtime"), meta9 = ({ data }) => {
+var import_jsx_dev_runtime24 = require("react/jsx-dev-runtime"), meta9 = ({ data }) => {
   var _a, _b, _c;
   return {
     title: `${config.appName} - Room Name: ${((_a = data.room) == null ? void 0 : _a.name) || "Unnamed Room"}`,
@@ -2630,45 +4165,132 @@ function Index8() {
     return () => {
       clearInterval(interval);
     };
-  }, []), /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Header, { room, home: !0 }),
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(RoomCodeShare, { className: "w-full", room }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(ConfessionForm, { room })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      confessions.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "flex flex-col gap-4 p-8 pb-0 items-center justify-center w-full h-full", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("p", { children: "No posts yet. Share the room link to get the ball rolling." }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("ul", { className: "flex flex-col gap-1 overflow-auto", children: confessions == null ? void 0 : confessions.map((confession) => /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(
+  }, []), /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 147,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col gap-4 px-8 items-center justify-center w-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(RoomCodeShare, { className: "w-full", room }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 149,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 148,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(ConfessionForm, { room }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 151,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 146,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      confessions.length === 0 && /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col gap-4 p-8 pb-0 items-center justify-center w-full h-full", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("p", { children: "No posts yet. Share the room link to get the ball rolling." }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 156,
+        columnNumber: 13
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 155,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("ul", { className: "flex flex-col gap-1 overflow-auto", children: confessions == null ? void 0 : confessions.map((confession) => /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(
         ConfessionCard,
         {
           confession,
           room,
           comments: comments.filter((c) => c.post.id === confession.id)
         },
-        confession.id
-      )) })
-    ] })
-  ] });
+        confession.id,
+        !1,
+        {
+          fileName: "app/routes/r/$roomId/posts.tsx",
+          lineNumber: 162,
+          columnNumber: 13
+        },
+        this
+      )) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 160,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 153,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/posts.tsx",
+    lineNumber: 145,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary7({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 181,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 180,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 184,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 183,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/$roomId/posts.tsx",
+    lineNumber: 179,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary9() {
   let caught = (0, import_react36.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 197,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 196,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 200,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/$roomId/posts.tsx",
+        lineNumber: 199,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/$roomId/posts.tsx",
+      lineNumber: 195,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -2683,7 +4305,7 @@ __export(roomId_exports2, {
   meta: () => meta10
 });
 var import_node11 = require("@remix-run/node"), import_react38 = require("@remix-run/react"), import_tiny_invariant9 = __toESM(require("tiny-invariant"));
-var import_jsx_runtime25 = require("react/jsx-runtime"), meta10 = ({ data }) => {
+var import_jsx_dev_runtime25 = require("react/jsx-dev-runtime"), meta10 = ({ data }) => {
   var _a, _b, _c;
   return {
     title: `${config.appName} - Room Name: ${((_a = data.room) == null ? void 0 : _a.name) || "Unnamed Room"}`,
@@ -2747,33 +4369,93 @@ var import_jsx_runtime25 = require("react/jsx-runtime"), meta10 = ({ data }) => 
 };
 function Index9() {
   let { room } = (0, import_react38.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(Header, { room, home: !0 }),
-      /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(ConfessionForm, { room })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10" })
-  ] });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(Header, { room, home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 137,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(ConfessionForm, { room }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 138,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 136,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10" }, void 0, !1, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 140,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/share/$roomId.tsx",
+    lineNumber: 135,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary8({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 151,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 150,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 154,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 153,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/r/share/$roomId.tsx",
+    lineNumber: 149,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary10() {
   let caught = (0, import_react38.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 167,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 166,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 170,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/r/share/$roomId.tsx",
+        lineNumber: 169,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/r/share/$roomId.tsx",
+      lineNumber: 165,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
@@ -2807,7 +4489,7 @@ __export(routes_exports, {
   meta: () => meta11
 });
 var import_node13 = require("@remix-run/node"), import_react39 = require("@remix-run/react"), import_react40 = require("react");
-var import_jsx_runtime26 = require("react/jsx-runtime"), action10 = async ({ request }) => {
+var import_jsx_dev_runtime26 = require("react/jsx-dev-runtime"), action10 = async ({ request }) => {
   let formData = await request.formData(), { name, _action, type, secret } = Object.fromEntries(formData);
   try {
     if (_action === "create") {
@@ -2858,44 +4540,92 @@ function Index10() {
   }, navigate = (0, import_react39.useNavigate)();
   return (0, import_react40.useEffect)(() => {
     room != null && room.id && navigate(`/${config.roomsPath}/${room.id}`);
-  }, [room]), /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Header, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(
+  }, [room]), /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Header, {}, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 100,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
       import_react39.Form,
       {
         ref: formRef,
         method: "post",
         className: "flex gap-4 flex-col mb-4 px-8",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("p", { className: "mb-4", children: config.appDescription }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("span", { className: "text-bold", children: "Already have a room code?" }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { className: "flex gap-2", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { className: "mb-4", children: config.appDescription }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 106,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("span", { className: "text-bold", children: "Already have a room code?" }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 107,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
               Input,
               {
                 value: roomCode,
                 onChange: (e) => setRoomCode(e.target.value),
                 placeholder: "Enter Room Code"
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 109,
+                columnNumber: 11
+              },
+              this
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
               LinkButton,
               {
                 to: `/${config.roomsPath}/${roomCode}/posts`,
                 "aria-label": "copy",
                 className: "text-lg",
                 children: "Join Room"
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 117,
+                columnNumber: 11
+              },
+              this
             )
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("p", { children: "Or create a new room. You have two options here." }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("p", { children: "A default room allows anyone with the room link to make posts and everyone with the room link can see all posts made." }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("p", { children: "For an AMA room only the creator of the room (or anyone with the room secret) can see all posts and can make comments on them. Everyone else can only make posts and view their own posts and comments made on them." }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { className: "w-full flex flex-row gap-2 justify-center items-center", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Input, { name: "name", ref: nameRef, placeholder: "Room Name (Optional)" }),
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { className: "flex flex-row gap-2 justify-center items-center", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+          ] }, void 0, !0, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 108,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "Or create a new room. You have two options here." }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 125,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "A default room allows anyone with the room link to make posts and everyone with the room link can see all posts made." }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 126,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "For an AMA room only the creator of the room (or anyone with the room secret) can see all posts and can make comments on them. Everyone else can only make posts and view their own posts and comments made on them." }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 130,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "w-full flex flex-row gap-2 justify-center items-center", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Input, { name: "name", ref: nameRef, placeholder: "Room Name (Optional)" }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 137,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-row gap-2 justify-center items-center", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
                   "input",
                   {
                     type: "radio",
@@ -2904,12 +4634,24 @@ function Index10() {
                     defaultChecked: !0,
                     onChange: handleRoomTypeChange,
                     className: "accent-gray-800"
-                  }
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 141,
+                    columnNumber: 15
+                  },
+                  this
                 ),
                 "Default"
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+              ] }, void 0, !0, {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 140,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
+                /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
                   "input",
                   {
                     type: "radio",
@@ -2917,63 +4659,167 @@ function Index10() {
                     value: "ama",
                     onChange: handleRoomTypeChange,
                     className: "accent-gray-800"
-                  }
+                  },
+                  void 0,
+                  !1,
+                  {
+                    fileName: "app/routes/index.tsx",
+                    lineNumber: 152,
+                    columnNumber: 15
+                  },
+                  this
                 ),
                 "AMA"
-              ] })
-            ] })
-          ] }),
-          roomType === "ama" && /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("span", { children: "AMA rooms need a secret." }),
-            /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+              ] }, void 0, !0, {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 151,
+                columnNumber: 13
+              }, this)
+            ] }, void 0, !0, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 139,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, !0, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 136,
+            columnNumber: 9
+          }, this),
+          roomType === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("span", { children: "AMA rooms need a secret." }, void 0, !1, {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 165,
+              columnNumber: 13
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
               Input,
               {
                 name: "secret",
                 placeholder: "Create a Room Secret",
                 required: roomType === "ama"
-              }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/index.tsx",
+                lineNumber: 166,
+                columnNumber: 13
+              },
+              this
             )
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+          ] }, void 0, !0, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 164,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
             Button,
             {
               type: "submit",
               name: "_action",
               value: roomType === "ama" ? "create_ama" : "create",
               children: roomType === "ama" ? "Create New AMA Room" : "Create New Room"
-            }
+            },
+            void 0,
+            !1,
+            {
+              fileName: "app/routes/index.tsx",
+              lineNumber: 173,
+              columnNumber: 9
+            },
+            this
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("p", { children: "Or create a poll" }),
-          /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Button, { type: "submit", name: "_action", value: "create_poll", children: "Create Poll" })
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "Or create a poll" }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 180,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Button, { type: "submit", name: "_action", value: "create_poll", children: "Create Poll" }, void 0, !1, {
+            fileName: "app/routes/index.tsx",
+            lineNumber: 181,
+            columnNumber: 9
+          }, this)
         ]
-      }
+      },
+      void 0,
+      !0,
+      {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 101,
+        columnNumber: 7
+      },
+      this
     )
-  ] });
+  ] }, void 0, !0, {
+    fileName: "app/routes/index.tsx",
+    lineNumber: 99,
+    columnNumber: 5
+  }, this);
 }
 function ErrorBoundary9({ error }) {
-  return console.error(error), /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(AppLayout, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Header, { home: !0 }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)("div", { children: [
+  return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(AppLayout, { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 195,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 194,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { children: [
         "An unexpected error occurred: ",
         error.message
-      ] }),
+      ] }, void 0, !0, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 198,
+        columnNumber: 9
+      }, this),
       ";"
-    ] })
-  ] });
+    ] }, void 0, !0, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 197,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/index.tsx",
+    lineNumber: 193,
+    columnNumber: 5
+  }, this);
 }
 function CatchBoundary11() {
   let caught = (0, import_react39.useCatch)();
   if (caught.status === 404)
-    return /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(AppLayout, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Header, { home: !0 }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { children: "Not found" }) })
-    ] });
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(AppLayout, { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Header, { home: !0 }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 211,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 210,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 214,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/index.tsx",
+        lineNumber: 213,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/index.tsx",
+      lineNumber: 209,
+      columnNumber: 7
+    }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "c358f1c1", entry: { module: "/build/entry.client-BU3H2RLO.js", imports: ["/build/_shared/chunk-6RFUV6HR.js", "/build/_shared/chunk-G5WX4PPA.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-D65QID4Y.js", imports: ["/build/_shared/chunk-LSL75C47.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2K7VCAJA.js", imports: ["/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/$confessionId": { id: "routes/m/$confessionId", parentId: "root", path: "m/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/$confessionId-VTC5QOPX.js", imports: ["/build/_shared/chunk-CIE7IB75.js", "/build/_shared/chunk-PO7NUBI5.js", "/build/_shared/chunk-QJ57X57E.js", "/build/_shared/chunk-64OYQGVI.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/ama/$confessionId": { id: "routes/m/ama/$confessionId", parentId: "root", path: "m/ama/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/ama/$confessionId-Y3F7BKOK.js", imports: ["/build/_shared/chunk-CIE7IB75.js", "/build/_shared/chunk-PO7NUBI5.js", "/build/_shared/chunk-QJ57X57E.js", "/build/_shared/chunk-64OYQGVI.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/share/$confessionId": { id: "routes/m/share/$confessionId", parentId: "root", path: "m/share/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/share/$confessionId-Z3UNQIWN.js", imports: ["/build/_shared/chunk-PO7NUBI5.js", "/build/_shared/chunk-QJ57X57E.js", "/build/_shared/chunk-64OYQGVI.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/ama/posts": { id: "routes/r/$roomId/ama/posts", parentId: "root", path: "r/:roomId/ama/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/ama/posts-QGDWXRJ3.js", imports: ["/build/_shared/chunk-VHVCZS53.js", "/build/_shared/chunk-W4MOOH5Q.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-64OYQGVI.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/index": { id: "routes/r/$roomId/index", parentId: "root", path: "r/:roomId", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/index-OWCQXIU5.js", imports: ["/build/_shared/chunk-LXGFOK52.js", "/build/_shared/chunk-W4MOOH5Q.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/poll/index": { id: "routes/r/$roomId/poll/index", parentId: "root", path: "r/:roomId/poll", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/index-CGJSUDFM.js", imports: ["/build/_shared/chunk-W4MOOH5Q.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/poll/results": { id: "routes/r/$roomId/poll/results", parentId: "root", path: "r/:roomId/poll/results", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/results-EQJGA3YQ.js", imports: ["/build/_shared/chunk-W4MOOH5Q.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/posts": { id: "routes/r/$roomId/posts", parentId: "root", path: "r/:roomId/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/posts-NUHYCV7R.js", imports: ["/build/_shared/chunk-7KCN4ZPX.js", "/build/_shared/chunk-LXGFOK52.js", "/build/_shared/chunk-QJ57X57E.js", "/build/_shared/chunk-VHVCZS53.js", "/build/_shared/chunk-W4MOOH5Q.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-64OYQGVI.js", "/build/_shared/chunk-XW4WH7UB.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/share/$roomId": { id: "routes/r/share/$roomId", parentId: "root", path: "r/share/:roomId", index: void 0, caseSensitive: void 0, module: "/build/routes/r/share/$roomId-AYB6IR5V.js", imports: ["/build/_shared/chunk-7KCN4ZPX.js", "/build/_shared/chunk-LXGFOK52.js", "/build/_shared/chunk-QJ57X57E.js", "/build/_shared/chunk-FKNI6Q67.js", "/build/_shared/chunk-URNZPFSF.js", "/build/_shared/chunk-7XL5SZ25.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-AXTHET2K.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-KSBR6SUS.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/unfurl": { id: "routes/unfurl", parentId: "root", path: "unfurl", index: void 0, caseSensitive: void 0, module: "/build/routes/unfurl-KQFNIBGI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-C358F1C1.js" };
+var assets_manifest_default = { version: "c984eaee", entry: { module: "/build/entry.client-RMR65IMO.js", imports: ["/build/_shared/chunk-L26JAXI3.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-GXVGGN2W.js", imports: ["/build/_shared/chunk-KG7KNTKK.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-OVRJEYMH.js", imports: ["/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/$confessionId": { id: "routes/m/$confessionId", parentId: "root", path: "m/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/$confessionId-YNEJTVVF.js", imports: ["/build/_shared/chunk-IFRROEBO.js", "/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/ama/$confessionId": { id: "routes/m/ama/$confessionId", parentId: "root", path: "m/ama/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/ama/$confessionId-2FNTIPNO.js", imports: ["/build/_shared/chunk-IFRROEBO.js", "/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/share/$confessionId": { id: "routes/m/share/$confessionId", parentId: "root", path: "m/share/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/share/$confessionId-OC2FCCKH.js", imports: ["/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/ama/posts": { id: "routes/r/$roomId/ama/posts", parentId: "root", path: "r/:roomId/ama/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/ama/posts-5PHFZ2TT.js", imports: ["/build/_shared/chunk-AHBEHNEX.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/index": { id: "routes/r/$roomId/index", parentId: "root", path: "r/:roomId", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/index-GCWP5CVV.js", imports: ["/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/poll/index": { id: "routes/r/$roomId/poll/index", parentId: "root", path: "r/:roomId/poll", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/index-MPHDTL7A.js", imports: ["/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/poll/results": { id: "routes/r/$roomId/poll/results", parentId: "root", path: "r/:roomId/poll/results", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/results-2XK6FX5J.js", imports: ["/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/posts": { id: "routes/r/$roomId/posts", parentId: "root", path: "r/:roomId/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/posts-CAI6SYK2.js", imports: ["/build/_shared/chunk-62Y6MO23.js", "/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-AHBEHNEX.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/share/$roomId": { id: "routes/r/share/$roomId", parentId: "root", path: "r/share/:roomId", index: void 0, caseSensitive: void 0, module: "/build/routes/r/share/$roomId-P2AUPLVN.js", imports: ["/build/_shared/chunk-62Y6MO23.js", "/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-FSITSSPI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-7EVCH6UB.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/unfurl": { id: "routes/unfurl", parentId: "root", path: "unfurl", index: void 0, caseSensitive: void 0, module: "/build/routes/unfurl-TNLOVCWX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-C984EAEE.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -3090,8 +4936,13 @@ var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath 
     module: routes_exports
   }
 };
-
-// server.js
-var import_vercel = require("@remix-run/vercel"), server_default = (0, import_vercel.createRequestHandler)({ build: server_build_exports, mode: "production" });
 // Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {});
+0 && (module.exports = {
+  assets,
+  assetsBuildDirectory,
+  entry,
+  future,
+  publicPath,
+  routes
+});
+//# sourceMappingURL=index.js.map
