@@ -26,6 +26,6 @@
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
     "nx": "15.4.2",
-    "rimraf": "^3.0.2"
+    "rimraf": "^5.0.1"
   }
 }
