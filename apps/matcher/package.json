@@ -19,7 +19,7 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@remix-run/node": "^1.8.2",
+    "@remix-run/node": "^1.18.1",
     "@remix-run/react": "^1.8.2",
     "@remix-run/vercel": "^1.8.2",
     "@types/react-dropzone": "^5.1.0",
