@@ -30,7 +30,7 @@
 		"contentful-typescript-codegen": "^3.4.0",
 		"dotenv": "^16.0.0",
 		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"postcss": "^8.4.20",
 		"prettier": "^2.8.0",
