@@ -28,7 +28,7 @@
     "cloudinary": "^1.32.0",
     "cross-env": "^7.0.3",
     "date-fns": "^2.29.3",
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.3.1",
     "esbuild": "^0.15.16",
     "framer-motion": "^7.6.15",
     "node-persist": "^3.1.0",
