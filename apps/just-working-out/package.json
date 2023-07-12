@@ -16,7 +16,7 @@
 		"codegen": "contentful-typescript-codegen --output src/lib/generated/contentful.d.ts"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.28.1",
+		"@playwright/test": "^1.36.0",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-vercel": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
