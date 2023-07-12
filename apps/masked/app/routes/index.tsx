@@ -30,7 +30,7 @@ export const action: ActionFunction = async ({ request }) => {
       const result = await createRoom(
         (name as string) ?? "",
         type as RoomType,
-        secret as string
+        secret as string,
       );
       return json(result);
     }
@@ -38,7 +38,7 @@ export const action: ActionFunction = async ({ request }) => {
       const result = await createRoom(
         (name as string) ?? "",
         "poll",
-        secret as string
+        secret as string,
       );
       return json(result);
     }
@@ -109,8 +109,7 @@ export default function Index() {
           <Input
             value={roomCode}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              setRoomCode(e.target.value)
-            }
+              setRoomCode(e.target.value)}
             placeholder="Enter Room Code"
           />
 

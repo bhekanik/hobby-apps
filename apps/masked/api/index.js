@@ -4592,7 +4592,7 @@ function Index10() {
               !1,
               {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 117,
+                lineNumber: 116,
                 columnNumber: 11
               },
               this
@@ -4604,23 +4604,23 @@ function Index10() {
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "Or create a new room. You have two options here." }, void 0, !1, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 125,
+            lineNumber: 124,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "A default room allows anyone with the room link to make posts and everyone with the room link can see all posts made." }, void 0, !1, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 126,
+            lineNumber: 125,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "For an AMA room only the creator of the room (or anyone with the room secret) can see all posts and can make comments on them. Everyone else can only make posts and view their own posts and comments made on them." }, void 0, !1, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 130,
+            lineNumber: 129,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "w-full flex flex-row gap-2 justify-center items-center", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Input, { name: "name", ref: nameRef, placeholder: "Room Name (Optional)" }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 137,
+              lineNumber: 136,
               columnNumber: 11
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-row gap-2 justify-center items-center", children: [
@@ -4639,7 +4639,7 @@ function Index10() {
                   !1,
                   {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 141,
+                    lineNumber: 140,
                     columnNumber: 15
                   },
                   this
@@ -4647,7 +4647,7 @@ function Index10() {
                 "Default"
               ] }, void 0, !0, {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 140,
+                lineNumber: 139,
                 columnNumber: 13
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("label", { className: "flex flex-row gap-2 justify-center items-center", children: [
@@ -4664,7 +4664,7 @@ function Index10() {
                   !1,
                   {
                     fileName: "app/routes/index.tsx",
-                    lineNumber: 152,
+                    lineNumber: 151,
                     columnNumber: 15
                   },
                   this
@@ -4672,23 +4672,23 @@ function Index10() {
                 "AMA"
               ] }, void 0, !0, {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 151,
+                lineNumber: 150,
                 columnNumber: 13
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 139,
+              lineNumber: 138,
               columnNumber: 11
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 136,
+            lineNumber: 135,
             columnNumber: 9
           }, this),
           roomType === "ama" && /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("span", { children: "AMA rooms need a secret." }, void 0, !1, {
               fileName: "app/routes/index.tsx",
-              lineNumber: 165,
+              lineNumber: 164,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
@@ -4702,14 +4702,14 @@ function Index10() {
               !1,
               {
                 fileName: "app/routes/index.tsx",
-                lineNumber: 166,
+                lineNumber: 165,
                 columnNumber: 13
               },
               this
             )
           ] }, void 0, !0, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 164,
+            lineNumber: 163,
             columnNumber: 11
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
@@ -4724,19 +4724,19 @@ function Index10() {
             !1,
             {
               fileName: "app/routes/index.tsx",
-              lineNumber: 173,
+              lineNumber: 172,
               columnNumber: 9
             },
             this
           ),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: "Or create a poll" }, void 0, !1, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 180,
+            lineNumber: 179,
             columnNumber: 9
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Button, { type: "submit", name: "_action", value: "create_poll", children: "Create Poll" }, void 0, !1, {
             fileName: "app/routes/index.tsx",
-            lineNumber: 181,
+            lineNumber: 180,
             columnNumber: 9
           }, this)
         ]
@@ -4760,11 +4760,11 @@ function ErrorBoundary9({ error }) {
   return console.error(error), /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(AppLayout, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Header, { home: !0 }, void 0, !1, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 195,
+      lineNumber: 194,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 194,
+      lineNumber: 193,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: [
@@ -4773,18 +4773,18 @@ function ErrorBoundary9({ error }) {
         error.message
       ] }, void 0, !0, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 198,
+        lineNumber: 197,
         columnNumber: 9
       }, this),
       ";"
     ] }, void 0, !0, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 197,
+      lineNumber: 196,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/index.tsx",
-    lineNumber: 193,
+    lineNumber: 192,
     columnNumber: 5
   }, this);
 }
@@ -4794,32 +4794,32 @@ function CatchBoundary11() {
     return /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(AppLayout, { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col max-w-4xl gap-4 w-full mx-auto sticky top-0 bg-gray-800 z-20 border-b-[1px] border-gray-700", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(Header, { home: !0 }, void 0, !1, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 211,
+        lineNumber: 210,
         columnNumber: 11
       }, this) }, void 0, !1, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 210,
+        lineNumber: 209,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "flex flex-col gap-4 w-full max-w-4xl mx-auto z-10", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { children: "Not found" }, void 0, !1, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 214,
+        lineNumber: 213,
         columnNumber: 11
       }, this) }, void 0, !1, {
         fileName: "app/routes/index.tsx",
-        lineNumber: 213,
+        lineNumber: 212,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/index.tsx",
-      lineNumber: 209,
+      lineNumber: 208,
       columnNumber: 7
     }, this);
   throw new Error(`Unexpected caught response with status: ${caught.status}`);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "c984eaee", entry: { module: "/build/entry.client-RMR65IMO.js", imports: ["/build/_shared/chunk-L26JAXI3.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-GXVGGN2W.js", imports: ["/build/_shared/chunk-KG7KNTKK.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-OVRJEYMH.js", imports: ["/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/$confessionId": { id: "routes/m/$confessionId", parentId: "root", path: "m/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/$confessionId-YNEJTVVF.js", imports: ["/build/_shared/chunk-IFRROEBO.js", "/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/ama/$confessionId": { id: "routes/m/ama/$confessionId", parentId: "root", path: "m/ama/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/ama/$confessionId-2FNTIPNO.js", imports: ["/build/_shared/chunk-IFRROEBO.js", "/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/share/$confessionId": { id: "routes/m/share/$confessionId", parentId: "root", path: "m/share/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/share/$confessionId-OC2FCCKH.js", imports: ["/build/_shared/chunk-GESW3IHU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/ama/posts": { id: "routes/r/$roomId/ama/posts", parentId: "root", path: "r/:roomId/ama/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/ama/posts-5PHFZ2TT.js", imports: ["/build/_shared/chunk-AHBEHNEX.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/index": { id: "routes/r/$roomId/index", parentId: "root", path: "r/:roomId", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/index-GCWP5CVV.js", imports: ["/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/poll/index": { id: "routes/r/$roomId/poll/index", parentId: "root", path: "r/:roomId/poll", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/index-MPHDTL7A.js", imports: ["/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/poll/results": { id: "routes/r/$roomId/poll/results", parentId: "root", path: "r/:roomId/poll/results", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/results-2XK6FX5J.js", imports: ["/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/posts": { id: "routes/r/$roomId/posts", parentId: "root", path: "r/:roomId/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/posts-CAI6SYK2.js", imports: ["/build/_shared/chunk-62Y6MO23.js", "/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-AHBEHNEX.js", "/build/_shared/chunk-UN4XINNF.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-544ZJ6MY.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/share/$roomId": { id: "routes/r/share/$roomId", parentId: "root", path: "r/share/:roomId", index: void 0, caseSensitive: void 0, module: "/build/routes/r/share/$roomId-P2AUPLVN.js", imports: ["/build/_shared/chunk-62Y6MO23.js", "/build/_shared/chunk-2YJIY6IU.js", "/build/_shared/chunk-PTJONUWS.js", "/build/_shared/chunk-TNSJJ55X.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-4VPM5LOL.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-FSITSSPI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-7EVCH6UB.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/unfurl": { id: "routes/unfurl", parentId: "root", path: "unfurl", index: void 0, caseSensitive: void 0, module: "/build/routes/unfurl-TNLOVCWX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-C984EAEE.js" };
+var assets_manifest_default = { version: "9aed3cc8", entry: { module: "/build/entry.client-A6AD6GRW.js", imports: ["/build/_shared/chunk-Y23DACDU.js", "/build/_shared/chunk-4IYZMDEG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OISHPX7T.js", imports: ["/build/_shared/chunk-P76CVIU7.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-SO4BR6ZX.js", imports: ["/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/$confessionId": { id: "routes/m/$confessionId", parentId: "root", path: "m/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/$confessionId-UQAFP2AD.js", imports: ["/build/_shared/chunk-WKX7TK35.js", "/build/_shared/chunk-XO2HVJCD.js", "/build/_shared/chunk-SB6Z5ZJC.js", "/build/_shared/chunk-TNGW37ZS.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/ama/$confessionId": { id: "routes/m/ama/$confessionId", parentId: "root", path: "m/ama/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/ama/$confessionId-MHN7WDHC.js", imports: ["/build/_shared/chunk-WKX7TK35.js", "/build/_shared/chunk-XO2HVJCD.js", "/build/_shared/chunk-SB6Z5ZJC.js", "/build/_shared/chunk-TNGW37ZS.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/m/share/$confessionId": { id: "routes/m/share/$confessionId", parentId: "root", path: "m/share/:confessionId", index: void 0, caseSensitive: void 0, module: "/build/routes/m/share/$confessionId-BUBTLZ7S.js", imports: ["/build/_shared/chunk-XO2HVJCD.js", "/build/_shared/chunk-SB6Z5ZJC.js", "/build/_shared/chunk-TNGW37ZS.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/ama/posts": { id: "routes/r/$roomId/ama/posts", parentId: "root", path: "r/:roomId/ama/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/ama/posts-HOMJ24QB.js", imports: ["/build/_shared/chunk-72SWFXXS.js", "/build/_shared/chunk-HDWQZ4RZ.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-TNGW37ZS.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/index": { id: "routes/r/$roomId/index", parentId: "root", path: "r/:roomId", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/index-VWT5YQK5.js", imports: ["/build/_shared/chunk-KCATKJOD.js", "/build/_shared/chunk-HDWQZ4RZ.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/$roomId/poll/index": { id: "routes/r/$roomId/poll/index", parentId: "root", path: "r/:roomId/poll", index: !0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/index-O3SH6PCO.js", imports: ["/build/_shared/chunk-HDWQZ4RZ.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/poll/results": { id: "routes/r/$roomId/poll/results", parentId: "root", path: "r/:roomId/poll/results", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/poll/results-MP6ZZIEZ.js", imports: ["/build/_shared/chunk-HDWQZ4RZ.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/r/$roomId/posts": { id: "routes/r/$roomId/posts", parentId: "root", path: "r/:roomId/posts", index: void 0, caseSensitive: void 0, module: "/build/routes/r/$roomId/posts-OSJZZZJR.js", imports: ["/build/_shared/chunk-PVNBUV4C.js", "/build/_shared/chunk-KCATKJOD.js", "/build/_shared/chunk-SB6Z5ZJC.js", "/build/_shared/chunk-72SWFXXS.js", "/build/_shared/chunk-HDWQZ4RZ.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-TNGW37ZS.js", "/build/_shared/chunk-3KZTUR4F.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/r/share/$roomId": { id: "routes/r/share/$roomId", parentId: "root", path: "r/share/:roomId", index: void 0, caseSensitive: void 0, module: "/build/routes/r/share/$roomId-3ROP7Y73.js", imports: ["/build/_shared/chunk-PVNBUV4C.js", "/build/_shared/chunk-KCATKJOD.js", "/build/_shared/chunk-SB6Z5ZJC.js", "/build/_shared/chunk-PVRZC4XH.js", "/build/_shared/chunk-AUYLHJJM.js", "/build/_shared/chunk-YAG44XE3.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !0 }, "routes/resources/manifest[.]webmanifest": { id: "routes/resources/manifest[.]webmanifest", parentId: "root", path: "resources/manifest.webmanifest", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/manifest[.]webmanifest-FSITSSPI.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/resources/subscribe": { id: "routes/resources/subscribe", parentId: "root", path: "resources/subscribe", index: void 0, caseSensitive: void 0, module: "/build/routes/resources/subscribe-7EVCH6UB.js", imports: void 0, hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/unfurl": { id: "routes/unfurl", parentId: "root", path: "unfurl", index: void 0, caseSensitive: void 0, module: "/build/routes/unfurl-TNLOVCWX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-9AED3CC8.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
