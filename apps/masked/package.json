@@ -27,7 +27,7 @@
     "classnames": "^2.3.2",
     "cloudinary": "^1.32.0",
     "cross-env": "^7.0.3",
-    "date-fns": "^2.29.3",
+    "date-fns": "^2.30.0",
     "dotenv": "^16.0.0",
     "esbuild": "^0.15.16",
     "framer-motion": "^7.6.15",
