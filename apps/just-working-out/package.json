@@ -28,7 +28,7 @@
 		"autoprefixer": "^10.4.13",
 		"contentful-management": "^10.26.0",
 		"contentful-typescript-codegen": "^3.4.0",
-		"dotenv": "^16.0.0",
+		"dotenv": "^16.3.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
